@@ -5,12 +5,12 @@
 // Function: load()
 // Called by HTML body element's onload event when the widget is ready to start
 //
-var settingEngine;
+var settingsEngine;
 
 
 function load()
 {
-	settingEngine = new SettingEngine();
+	settingsEngine = new SettingsEngine();
     setupParts();
 }
 
