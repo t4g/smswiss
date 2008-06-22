@@ -67,7 +67,7 @@ function sync()
 //
 function showBack(event)
 {
-    settingEngine.loadSettings();
+    settingsEngine.loadSettings();
 	
 	var front = document.getElementById("front");
     var back = document.getElementById("back");
@@ -92,7 +92,7 @@ function showBack(event)
 //
 function showFront(event)
 {
-    settingEngine.saveSettings();
+    settingsEngine.saveSettings();
 	
 	var front = document.getElementById("front");
     var back = document.getElementById("back");

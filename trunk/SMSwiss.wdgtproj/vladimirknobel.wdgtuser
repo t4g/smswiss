@@ -25,25 +25,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>41ac16494c703687</string>
+		<string>41ac1e08ecdd16db</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/ev/evqyzwW4HhK0Zjft1kfubk+++TI/-Tmp-/Dashcode/.SMSwiss.wdgtprojEovDS0/SMSwiss.wdgtproj/project.wdgt/</string>
+		<string>/private/var/folders/ev/evqyzwW4HhK0Zjft1kfubk+++TI/-Tmp-/Dashcode/.SMSwiss.wdgtproj0wlAtu/SMSwiss.wdgtproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>2</integer>
+		<integer>4</integer>
 		<key>percent-x</key>
-		<real>0.21562500298023224</real>
+		<real>0.12421874701976776</real>
 		<key>percent-y</key>
-		<real>0.20608898997306824</real>
+		<real>0.34309133887290955</real>
 		<key>pos-x</key>
-		<integer>672</integer>
+		<integer>159</integer>
 		<key>pos-y</key>
-		<integer>176</integer>
+		<integer>363</integer>
 	</dict>
 	<key>Design time language</key>
 	<string>en.lproj</string>
@@ -90,8 +90,7 @@
 	<key>Objects view last selections</key>
 	<array>
 		<array>
-			<integer>0</integer>
-			<integer>0</integer>
+			<integer>2</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
