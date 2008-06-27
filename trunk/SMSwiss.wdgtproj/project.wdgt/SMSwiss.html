@@ -16,17 +16,21 @@
     <script type="text/javascript" src="Parts/GlassButton.js" charset="utf-8"></script>
 	<script type="text/javascript" src="SettingsEngine.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSwiss.js" charset="utf-8"></script>
+<script type="text/javascript" src="Parts/PopupButton.js" charset="utf-8"></script>
 </head>
 <body onload="load();">
     <div id="front">
         <!-- Front main content -->
-		<img id="frontImg" src="Images/Skins/SMSwissBlue.png" alt="" apple-locked="true">
+		<img id="frontImg" src="Images/Skins/SMSwissSunrise.png" alt="" apple-locked="true">
         
-		<input type="search" value="" placeholder="" results="10" incremental="incremental" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.searchfield" id="refererField" apple-group="searchfield" apple-locked="true">
+		<input type="search" value="" placeholder="" results="10" incremental="incremental" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.searchfield" id="refererField" apple-group="searchfield">
     
 		<textarea class="apple-textarea apple-no-children" apple-part="com.apple.Dashcode.part.textarea" id="smsTextArea" apple-group="textarea" apple-locked="true"></textarea>
 		
 		<div class="apple-no-children" id="info" apple-locked="true" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+    <div apple-part="com.apple.Dashcode.part.roundedpopupbutton" class="apple-no-children" apple-style="image-theme: 0; image-shape: 3; image-button-type: 1; image-opacity: 1.00; image-top-color: 1.0000,1.0000,1.0000; image-bottom-color: 0.6700,0.6700,0.6700; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.1810,0.1810,0.1810; image-border-width: 1; shine-height: 0.50; shadow-include-shadow: 0; shadow-blur: 3.00;" id="popup" apple-group="popup"></div>
+    <div apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" id="glassbutton" apple-group="glassbutton"></div>
+    <div apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" id="glassbutton1" apple-group="glassbutton1"></div>
     </div>
     <div id="back">
        <img id="backImg" src="Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">

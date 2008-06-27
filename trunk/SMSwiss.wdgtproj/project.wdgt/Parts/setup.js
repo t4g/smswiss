@@ -5,5 +5,8 @@ function setupParts() {
     setupParts.called = true;
     CreateInfoButton('info', { frontID: 'front', foregroundStyle: 'white', backgroundStyle: 'black', onclick: 'showBack' });
     CreateGlassButton('done', { text: 'Done', onclick: 'showFront' });
+    CreatePopupButton('popup', { options: unescape('[[%27Sunrise Private%27%2C %27Item 1%27%2C true]%2C %27Item 2%27%2C %27Item 3%27]'), rightImageWidth: 16, leftImageWidth: 5 });
+    CreateGlassButton('glassbutton', { text: 'Send' });
+    CreateGlassButton('glassbutton1', { text: 'Clear' });
 }
 window.addEventListener('load', setupParts, false);
