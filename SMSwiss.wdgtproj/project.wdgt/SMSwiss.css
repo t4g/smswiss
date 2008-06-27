@@ -67,7 +67,29 @@ body {
 #refererField {
     font: normal normal normal 16px/normal 'Lucida Grande';
     position: absolute;
-    top: 19px;
-    left: 65px;
-    width: 250px;
+    top: 12px;
+    left: 17px;
+    width: 262px;
+}
+
+#popup {
+    position: absolute;
+    text-align: left;
+    left: 91px;
+    width: 224px;
+    top: 44px;
+    font-size: 11px;
+    font-family: HelveticaNeue;
+}
+
+#glassbutton {
+    position: absolute;
+    top: 190px;
+    left: 14px;
+}
+
+#glassbutton1 {
+    position: absolute;
+    top: 191px;
+    left: 86px;
 }

@@ -25,11 +25,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>b9a85678f908ac41</string>
+		<string>76c57c5f6220ac41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.TemplateCustomgsd0bj/SMSwiss.wdgtproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.wdgtprojJX96S9/SMSwiss.wdgtproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -37,13 +37,13 @@
 		<key>percent-type</key>
 		<integer>1</integer>
 		<key>percent-x</key>
-		<real>0.34765625</real>
+		<real>0.35859376192092896</real>
 		<key>percent-y</key>
-		<real>0.36250001192092896</real>
+		<real>0.21375000476837158</real>
 		<key>pos-x</key>
-		<integer>445</integer>
+		<integer>459</integer>
 		<key>pos-y</key>
-		<integer>290</integer>
+		<integer>171</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -98,11 +98,7 @@
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array>
-		<array>
-			<integer>0</integer>
-		</array>
-	</array>
+	<array/>
 	<key>Opened Steps</key>
 	<array/>
 </dict>
