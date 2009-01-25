@@ -12,29 +12,31 @@
 		<string>-load</string>
 		<key>SMSwiss.js:22</key>
 		<string></string>
-		<key>SettingsEngine.js:182</key>
+		<key>SettingsEngine.js:190</key>
 		<string>-preferenceForKey</string>
-		<key>SettingsEngine.js:184</key>
-		<string>-preferenceForKey</string>
-		<key>SettingsEngine.js:186</key>
+		<key>SettingsEngine.js:192</key>
 		<string>-preferenceForKey</string>
 		<key>SettingsEngine.js:194</key>
-		<string>-setPreferenceForKey</string>
-		<key>SettingsEngine.js:195</key>
-		<string>-setPreferenceForKey</string>
+		<string>-preferenceForKey</string>
 		<key>SettingsEngine.js:202</key>
 		<string>-setPreferenceForKey</string>
-		<key>SettingsEngine.js:207</key>
-		<string>-getPreferenceForKey</string>
-		<key>SettingsEngine.js:208</key>
-		<string>-getPreferenceForKey</string>
+		<key>SettingsEngine.js:203</key>
+		<string>-setPreferenceForKey</string>
 		<key>SettingsEngine.js:210</key>
+		<string>-setPreferenceForKey</string>
+		<key>SettingsEngine.js:215</key>
 		<string>-getPreferenceForKey</string>
-		<key>SettingsEngine.js:55</key>
+		<key>SettingsEngine.js:216</key>
+		<string>-getPreferenceForKey</string>
+		<key>SettingsEngine.js:218</key>
+		<string>-getPreferenceForKey</string>
+		<key>SettingsEngine.js:22</key>
+		<string>-SettingsEngine</string>
+		<key>SettingsEngine.js:58</key>
 		<string>-selectRunningAccount</string>
-		<key>SettingsEngine.js:56</key>
+		<key>SettingsEngine.js:59</key>
 		<string>-selectRunningAccount</string>
-		<key>SettingsEngine.js:57</key>
+		<key>SettingsEngine.js:60</key>
 		<string>-selectRunningAccount</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
@@ -60,11 +62,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>d1e75313215aae41</string>
+		<string>90662ce42f5aae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojlHNDlQ/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojgNIpIp/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>

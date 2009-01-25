@@ -19,9 +19,9 @@ var defaultPreferenceValues = {
 
 
 //var accountsNames = ["Sunrise", "Cablecom", "ETHZ", "-", "-"];
-var userNames = ["Elia", "Elia", "Elia", "-", "-"];
-var passwords = ["123", "123", "123", "-", "-"];
-var providers = [0, 1, 2,0,0];
+//var userNames = ["Elia", "Elia", "Elia", "-", "-"];
+//var passwords = ["123", "123", "123", "-", "-"];
+//var providers = [0, 1, 2,0,0];
 //var ruuningAccount = 0;
 
 //Public methods, Setting Engine Interface 
@@ -41,6 +41,9 @@ this.loadAccountData= function(accountID){
             var password = document.getElementById("passwordText");
             
             var accountsNames = preferenceForKey("accountsNames");
+            var userNames = preferenceForKey("userNames");
+            var passwords = preferenceForKey("passwords");
+            var providers = preferenceForKey("providers");
             
             id.value=accountID;
             accountName.value = accountsNames[accountID];
@@ -142,13 +145,18 @@ function saveAccountData(){
             
             var accountID = id.value;
             var accountsNames = preferenceForKey("accountsNames");
-            
+            var userNames = preferenceForKey("userNames");
+            var passwords = preferenceForKey("passwords");
+            var providers = preferenceForKey("providers");
             
             accountsNames[accountID]=accountName.value;
             providers[accountID]=provider.object.getSelectedIndex();
             userNames[accountID]=userName.value;
             passwords[accountID]=password.value;
             
+            setPreferenceForKey(providers, "providers");
+            setPreferenceForKey(passwords, "passwords");
+            setPreferenceForKey(userNames, "userNames");
             setPreferenceForKey(accountsNames, "accountsNames");
 }
 
