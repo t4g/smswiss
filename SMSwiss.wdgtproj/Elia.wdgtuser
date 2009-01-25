@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Breakpoints</key>
+	<dict>
+		<key>SettingsEngine.js:21</key>
+		<string>getAccountNames</string>
+	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -16,8 +21,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1035, 310}}</string>
-			<string>{{0, 320}, {1035, 353}}</string>
+			<string>{{0, 0}, {1035, 342}}</string>
+			<string>{{0, 352}, {1035, 321}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -25,28 +30,30 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>76c57c5f6220ac41</string>
+		<string>66a39b363107ae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.wdgtprojJX96S9/SMSwiss.wdgtproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.wdgtprojIWuWIL/SMSwiss.wdgtproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>1</integer>
+		<integer>3</integer>
 		<key>percent-x</key>
-		<real>0.35859376192092896</real>
+		<real>0.15312500298023224</real>
 		<key>percent-y</key>
-		<real>0.21375000476837158</real>
+		<real>0.32499998807907104</real>
 		<key>pos-x</key>
-		<integer>459</integer>
+		<integer>752</integer>
 		<key>pos-y</key>
-		<integer>171</integer>
+		<integer>320</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
+	<key>DeploymentOptions</key>
+	<dict/>
 	<key>Design time language</key>
 	<string>en.lproj</string>
 	<key>MainSplitViewGeometry</key>
@@ -64,7 +71,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>0 63 1280 715 0 0 1280 778 </string>
+	<string>103 63 1280 715 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -79,8 +86,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 361}}</string>
-			<string>{{0, 371}, {246, 302}}</string>
+			<string>{{0, 0}, {246, 352}}</string>
+			<string>{{0, 362}, {246, 311}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -90,16 +97,47 @@
 		</array>
 		<array>
 			<integer>0</integer>
+			<integer>1</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
+		<array>
+			<integer>0</integer>
 			<integer>0</integer>
 		</array>
 		<array>
 			<integer>0</integer>
 			<integer>1</integer>
+			<integer>3</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>3</integer>
+			<integer>0</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>0</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array/>
+	<array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+		</array>
+	</array>
 	<key>Opened Steps</key>
 	<array/>
+	<key>Visible StackLayout Views</key>
+	<array>
+		<string>front</string>
+	</array>
 </dict>
 </plist>
