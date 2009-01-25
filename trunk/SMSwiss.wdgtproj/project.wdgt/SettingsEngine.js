@@ -14,18 +14,43 @@ function SettingsEngine() {
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
 
-//Return the user name for the requested SMS engine
-this.getUserName = function (smsEngine) {
+
+
+this.getAccountNames = function (){
+
+    return "dfasd";
+ 
+}
+
+
+//Return the user name for the requested account
+this.getUserName = function (accountID) {
 		
 };
 
-//
-this.getPassword = function (smsEngine) {
+//Return the password for the requested accountID
+this.getPassword = function (accountID) {
 		
 };
 
-//Return the actual SMS engine to use
-this.getSMSEngine = function () {
+//Return the proxy for the requested accountID
+this.getProxyURL = function (accountID) {
+		
+};
+
+//Return the proxy user name for the requested accountID
+this.getProxyUserName = function (accountID) {
+		
+};
+
+//Return the proxy password name for the requested accountID
+this.getProxyUserName = function (accountID) {
+		
+};
+
+
+//Return the actual SMS account to use
+this.getSelectedAccount = function () {
 		
 };
 

@@ -30,24 +30,18 @@ body {
 
 #back {
     display: none;
-}
-
-#backImg {
-    position: absolute;
-    display: block;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    width: 332px;
-    height: 198px;
+    width: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    min-height: 0px;
+    height: auto;
 }
 
 #done {
     position: absolute;
-    right: 21px;
-    bottom: 21px;
+    right: 25px;
     margin-left: auto;
+    bottom: 18px;
     margin-top: auto;
 }
 
@@ -62,6 +56,7 @@ body {
     width: 298px;
     height: 100px;
     top: 59px;
+    font-size: 15px;
 }
 
 #refererField {
@@ -92,4 +87,63 @@ body {
     position: absolute;
     top: 191px;
     left: 86px;
+}
+
+#backImg {
+    width: 332px;
+    height: 220px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+}
+
+#list {
+    background-color: white;
+    overflow: hidden;
+    display: none;
+    padding: 0px;
+    margin-top: 0px;
+    width: 100%;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    top: 66px;
+    left: -4px;
+}
+
+.listRowTemplate_template {
+    position: relative;
+    list-style-type: none;
+    height: 24px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-color: rgb(224, 224, 224);
+
+    -khtml-margin-top-collapse: collapse;
+    -khtml-margin-bottom-collapse: collapse;
+}
+
+.label_template {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    height: 17px;
+    right: 10px;
+    width: auto;
+    color: black;
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }

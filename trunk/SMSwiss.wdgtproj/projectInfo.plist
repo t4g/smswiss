@@ -3,7 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CYProjectFormatVersion</key>
-	<integer>1</integer>
+	<integer>14</integer>
+	<key>CYShineVersion</key>
+	<integer>2</integer>
+	<key>MainCSS</key>
+	<string>SMSwiss.css</string>
+	<key>MainJS</key>
+	<string>SMSwiss.js</string>
 	<key>Steps</key>
 	<array>
 		<dict>

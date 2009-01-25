@@ -7,11 +7,38 @@
 //
 var settingsEngine;
 
+// This object implements the dataSource methods for the list.
+var listDataSource = {
+	
+	// Sample data for the content of the list. 
+	// Your application may also fetch this data remotely via XMLHttpRequest.
+	_rowData: ["Item 1", "Item 2", "Item 3"],
+	
+	// The List calls this method to find out how many rows should be in the list.
+	numberOfRows: function() {
+		return this._rowData.length;
+	},
+	
+	// The List calls this method once for every row.
+	prepareRow: function(rowElement, rowIndex, templateElements) {
+		// templateElements contains references to all elements that have an id in the template row.
+		// Ex: set the value of an element with id="label".
+		if (templateElements.label) {
+			templateElements.label.innerText = this._rowData[rowIndex];
+		}
+
+		// Assign a click event handler for the row.
+		rowElement.onclick = function(event) {
+			// Do something interesting
+			alert("Row "+rowIndex);
+		};
+	}
+};
 
 function load()
 {
 	settingsEngine = new SettingsEngine();
-    setupParts();
+    dashcode.setupParts();
 }
 
 //
