@@ -18,17 +18,13 @@ var defaultPreferenceValues = {
     };
 
 
-//var accountsNames = ["Sunrise", "Cablecom", "ETHZ", "-", "-"];
-//var userNames = ["Elia", "Elia", "Elia", "-", "-"];
-//var passwords = ["123", "123", "123", "-", "-"];
-//var providers = [0, 1, 2,0,0];
-//var ruuningAccount = 0;
+var smsEngine;
 
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
 
 this.getAccountNames = function (){
-    var accountsNames = preferenceForKey("accountsNames");
+    var accountsNames = getPreferenceForKey("accountsNames");
     return accountsNames;
 }
 
@@ -40,10 +36,10 @@ this.loadAccountData= function(accountID){
             var userName = document.getElementById("userNameText");
             var password = document.getElementById("passwordText");
             
-            var accountsNames = preferenceForKey("accountsNames");
-            var userNames = preferenceForKey("userNames");
-            var passwords = preferenceForKey("passwords");
-            var providers = preferenceForKey("providers");
+            var accountsNames = getPreferenceForKey("accountsNames");
+            var userNames = getPreferenceForKey("userNames");
+            var passwords = getPreferenceForKey("passwords");
+            var providers = getPreferenceForKey("providers");
             
             id.value=accountID;
             accountName.value = accountsNames[accountID];
@@ -53,10 +49,19 @@ this.loadAccountData= function(accountID){
 }
 
 //call this method to read from the selectedAccount list the selected item and store it
+//as the new account to use for sending sms
 this.selectRunningAccount = function(){
         var accountSelectList = document.getElementById("selectedAccount").object;
         var ruuningAccount = accountSelectList.getSelectedIndex();
         setPreferenceForKey(ruuningAccount, "ruuningAccount");
+        initSMSEngine(); //Reload the SMSengine
+}
+
+//Call this method to retreive the SMS engine
+//NOTE: Since the SMS engine can change at any time, you should always call this method to use it
+//and never store or create a local copy of the SMSengine object.
+this.getSMSEngine = function(){
+    return smsEngine;
 }
 
 
@@ -126,6 +131,7 @@ this.remove = function (){
 this.loadSettings = function (){
     loadSelectAccountList(); //Set up the front selection list
     loadAccountsNames();
+    initSMSEngine(); //Load the SMSengine;
 }
 
 // Called when the back of the widget is hidden and the done button was pressed
@@ -136,6 +142,30 @@ this.saveSettings = function (){
 
 //Private method
 //-----------------------------------------------------------
+
+//This is a privat method used to initialize the privat smsEngine object.
+//Any thame the running account is changed or user mofify some setting the engine 
+//has to be reinitialized.
+function initSMSEngine(){
+
+    smsEngine = null;
+    //Check if the current account is valid
+    //-------------------------------------- 
+        var userName = getCurrentUserName();
+        var password = getCurrentPassword();
+        var provider = getCurrentProvider();
+    
+        if(userName == undefined || userName.length == 0)//A username as to be difined
+            return;
+    //--------------------------------------    
+        
+    if(provider == 2) //Yallo
+        smsEngine = new SMSEngineYallo(userName,password);
+}
+
+
+
+
 function saveAccountData(){
             var id = document.getElementById("accountID");
             var accountName = document.getElementById("accountNameText");
@@ -144,10 +174,10 @@ function saveAccountData(){
             var password = document.getElementById("passwordText");
             
             var accountID = id.value;
-            var accountsNames = preferenceForKey("accountsNames");
-            var userNames = preferenceForKey("userNames");
-            var passwords = preferenceForKey("passwords");
-            var providers = preferenceForKey("providers");
+            var accountsNames = getPreferenceForKey("accountsNames");
+            var userNames = getPreferenceForKey("userNames");
+            var passwords = getPreferenceForKey("passwords");
+            var providers = getPreferenceForKey("providers");
             
             accountsNames[accountID]=accountName.value;
             providers[accountID]=provider.object.getSelectedIndex();
@@ -160,10 +190,12 @@ function saveAccountData(){
             setPreferenceForKey(accountsNames, "accountsNames");
 }
 
+//This method generate the account list used in the front panel of the widget
+//it also select the running account
 function loadSelectAccountList(){
                         
         var accountSelectList = document.getElementById("selectedAccount").object;
-        var accountsNames = preferenceForKey("accountsNames");
+        var accountsNames = getPreferenceForKey("accountsNames");
              
         accountSelectList.select[0].text=accountsNames[0];
         accountSelectList.select[1].text=accountsNames[1];
@@ -174,27 +206,36 @@ function loadSelectAccountList(){
         var ruuningAccount = getPreferenceForKey("ruuningAccount");
       
         accountSelectList.setSelectedIndex(ruuningAccount);
-
 }
 
+//Return the user names attacched to the running account
+function getCurrentUserName(){
+    var ruuningAccount = getPreferenceForKey("ruuningAccount");
+    var userNames = getPreferenceForKey("userNames");
+    return userNames[ruuningAccount];
+}
+//Return the password attacched to the running account
+function getCurrentPassword(){
+
+    var ruuningAccount = getPreferenceForKey("ruuningAccount");
+    var passwords = getPreferenceForKey("passwords");
+    return passwords[ruuningAccount];
+}
+//Return the SMS provider attacched to the running account
+function getCurrentProvider(){
+    var ruuningAccount = getPreferenceForKey("ruuningAccount");
+    var providers = getPreferenceForKey("providers");
+    return Number(providers[ruuningAccount]);
+}
+
+
+//Load the account names from SettingsEngine and reload the list used into the account setting page
 function loadAccountsNames(){
-    //Load the account names from SettingsEngine and reload the list
     accountDataSource._rowData= settingsEngine.getAccountNames();
     document.getElementById("accountList").object.reloadData();
 }
 
 
-function preferenceForKey(key) {
-	var result;
-	
-    result = getPreferenceForKey(key);
-	
-	if (!result) {
-		result = defaultPreferenceValues[key];
-        setPreferenceForKey(result,key);
-	}
-	return result;
-}
 
 //We have only instance preference key this because users can add multiple times the same widget to set up more
 //than only five accounts.
@@ -213,7 +254,12 @@ function setPreferenceForKey(value,key){
 //than only five accounts.
 function getPreferenceForKey(key){
     var result = widget.preferenceForKey(createInstancePreferenceKey(key));
-    if(!result) return result; //If undefined
+  
+    if (!result) { //If undefined return the default value
+		result = defaultPreferenceValues[key];
+        return result;
+	}
+    
     if(typeof(result) != "string") return result;
     if(result.indexOf("ARRAY/\|/") == -1) return result;
     var parts = result.split("/\|/");
