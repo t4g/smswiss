@@ -15,7 +15,7 @@ function load()
 {
     settingsEngine = new SettingsEngine();
     settingsEngine.loadSettings();
-    settingsEngine.loadAccountData(0); //Load the first account data by default
+    settingsEngine.loadAccountData(0); //Load the first account data into the account setting page by default
     dashcode.setupParts();
 }
 
@@ -73,7 +73,7 @@ function sync()
 //
 function showBack(event)
 {
-    settingsEngine.loadSettings();
+    //settingsEngine.loadSettings(); reloading settings is probably non needed when showing the back of the widget
     
     var front = document.getElementById("front");
     var back = document.getElementById("back");
