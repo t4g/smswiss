@@ -65,6 +65,39 @@ function sync()
     // globalPreferenceValue = widget.preferenceForKey(null, "your-key");
 }
 
+
+
+//TODO: complete status feed back
+function engineStatusFeedBack(event){
+    alert(event);
+}
+//TODO: complete feed back
+function engineFeedBack(event){
+    alert(event);
+}
+
+function sendNewSMS()
+{
+        if (settingsEngine.getSMSEngine() != null
+            && settingsEngine.getSMSEngine().isConnected() 
+            && settingsEngine.getSMSEngine().hasEnoughCredits(message_text_area.value.length)
+            && receiver_text_area.value != "") {            
+                 
+                var phoneNumber =receiver_text_area.value;
+                var numCheckregex = new RegExp('^[+]?[0-9./ ]+');
+
+                if(numCheckregex.exec(phoneNumber) == null){ //The number is not valid
+                      //TODO: allert that the number is not valid
+                      return;
+                }       
+                settingsEngine.getSMSEngine().Send(message_text_area.value,phoneNumber);
+        }else{
+            alert("The sms engine is not in state to send sms");
+        }
+}
+
+
+
 //
 // Function: showBack(event)
 // Called when the info button is clicked to show the back of the widget
@@ -100,6 +133,15 @@ function showFront(event)
 {
     settingsEngine.saveSettings();
     settingsEngine.loadSettings(); //After saving reload all settings
+    
+    //GET sms count
+    if(settingsEngine.getSMSEngine() != null){
+    
+        settingsEngine.getSMSEngine().getAvailSMS();
+    }
+    
+    
+    
     
     var front = document.getElementById("front");
     var back = document.getElementById("back");

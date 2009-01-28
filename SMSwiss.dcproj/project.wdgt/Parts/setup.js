@@ -8,7 +8,7 @@ var dashcodePartSpecs = {
     "accountList": { "creationFunction": "CreateList", "dataArray": ["Item 1", "Item 2", "Item 3"], "dataSourceName": "accountDataSource", "labelElementId": "label", "listStyle": "List.EDGE_TO_EDGE", "sampleRows": 5, "useDataSource": true },
     "accountNameLabel": { "creationFunction": "CreateText", "text": "Acc. Name:" },
     "done": { "creationFunction": "CreateGlassButton", "onclick": "showFront", "text": "Done" },
-    "glassbutton": { "creationFunction": "CreateGlassButton", "text": "Send" },
+    "glassbutton": { "creationFunction": "CreateGlassButton", "onclick": "sendNewSMS", "text": "Send" },
     "info": { "backgroundStyle": "black", "creationFunction": "CreateInfoButton", "foregroundStyle": "white", "frontID": "front", "onclick": "showBack" },
     "label": { "creationFunction": "CreateText", "text": "Item" },
     "passwordLabel": { "creationFunction": "CreateText", "text": "Password:" },

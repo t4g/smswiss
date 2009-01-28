@@ -4,6 +4,10 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
+		<key>SMSwiss.js:138</key>
+		<string>-showFront</string>
+		<key>SMSwiss.js:95</key>
+		<string>sendNewSMS</string>
 		<key>SettingsEngine.js:132</key>
 		<string>-loadSettings</string>
 		<key>SettingsEngine.js:140</key>
@@ -31,8 +35,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1021, 402}}</string>
-			<string>{{0, 412}, {1021, 486}}</string>
+			<string>{{0, 0}, {1021, 405}}</string>
+			<string>{{0, 415}, {1021, 483}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -40,11 +44,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>2311621d135eae41</string>
+		<string>4b3e4e959d60ae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojStsow0/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojtS18Nj/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -52,13 +56,13 @@
 		<key>percent-type</key>
 		<integer>3</integer>
 		<key>percent-x</key>
-		<real>0.33697918057441711</real>
+		<real>0.29583331942558289</real>
 		<key>percent-y</key>
-		<real>0.23499999940395355</real>
+		<real>0.30833333730697632</real>
 		<key>pos-x</key>
-		<integer>927</integer>
+		<integer>1006</integer>
 		<key>pos-y</key>
-		<integer>706</integer>
+		<integer>618</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -109,7 +113,13 @@
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array/>
+	<array>
+		<array>
+			<integer>0</integer>
+			<integer>0</integer>
+			<integer>5</integer>
+		</array>
+	</array>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>
