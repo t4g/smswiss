@@ -18,7 +18,7 @@ var defaultPreferenceValues = {
     };
 
 
-var smsEngine;
+var smsEngine = null;
 
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
