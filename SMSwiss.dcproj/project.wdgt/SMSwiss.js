@@ -83,7 +83,7 @@ function sendNewSMS()
             && settingsEngine.getSMSEngine().hasEnoughCredits(message_text_area.value.length)
             && receiver_text_area.value != "") {            
                  
-                var phoneNumber =receiver_text_area.value;
+                var phoneNumber =receiver_text_area.value.split(" (")[0];
                 var numCheckregex = new RegExp('^[+]?[0-9./ ]+');
 
                 if(numCheckregex.exec(phoneNumber) == null){ //The number is not valid
@@ -94,6 +94,11 @@ function sendNewSMS()
         }else{
             alert("The sms engine is not in state to send sms");
         }
+}
+
+
+function focusMessage(){
+    messageField.focus();
 }
 
 
