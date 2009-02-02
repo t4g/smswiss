@@ -30,17 +30,6 @@ body {
     margin-top: auto;
 }
 
-#img {
-    width: 322px;
-    height: 193px;
-    position: absolute;
-    right: auto;
-    bottom: auto;
-    margin-top: 0px;
-    top: 15px;
-    left: 20px;
-}
-
 #backImg {
     position: absolute;
     right: auto;
@@ -246,13 +235,23 @@ body {
     right: auto;
     margin-top: 0px;
     top: 21px;
-    width: 122px;
-    left: 214px;
+    width: 77px;
+    left: 259px;
     bottom: 171px;
     height: auto;
 }
 
-#glassbutton {
+#receiverNumberField {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    top: 21px;
+    left: 58px;
+    width: 199px;
+}
+
+#sendButton {
     position: absolute;
     right: auto;
     bottom: auto;
@@ -261,7 +260,7 @@ body {
     left: 26px;
 }
 
-#message_text_area {
+#messageField {
     color: black;
     font-family: HelveticaNeue;
     font-size: 10pt;
@@ -269,18 +268,52 @@ body {
     right: auto;
     bottom: auto;
     margin-top: 0px;
-    left: 27px;
-    top: 46px;
-    width: 307px;
+    top: 49px;
+    width: 304px;
+    left: 28px;
     height: 133px;
 }
 
-#receiver_text_area {
+#background {
+    width: 322px;
+    height: 193px;
     position: absolute;
     right: auto;
     bottom: auto;
     margin-top: 0px;
-    top: 21px;
-    width: 145px;
-    left: 58px;
+    top: 15px;
+    left: 20px;
+}
+
+.receiverAutoCompleteItem {
+    padding-left: 24px;
+    font: normal normal normal 11px/normal 'Lucida Grande';
+    background-image: url(images/searchBar.png);
+    border-width: 0px;
+}
+
+.receiverAutoCompleteItem a:link {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+#receiverAutoComplete {
+    font: normal normal normal 11px/normal 'Lucida Grande';
+    //color: #777777;
+    opacity: 0.9;
+    background-image: url(images/searchBar.png);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 55px;
+    width: 250px;
+    top: 42px;
+    height: 100px;
+    z-index: 4;
+    visibility: hidden;
+    //white-space: nowrap;
+    //-khtml-user-select: none;
+    //cursor: default;
+    border-bottom-color: rgb(170, 170, 170);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 }

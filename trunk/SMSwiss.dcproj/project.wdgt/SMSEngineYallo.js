@@ -115,7 +115,7 @@ function loadSMS(){
 
 function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSendSMS){
   if (xmlRequest.status != 200) {
-    alert("Error fetching session id data: HTTP status " + xmlRequest.status);
+    alert("Error fetching session id data: HTTP status " + xmlRequest.status + " (YalloSMSEngine)");
     return engineFeedBack("ConnectionError");
   }
   if(getIsLogedIn(xmlRequest.responseText)){
@@ -123,11 +123,11 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   } else {
     innerSessionID = -1;
     if(withAutentication) { //In case we are doing the autentication do not check the session
-      alert("Unable to log in!");
+      alert("Unable to log in!  (YalloSMSEngine)");
       return engineFeedBack("LogError");
     } else {
       if(isJustAuthenticated) {
-        alert("Unable to set cookies!");
+        alert("Unable to set cookies!  (YalloSMSEngine)");
         return engineFeedBack("CookieError");
       } else {
         return doAuthentication(queue_mess,number);
@@ -148,7 +148,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   // Retreive remaining SMS
   remainningSMS = getSMSCount(xmlRequest.responseText);
   if (remainningSMS == -1) {
-      alert("Unable to retreive remaining sms");
+      alert("Unable to retreive remaining sms! (YalloSMSEngine)");
       return engineFeedBack("SMSCountError");
   }
 
@@ -157,7 +157,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   
   //If a sms was sent check it
   if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
-    alert("Unable to send sms!, The Java Script SMS Engine was not able to find the key word in the returned html page  which identify a sucessfull sent sms.");
+    alert("Unable to send sms!, The Java Script Yallo SMS Engine was not able to find the key word in the returned html page  which identify a sucessfull sent sms.");
     return engineFeedBack("SMSError");
   }
   
@@ -248,7 +248,7 @@ function getSMSCount(html){
   var smsDetecStr2 = '</div>';
   
   if (html.indexOf(smsDetecStr1) == -1) {
-    alert("Unable to retreive SMS count!");
+    alert("Unable to retreive SMS count!  (YalloSMSEngine)");
     return -1;
   }
   
@@ -257,7 +257,7 @@ function getSMSCount(html){
   var end = html.indexOf(smsDetecStr2, begin);
   
   if (end - begin  > 200 || end - begin  < 0) {
-    alert("Unable to retreive remaining free sms from html!");
+    alert("Unable to retreive remaining free sms from html! (YalloSMSEngine)");
     return 0;
   }
   
@@ -265,7 +265,7 @@ function getSMSCount(html){
   var re = /\s*([0-9]+).*/; 
   a = re.exec(str);
   if (a == null) {
-    alert("Unable to retrieve remaining free sms from html!");
+    alert("Unable to retrieve remaining free sms from html! (YalloSMSEngine)");
     return 0;
   }
   

@@ -4,22 +4,8 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
-		<key>SMSwiss.js:138</key>
-		<string>-showFront</string>
-		<key>SMSwiss.js:95</key>
-		<string>sendNewSMS</string>
-		<key>SettingsEngine.js:132</key>
-		<string>-loadSettings</string>
-		<key>SettingsEngine.js:140</key>
-		<string>-saveSettings</string>
-		<key>SettingsEngine.js:151</key>
-		<string>-initSMSEngine</string>
-		<key>SettingsEngine.js:213</key>
-		<string>-getCurrentUserName</string>
-		<key>SettingsEngine.js:240</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:54</key>
-		<string>selectRunningAccount</string>
+		<key>AddressBoock.js:64</key>
+		<string>-searchKeyPressed</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -35,8 +21,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1021, 405}}</string>
-			<string>{{0, 415}, {1021, 483}}</string>
+			<string>{{0, 0}, {1230, 324}}</string>
+			<string>{{0, 334}, {1230, 656}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -44,11 +30,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>4b3e4e959d60ae41</string>
+		<string>1687c31d926eae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojtS18Nj/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojRwJ5Tq/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -56,13 +42,13 @@
 		<key>percent-type</key>
 		<integer>3</integer>
 		<key>percent-x</key>
-		<real>0.29583331942558289</real>
+		<real>0.20937499403953552</real>
 		<key>percent-y</key>
-		<real>0.30833333730697632</real>
+		<real>0.28999999165534973</real>
 		<key>pos-x</key>
-		<integer>1006</integer>
+		<integer>1172</integer>
 		<key>pos-y</key>
-		<integer>618</integer>
+		<integer>640</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -78,12 +64,12 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 919}}</string>
-			<string>{{245, 0}, {1022, 919}}</string>
+			<string>{{0, 0}, {244, 1011}}</string>
+			<string>{{245, 0}, {1231, 1011}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>304 167 1266 940 0 0 1920 1178 </string>
+	<string>304 75 1475 1032 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -98,8 +84,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 352}}</string>
-			<string>{{0, 362}, {246, 536}}</string>
+			<string>{{0, 0}, {246, 388}}</string>
+			<string>{{0, 398}, {246, 592}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
