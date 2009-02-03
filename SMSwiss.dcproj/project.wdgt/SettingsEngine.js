@@ -1,3 +1,6 @@
+var settingsEngine = new SettingsEngine();
+
+
 function SettingsEngine() {
 
 
@@ -50,7 +53,7 @@ this.loadAccountData= function(accountID){
 
 //call this method to read from the selectedAccount list the selected item and store it
 //as the new account to use for sending sms
-this.selectRunningAccount = function(){
+this.setRunningAccount = function(){
         var accountSelectList = document.getElementById("selectedAccount").object;
         var ruuningAccount = accountSelectList.getSelectedIndex();
         setPreferenceForKey(ruuningAccount, "ruuningAccount");
@@ -269,10 +272,6 @@ function getPreferenceForKey(key){
 
 }
 
-//This is a global function used to handel events rising from the front list to choise the current account
-function selectRunningAccount(event){
-    settingsEngine.selectRunningAccount();
-}
 
 // This object implements the dataSource methods for the list.
 var accountDataSource = {

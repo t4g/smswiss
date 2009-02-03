@@ -4,7 +4,7 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
-		<key>AddressBoock.js:64</key>
+		<key>AddressBoock.js:62</key>
 		<string>-searchKeyPressed</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
@@ -30,11 +30,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>1687c31d926eae41</string>
+		<string>dc7fcc768a70ae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojRwJ5Tq/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojfcQTxb/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -103,7 +103,7 @@
 		<array>
 			<integer>0</integer>
 			<integer>0</integer>
-			<integer>5</integer>
+			<integer>3</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>

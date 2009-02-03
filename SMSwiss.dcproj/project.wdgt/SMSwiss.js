@@ -5,15 +5,12 @@
  */
 
 
-var settingsEngine;
- 
 //
 // Function: load()
 // Called by HTML body element's onload event when the widget is ready to start
 //
 function load()
 {
-    settingsEngine = new SettingsEngine();
     settingsEngine.loadSettings();
     settingsEngine.loadAccountData(0); //Load the first account data into the account setting page by default
     dashcode.setupParts();
