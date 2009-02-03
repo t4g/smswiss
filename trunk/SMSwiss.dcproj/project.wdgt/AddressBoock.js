@@ -1,8 +1,6 @@
-var wasEnterKeyPressedBeforSearch;
-
-var selectedContatcIndex;
-
-
+//Global object
+var addressBoockEngine = new addressBoock();
+    
 
 function addressBoock(){
 
@@ -51,7 +49,7 @@ function addressBoock(){
         
         if(displayedContact>0){
             receiverAutoComplete.style.visibility="visible";
-            highlightContact(selectedContatcIndex);
+            this.highlightContact(selectedContatcIndex);
         }else{
             receiverAutoComplete.style.visibility="hidden";
         }
@@ -82,7 +80,7 @@ function addressBoock(){
                 if(firstContact!=null){
                         firstContactNum = firstContact.getAttribute('number');
                         firstContactName = firstContact.getAttribute('name');
-                        selctedContact(firstContactName,firstContactNum);
+                        this.selctedContact(firstContactName,firstContactNum);
                 }             
                 receiverAutoComplete.style.visibility="hidden";
                 performSearch = false;
@@ -95,7 +93,7 @@ function addressBoock(){
                 if(firstContact!=null){
                         firstContactNum = firstContact.getAttribute('number');
                         firstContactName = firstContact.getAttribute('name');
-                        return selctedContact(firstContactName,firstContactNum);
+                        return this.selctedContact(firstContactName,firstContactNum);
                 }
                 receiverAutoComplete.style.visibility="hidden";
                 performSearch = false;
@@ -141,8 +139,8 @@ function addressBoock(){
         enclosingDiv.setAttribute('number', '' + number);
         enclosingDiv.setAttribute('name', '' + name);
         
-        var html = "<A HREF=\"#\" id=\"contact-link-" + index + "\" onMouseOver=\"highlightContact(" + index + ");\""+
-                    "onMouseUP=\"selctedContact('" + name + "','"+number+"');focusMessage();\">" + name + " (" + number + ")</A>";
+        var html = "<A HREF=\"#\" id=\"contact-link-" + index + "\" onMouseOver=\"addressBoockEngine.highlightContact(" + index + ");\""+
+                    "onMouseUP=\"addressBoockEngine.selctedContact('" + name + "','"+number+"');focusMessage();\">" + name + " (" + number + ")</A>";
         
         enclosingDiv.innerHTML = html;
         
@@ -151,8 +149,6 @@ function addressBoock(){
 }
 
 
-//Istantiating addressBook and its global method papping
-var addressBoockEngine = addressBoock();
 
 
 
