@@ -1,6 +1,3 @@
-//Global object
-var addressBoockEngine = new addressBoock();
-    
 
 function addressBoock(){
 
