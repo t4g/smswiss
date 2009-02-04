@@ -9,35 +9,35 @@
 		<key>SMSwiss.js:17</key>
 		<string>-load</string>
 		<key>SMSwiss.js:20</key>
-		<string>-load</string>
+		<string>-</string>
 		<key>SMSwiss.js:22</key>
 		<string></string>
-		<key>SettingsEngine.js:190</key>
-		<string>-preferenceForKey</string>
-		<key>SettingsEngine.js:192</key>
-		<string>-preferenceForKey</string>
-		<key>SettingsEngine.js:194</key>
-		<string>-preferenceForKey</string>
-		<key>SettingsEngine.js:202</key>
-		<string>-setPreferenceForKey</string>
-		<key>SettingsEngine.js:203</key>
-		<string>-setPreferenceForKey</string>
-		<key>SettingsEngine.js:210</key>
-		<string>-setPreferenceForKey</string>
-		<key>SettingsEngine.js:215</key>
-		<string>-getPreferenceForKey</string>
-		<key>SettingsEngine.js:216</key>
-		<string>-getPreferenceForKey</string>
-		<key>SettingsEngine.js:218</key>
-		<string>-getPreferenceForKey</string>
-		<key>SettingsEngine.js:22</key>
+		<key>SettingsEngine.js:187</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:189</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:19</key>
 		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:58</key>
-		<string>-selectRunningAccount</string>
-		<key>SettingsEngine.js:59</key>
-		<string>-selectRunningAccount</string>
-		<key>SettingsEngine.js:60</key>
-		<string>-selectRunningAccount</string>
+		<key>SettingsEngine.js:191</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:199</key>
+		<string>-loadSelectAccountList</string>
+		<key>SettingsEngine.js:200</key>
+		<string>-loadSelectAccountList</string>
+		<key>SettingsEngine.js:207</key>
+		<string>-loadSelectAccountList</string>
+		<key>SettingsEngine.js:212</key>
+		<string>-getCurrentUserName</string>
+		<key>SettingsEngine.js:213</key>
+		<string>-getCurrentUserName</string>
+		<key>SettingsEngine.js:215</key>
+		<string>-getCurrentUserName</string>
+		<key>SettingsEngine.js:55</key>
+		<string>-setRunningAccount</string>
+		<key>SettingsEngine.js:56</key>
+		<string>-setRunningAccount</string>
+		<key>SettingsEngine.js:57</key>
+		<string>-setRunningAccount</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -62,11 +62,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>90662ce42f5aae41</string>
+		<string>95b8e6942474ae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojgNIpIp/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojsuAKFZ/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>

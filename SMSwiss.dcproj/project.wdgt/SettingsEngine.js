@@ -1,6 +1,3 @@
-var settingsEngine = new SettingsEngine();
-
-
 function SettingsEngine() {
 
 
