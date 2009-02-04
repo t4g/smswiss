@@ -166,3 +166,9 @@ if (window.widget) {
     widget.onshow = show;
     widget.onsync = sync;
 }
+
+
+function globalSetRunningAccount(event)
+{
+    // Insert Code Here
+}
