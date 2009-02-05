@@ -58,14 +58,14 @@ function addressBoock(){
         performSearch = true; //by default the search has to be performed
         
         if(event.keyCode==40){  //down key   
-                highlightContact(selectedContatcIndex+1);
+                this.highlightContact(selectedContatcIndex+1);
                 event.bubbles=false;
                 event.cancelBubble=true;
                 event.stopPropagation();  
         }
         
         if(event.keyCode==38){ //up key
-                highlightContact(selectedContatcIndex-1);
+                this.highlightContact(selectedContatcIndex-1);
                 event.bubbles=false;
                 event.cancelBubble=true;
                 event.stopPropagation();  
