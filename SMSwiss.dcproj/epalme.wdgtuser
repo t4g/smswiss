@@ -30,11 +30,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>dc7fcc768a70ae41</string>
+		<string>522a99efcd75ae41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojfcQTxb/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojHMo1P2/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -102,8 +102,6 @@
 	<array>
 		<array>
 			<integer>0</integer>
-			<integer>0</integer>
-			<integer>3</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
