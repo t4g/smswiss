@@ -158,9 +158,21 @@ function initSMSEngine(){
         if(userName == undefined || userName.length == 0)//A username as to be difined
             return;
     //--------------------------------------    
+    
         
+    if(provider == 0) //Sunrise
+        smsEngine = new SMSEngineSunriseMail(userName,password);           
+    
+    if(provider == 1) //Cablecom
+        smsEngine = new SMSEngineCablecom(userName,password);
+                        
     if(provider == 2) //Yallo
         smsEngine = new SMSEngineYallo(userName,password);
+        
+    //if(provider == 3) //ETHZ
+    //    smsEngine = new SMSEngineETHZ(userName,password);
+        
+
 }
 
 

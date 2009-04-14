@@ -6,6 +6,10 @@
 	<dict>
 		<key>AddressBoock.js:62</key>
 		<string>-searchKeyPressed</string>
+		<key>SMSEngineCablecom.js:19</key>
+		<string>getAvailSMS</string>
+		<key>SMSEngineSunriseMail.js:19</key>
+		<string>getAvailSMS</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -30,25 +34,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>522a99efcd75ae41</string>
+		<string>68af7e7df328af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojHMo1P2/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojY37HAS/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>3</integer>
+		<integer>4</integer>
 		<key>percent-x</key>
-		<real>0.20937499403953552</real>
+		<real>0.34427082538604736</real>
 		<key>percent-y</key>
-		<real>0.28999999165534973</real>
+		<real>0.31499999761581421</real>
 		<key>pos-x</key>
-		<integer>1172</integer>
+		<integer>661</integer>
 		<key>pos-y</key>
-		<integer>640</integer>
+		<integer>610</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -69,7 +73,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>304 75 1475 1032 0 0 1920 1178 </string>
+	<string>249 146 1475 1032 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -97,11 +101,23 @@
 			<integer>0</integer>
 			<integer>0</integer>
 		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
 			<integer>0</integer>
+			<integer>1</integer>
+			<integer>4</integer>
+			<integer>3</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
@@ -110,7 +126,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>front</string>
+		<string>back</string>
 	</array>
 </dict>
 </plist>
