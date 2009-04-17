@@ -77,17 +77,17 @@ function sendNewSMS()
 {
         if (settingsEngine.getSMSEngine() != null
             && settingsEngine.getSMSEngine().isConnected() 
-            && settingsEngine.getSMSEngine().hasEnoughCredits(message_text_area.value.length)
-            && receiver_text_area.value != "") {            
+            && settingsEngine.getSMSEngine().hasEnoughCredits(messageField.value.length)
+            && receiverNumberField.value != "") {            
                  
-                var phoneNumber =receiver_text_area.value.split(" (")[0];
+                var phoneNumber =receiverNumberField.value.split(" (")[0];
                 var numCheckregex = new RegExp('^[+]?[0-9./ ]+');
 
                 if(numCheckregex.exec(phoneNumber) == null){ //The number is not valid
                       //TODO: allert that the number is not valid
                       return;
                 }       
-                settingsEngine.getSMSEngine().Send(message_text_area.value,phoneNumber);
+                settingsEngine.getSMSEngine().Send(messageField.value,phoneNumber);
         }else{
             alert("The sms engine is not in state to send sms");
         }

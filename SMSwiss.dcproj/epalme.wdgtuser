@@ -8,6 +8,8 @@
 		<string>-searchKeyPressed</string>
 		<key>SMSEngineCablecom.js:19</key>
 		<string>getAvailSMS</string>
+		<key>SMSEngineSunriseMail.js:1</key>
+		<string>SMSEngineSunriseMail</string>
 		<key>SMSEngineSunriseMail.js:19</key>
 		<string>getAvailSMS</string>
 	</dict>
@@ -34,11 +36,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>68af7e7df328af41</string>
+		<string>05c1f3b4cd30af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojY37HAS/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojCUm1K5/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -46,13 +48,13 @@
 		<key>percent-type</key>
 		<integer>4</integer>
 		<key>percent-x</key>
-		<real>0.34427082538604736</real>
+		<real>0.4088541567325592</real>
 		<key>percent-y</key>
-		<real>0.31499999761581421</real>
+		<real>0.39750000834465027</real>
 		<key>pos-x</key>
-		<integer>661</integer>
+		<integer>785</integer>
 		<key>pos-y</key>
-		<integer>610</integer>
+		<integer>511</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -115,9 +117,6 @@
 	<array>
 		<array>
 			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
-			<integer>3</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
@@ -126,7 +125,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>back</string>
+		<string>front</string>
 	</array>
 </dict>
 </plist>
