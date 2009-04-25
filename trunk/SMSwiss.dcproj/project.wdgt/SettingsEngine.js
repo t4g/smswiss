@@ -19,6 +19,8 @@ var defaultPreferenceValues = {
 
 
 var smsEngine = null;
+var proxy = null;
+var proxyPort = null;
 
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
@@ -66,19 +68,15 @@ this.getSMSEngine = function(){
 
 
 //Return the proxy for the requested accountID
-this.getProxyURL = function (accountID) {
-		
+this.getProxy = function () {
+    return proxy;
 };
 
 //Return the proxy user name for the requested accountID
-this.getProxyUserName = function (accountID) {
-		
+this.getProxyPort = function () {
+    return proxyPort;
 };
 
-//Return the proxy password name for the requested accountID
-this.getProxyUserName = function (accountID) {
-		
-};
 
 
 //Return the actual SMS account to use
@@ -131,6 +129,7 @@ this.remove = function (){
 this.loadSettings = function (){
     loadSelectAccountList(); //Set up the front selection list
     loadAccountsNames();
+    loadProxySetting();
     initSMSEngine(); //Load the SMSengine;
 }
 
@@ -191,6 +190,17 @@ function saveAccountData(){
             var passwords = getPreferenceForKey("passwords");
             var providers = getPreferenceForKey("providers");
             
+            var proxy = document.getElementById("proxyText").value;
+            var proxyPort = document.getElementById("proxyPortText").value;
+            
+            if(proxy == ""){
+                proxy = undefined;
+                proxyPort = undefined;
+            }else if(proxyPort == ""){
+                proxyPort = "80";
+            }
+            
+            
             accountsNames[accountID]=accountName.value;
             providers[accountID]=provider.object.getSelectedIndex();
             userNames[accountID]=userName.value;
@@ -200,7 +210,21 @@ function saveAccountData(){
             setPreferenceForKey(passwords, "passwords");
             setPreferenceForKey(userNames, "userNames");
             setPreferenceForKey(accountsNames, "accountsNames");
+            setPreferenceForKey(proxy, "proxy");
+            setPreferenceForKey(proxyPort, "proxyPort");
 }
+
+//This function load the current proxy settings
+function loadProxySetting(){
+
+    proxy = getPreferenceForKey("proxy");
+    proxyPort = getPreferenceForKey("proxyPort");
+    if(proxy == undefined){
+        proxy = null;
+        proxyPort = null;
+    }
+}
+
 
 //This method generate the account list used in the front panel of the widget
 //it also select the running account

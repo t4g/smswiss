@@ -258,6 +258,7 @@ body {
     margin-top: 0px;
     top: 182px;
     left: 26px;
+    opacity: 1;
 }
 
 #messageField {
@@ -268,10 +269,16 @@ body {
     right: auto;
     bottom: auto;
     margin-top: 0px;
-    top: 49px;
-    width: 304px;
-    left: 28px;
-    height: 133px;
+    border-width: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-border-top-left-radius: 0px 0px;
+    -webkit-border-top-right-radius: 0px 0px;
+    -webkit-border-bottom-left-radius: 0px 0px;
+    -webkit-border-bottom-right-radius: 0px 0px;
+    top: 50px;
+    left: 29px;
+    height: 132px;
+    width: 303px;
 }
 
 #background {
@@ -316,4 +323,201 @@ body {
     border-bottom-color: rgb(170, 170, 170);
     border-bottom-style: solid;
     border-bottom-width: 1px;
+}
+
+#accountPage {
+}
+
+#settingBox {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    background-color: rgb(231, 231, 231);
+    -webkit-border-top-left-radius: 0px 0px;
+    -webkit-border-top-right-radius: 0px 0px;
+    -webkit-border-bottom-left-radius: 0px 0px;
+    -webkit-border-bottom-right-radius: 0px 0px;
+    font-size: 16px;
+    width: 315px;
+    margin-right: 7px;
+    height: 123px;
+    margin-left: 22px;
+    margin-top: 49px;
+}
+
+#proxyLabel {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    height: 19px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 5px;
+    width: 94px;
+    top: 79px;
+}
+
+#proxyText {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    display: block;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 191px;
+    left: 99px;
+    top: 77px;
+}
+
+#text3 {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 5px;
+    top: 4px;
+    right: 218px;
+    width: auto;
+    bottom: 103px;
+    height: auto;
+}
+
+#checkboxbutton3 {
+    margin-right: 3px;
+    min-height: 0px;
+    -khtml-margin-top-collapse: collapse;
+    -khtml-margin-bottom-collapse: collapse;
+    margin-top: 3px;
+    width: 12px;
+}
+
+#proxyPortText {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    display: block;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 99px;
+    width: 51px;
+    top: 100px;
+}
+
+#proxyPortLabel {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 5px;
+    top: 103px;
+    right: 217px;
+    width: auto;
+    bottom: 5px;
+    height: auto;
+}
+
+#clearLabel {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 5px;
+    top: 25px;
+    width: auto;
+    height: auto;
+}
+
+#clearCheckBox {
+    width: 80px;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    height: 18px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 99px;
+    top: 23px;
+}
+
+#vibrateCheckBox {
+    width: 80px;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    height: 18px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    left: 99px;
+    top: 3px;
+}
+
+#vibrateDescLable {
+    position: absolute;
+    text-align: left;
+    vertical-align: middle;
+    top: 2px;
+    left: 18px;
+    right: -133px;
+    width: auto;
+    bottom: -4px;
+    height: auto;
+}
+
+#clearDescLable {
+    position: absolute;
+    text-align: left;
+    vertical-align: middle;
+    top: 2px;
+    left: 18px;
+    right: -129px;
+    width: auto;
+    bottom: 1px;
+    height: auto;
+}
+
+#text {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 5px;
+    top: 55px;
+    width: auto;
+    bottom: 49px;
+    height: auto;
+}
+
+#settingPage {
+    visibility: hidden;
 }
