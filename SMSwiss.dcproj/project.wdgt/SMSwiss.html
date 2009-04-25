@@ -37,7 +37,6 @@
             settingsEngine.setRunningAccount(event);
         }
     </script>
-    
 </head>
 <body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
     <div id="front">
@@ -54,22 +53,51 @@
         <img src="Images/back.png" alt="" apple-part="com.apple.Dashcode.part.backimage" apple-style="image-radius: 12,12,12,12;" id="backImg" apple-locked="true">
         <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
         <div apple-part="com.apple.Dashcode.part.roundedpopupbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 1; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="popup"></div>
-        <ul apple-part="com.apple.Dashcode.part.widgetList" id="accountList">
-            <li id="listRowTemplate" apple-template="true" class="listRowTemplate_template">
-                <div id="label" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children label_template" apple-text-overflow="ellipsis"></div>
-            </li>
-        </ul>
-        <div apple-part="com.apple.Dashcode.part.box" id="accountInfo">
-            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="providerLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="userNameLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="passwordLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-            <div apple-part="com.apple.Dashcode.part.roundedpopupbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 1; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="providerList"></div>
-            <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="userNameText">
-            <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="passwordText">
-            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="accountNameLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-            <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="accountNameText">
-            <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="accountID">
+        <!-- Account Page -->
+        <div apple-part="com.apple.Dashcode.part.box" id="accountPage">
+            <ul apple-part="com.apple.Dashcode.part.widgetList" id="accountList">
+                <li id="listRowTemplate" apple-template="true" class="listRowTemplate_template">
+                    <div id="label" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children label_template" apple-text-overflow="ellipsis"></div>
+                </li>
+            </ul>
+            <div apple-part="com.apple.Dashcode.part.box" id="accountInfo">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="providerLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="userNameLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="passwordLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <div apple-part="com.apple.Dashcode.part.roundedpopupbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 1; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="providerList"></div>
+                <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="userNameText">
+                <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="passwordText">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="accountNameLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="accountNameText">
+                <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="accountID">
+            </div>
         </div>
+        <!-- END Account Page -->
+        <!-- Setting Page -->
+        <div apple-part="com.apple.Dashcode.part.box" id="settingPage">
+            <div apple-part="com.apple.Dashcode.part.box" id="settingBox">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="proxyLabel" apple-style="part-height-dependent: true;"></div>
+                <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="proxyText">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="proxyPortLabel"></div>
+                <div apple-part="com.apple.Dashcode.part.checkboxbutton" id="clearCheckBox" apple-group="checkboxbutton">
+                    <input type="checkbox" name="Checkbox" checked="checked" id="checkboxbutton1" apple-group="checkboxbutton">
+                    <div id="clearDescLable">(Clear SMS after sucessfull sent)</div>
+                </div>
+                <div apple-part="com.apple.Dashcode.part.checkboxbutton" id="vibrateCheckBox" apple-group="checkboxbutton2">
+                    <input type="checkbox" name="Checkbox" checked="checked" id="checkboxbutton3" apple-group="checkboxbutton2">
+                    <div id="vibrateDescLable">(Vibrate after sucessul SMS sent)</div>
+                </div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="text3"></div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="clearLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="proxyPortText">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="text" apple-style="part-width-dependent: true;"></div>
+            </div>
+        </div>
+        <!-- END Setting Page -->
+        <!-- About Page -->
+        <div apple-part="com.apple.Dashcode.part.box" id="aboutPage">
+        </div>
+        <!-- END About Page -->
     </div>
 </body>
 </html>

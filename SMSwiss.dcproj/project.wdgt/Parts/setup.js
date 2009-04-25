@@ -7,14 +7,19 @@
 var dashcodePartSpecs = {
     "accountList": { "creationFunction": "CreateList", "dataArray": ["Item 1", "Item 2", "Item 3"], "dataSourceName": "accountDataSource", "labelElementId": "label", "listStyle": "List.EDGE_TO_EDGE", "sampleRows": 5, "useDataSource": true },
     "accountNameLabel": { "creationFunction": "CreateText", "text": "Acc. Name:" },
+    "clearLabel": { "creationFunction": "CreateText", "text": "Clear:" },
     "done": { "creationFunction": "CreateGlassButton", "onclick": "showFront", "text": "Done" },
     "info": { "backgroundStyle": "black", "creationFunction": "CreateInfoButton", "foregroundStyle": "white", "frontID": "front", "onclick": "showBack" },
     "label": { "creationFunction": "CreateText", "text": "Item" },
     "passwordLabel": { "creationFunction": "CreateText", "text": "Password:" },
-    "popup": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "options": ["Accounts"], "rightImageWidth": 16 },
+    "popup": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "showSettingPage", "options": ["Accounts", "Settings", "About"], "rightImageWidth": 16 },
     "providerLabel": { "creationFunction": "CreateText", "text": "Provider:" },
     "providerList": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "options": [["Sunrise", "0"], ["Calecom", "1"], ["Yallo", "2"], ["ETHZ", "3"]], "rightImageWidth": 16 },
+    "proxyLabel": { "creationFunction": "CreateText", "text": "Proxy address:" },
+    "proxyPortLabel": { "creationFunction": "CreateText", "text": "Proxy port:" },
     "selectedAccount": { "creationFunction": "CreatePopupButton", "leftImageWidth": 10, "onchange": "globalSetRunningAccount", "options": [["", "account0"], ["", "account1"], ["", "account2"], ["", "account3"], ["", "account4"]], "rightImageWidth": 16 },
     "sendButton": { "creationFunction": "CreateGlassButton", "onclick": "sendNewSMS", "text": "Send" },
+    "text": { "creationFunction": "CreateText", "text": "Addvanced:" },
+    "text3": { "creationFunction": "CreateText", "text": "Vibration:" },
     "userNameLabel": { "creationFunction": "CreateText", "text": "User Name:" }
 };

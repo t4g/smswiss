@@ -172,3 +172,30 @@ function globalSetRunningAccount(event)
 {
     // Insert Code Here
 }
+
+
+
+
+
+
+
+
+function showSettingPage(event)
+{
+    accountPage.style.visibility='hidden';
+    settingPage.style.visibility='hidden';
+    aboutPage.style.visibility='hidden';
+
+    
+    if(event.srcElement.value == "Accounts"){
+        accountPage.style.visibility='visible';
+    }
+    if(event.srcElement.value == "Settings"){
+        settingPage.style.visibility='visible';
+    }
+    if(event.srcElement.value == "About"){
+        aboutPage.style.visibility='visible';
+    }
+
+
+}

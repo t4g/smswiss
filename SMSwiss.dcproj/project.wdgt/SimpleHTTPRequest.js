@@ -10,6 +10,7 @@ var innerData = null;
 var innerCookie = null;
 var callBackFunction = null;
 
+
 var SimpleHTTPRequestObject = this;
 
 
@@ -36,11 +37,16 @@ this.send = function(data){
 	innerData=data;
 	
 	if(innerURL == null)return;
+    
+    var proxy = settingsEngine.getProxy();
+    var proxyport = settingsEngine.getProxyPort();
+    
 	
 	var cmd = "/usr/bin/curl -q -b --silent --include --location --max-redirs 20 --header 'X-Widget-Request: true'";
 	cmd=cmd +' --url "' + innerURL + '"';
 	if(innerCookie !=null) cmd= cmd +' --cookie "' + innerCookie +'"';
 	if(data !=null) cmd= cmd +' --data "' + data + '"';
+    if(proxy !=null) cmd = cmd + ' --proxy "'+proxy+':'+proxyport+'"';
 	
 	callBackFunction= this.onload;
 	

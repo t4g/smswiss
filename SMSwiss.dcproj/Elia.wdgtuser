@@ -8,36 +8,46 @@
 		<string>-</string>
 		<key>SMSwiss.js:17</key>
 		<string>-load</string>
+		<key>SMSwiss.js:173</key>
+		<string>-globalSetRunningAccount</string>
+		<key>SMSwiss.js:185</key>
+		<string>-showSettingPage</string>
 		<key>SMSwiss.js:20</key>
 		<string>-</string>
 		<key>SMSwiss.js:22</key>
-		<string></string>
-		<key>SettingsEngine.js:187</key>
+		<string>-</string>
+		<key>SettingsEngine.js:186</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:189</key>
+		<key>SettingsEngine.js:188</key>
 		<string>-saveAccountData</string>
 		<key>SettingsEngine.js:19</key>
 		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:191</key>
+		<key>SettingsEngine.js:190</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:199</key>
+		<key>SettingsEngine.js:196</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:209</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:210</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:220</key>
+		<string>-loadProxySetting</string>
+		<key>SettingsEngine.js:231</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:200</key>
+		<key>SettingsEngine.js:236</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:207</key>
+		<key>SettingsEngine.js:237</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:212</key>
-		<string>-getCurrentUserName</string>
-		<key>SettingsEngine.js:213</key>
-		<string>-getCurrentUserName</string>
-		<key>SettingsEngine.js:215</key>
-		<string>-getCurrentUserName</string>
-		<key>SettingsEngine.js:55</key>
-		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:56</key>
-		<string>-setRunningAccount</string>
+		<key>SettingsEngine.js:239</key>
+		<string>-loadSelectAccountList</string>
 		<key>SettingsEngine.js:57</key>
 		<string>-setRunningAccount</string>
+		<key>SettingsEngine.js:58</key>
+		<string>-setRunningAccount</string>
+		<key>SettingsEngine.js:59</key>
+		<string>-setRunningAccount</string>
+		<key>SimpleHTTPRequest.js:45</key>
+		<string>send</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -62,25 +72,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>37541c569174ae41</string>
+		<string>6841f8683d46af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojKFr6Pg/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojXamnUz/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>percent-x</key>
-		<real>0.32578125596046448</real>
+		<real>0.19062499701976776</real>
 		<key>percent-y</key>
-		<real>0.32124999165534973</real>
+		<real>0.25624999403953552</real>
 		<key>pos-x</key>
-		<integer>517</integer>
+		<integer>690</integer>
 		<key>pos-y</key>
-		<integer>331</integer>
+		<integer>205</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -103,7 +113,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>31 80 1229 698 0 0 1280 778 </string>
+	<string>6 80 1229 698 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -134,30 +144,19 @@
 		</array>
 		<array>
 			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
 			<integer>0</integer>
 		</array>
 		<array>
 			<integer>0</integer>
 			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
 			<integer>0</integer>
-			<integer>0</integer>
-			<integer>3</integer>
+			<integer>1</integer>
+			<integer>5</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
@@ -168,7 +167,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>front</string>
+		<string>back</string>
 	</array>
 </dict>
 </plist>
