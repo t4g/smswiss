@@ -3,7 +3,36 @@
  You may edit this file to customize your widget or web page 
  according to the license.txt file included in the project.
  */
+ 
+ var addressBoockEngine = new addressBoock();
+var settingsEngine = new SettingsEngine();
+        
+function globalSearchKeyPressed(event){
+            addressBoockEngine.searchKeyPressed(event);
+}
+function globalSearchContacts(event){
+            addressBoockEngine.searchContacts(event);
+}
+function globalSetRunningAccount(event){
+            settingsEngine.setRunningAccount(event);
+}
+ 
+ 
+var SMSEngineStatus = {
+                registeringUser : "Loging...",
+                sendingSMS: "Sending SMS...",
+                loadingAccountStatus: "Loading account..."
+};
 
+var SMSEngineFeedBack = {
+                connectionError : "Connection error!",
+                authenticationError: "Authentication error!",
+                cookieError: "Cookie erro!r",
+                smsCountError :"SMS count error!",
+                smsSendingError: "SMS sending error!",
+                smsSent: "SMS successful sent!",
+                authenticationSuccessful: "User successful authenticated!"
+};
 
 //
 // Function: load()
@@ -67,10 +96,31 @@ function sync()
 //TODO: complete status feed back
 function engineStatusFeedBack(event){
     alert(event);
+    statusDesc.innerHTML = event;
+    statusIcon.src = "images/loading.gif"
+    statusIcon.style.visibility="visible";
 }
 //TODO: complete feed back
 function engineFeedBack(event){
     alert(event);
+    
+    statusIcon.style.visibility="hidden";
+    
+    if(event == SMSEngineFeedBack.smsSent){
+        statusIcon.src = "images/sent.png"
+        statusIcon.style.visibility="visible";
+        statusDesc.innerHTML = event;
+        return;
+    }
+    if(event == SMSEngineFeedBack.authenticationSuccessful){
+        statusDesc.innerHTML = "SMS left: " + settingsEngine.getSMSEngine().getSMSCount();
+        return;
+    }
+        
+        
+    statusIcon.src = "images/error.png"
+    statusIcon.style.visibility="visible";
+    statusDesc.innerHTML = event;
 }
 
 function sendNewSMS()
@@ -137,10 +187,9 @@ function showFront(event)
     settingsEngine.loadSettings(); //After saving reload all settings
     
     //GET sms count
-    if(settingsEngine.getSMSEngine() != null){
-    
-        settingsEngine.getSMSEngine().getAvailSMS();
-    }
+    //if(settingsEngine.getSMSEngine() != null){
+    //    settingsEngine.getSMSEngine().getAvailSMS();
+    //}
     
     
     
@@ -166,14 +215,6 @@ if (window.widget) {
     widget.onshow = show;
     widget.onsync = sync;
 }
-
-
-function globalSetRunningAccount(event)
-{
-    // Insert Code Here
-}
-
-
 
 
 

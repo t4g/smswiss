@@ -69,7 +69,7 @@ function sendSMS(smsText,number){
 }
 
 function sendSingleSMS(queue_mess,number){
-  engineStatusFeedBack("Sending");
+  engineStatusFeedBack(SMSEngineStatus.sendingSMS);
   var mess = queue_mess[queue_mess.length-1]; //Mess to send
   var feedURL = "https://www.yallo.ch/kp/dyn/web/sec/acc/sms/sendSms.do";
   var onloadHandler = function() {responseHandler(xmlRequest, queue_mess, number, false, true);};
@@ -86,7 +86,7 @@ function sendSingleSMS(queue_mess,number){
 function doAuthentication(queue_mess,number) 
 {
   isJustAuthenticated=true;
-  engineStatusFeedBack("Logging");
+  engineStatusFeedBack(SMSEngineStatus.registeringUser);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/j_security_check.do";
   var onloadHandler = function() { responseHandler(xmlRequest, queue_mess, number, true, false); };
   xmlRequest.onload = onloadHandler;
@@ -99,7 +99,7 @@ function doAuthentication(queue_mess,number)
 
 
 function loadSMS(){
-  engineStatusFeedBack("Updating");
+  engineStatusFeedBack(sendingSMS.loadingAccountStatus);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/pub/home/home.do";
   var onloadHandler = function() { responseHandler(xmlRequest, null, null, false, false); };
   xmlRequest.onload = onloadHandler;
@@ -116,7 +116,7 @@ function loadSMS(){
 function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSendSMS){
   if (xmlRequest.status != 200) {
     alert("Error fetching session id data: HTTP status " + xmlRequest.status + " (YalloSMSEngine)");
-    return engineFeedBack("ConnectionError");
+    return engineFeedBack(SMSEngineFeedBack.connectionError);
   }
   if(getIsLogedIn(xmlRequest.responseText)){
     innerSessionID = getSessionID(xmlRequest.getAllResponseHeaders());
@@ -124,11 +124,11 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
     innerSessionID = -1;
     if(withAutentication) { //In case we are doing the autentication do not check the session
       alert("Unable to log in!  (YalloSMSEngine)");
-      return engineFeedBack("LogError");
+      return engineFeedBack(SMSEngineFeedBack.authenticationError);
     } else {
       if(isJustAuthenticated) {
         alert("Unable to set cookies!  (YalloSMSEngine)");
-        return engineFeedBack("CookieError");
+        return engineFeedBack(SMSEngineFeedBack.cookieError);
       } else {
         return doAuthentication(queue_mess,number);
       }
@@ -149,16 +149,16 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   remainningSMS = getSMSCount(xmlRequest.responseText);
   if (remainningSMS == -1) {
       alert("Unable to retreive remaining sms! (YalloSMSEngine)");
-      return engineFeedBack("SMSCountError");
+      return engineFeedBack(SMSEngineFeedBack.smsCountError);
   }
 
   if(queue_mess == null) //There is no sms to send it was a simple login
-    return engineFeedBack("LogOK");
+    return engineFeedBack(SMSEngineFeedBack.authenticationSuccessful);
   
   //If a sms was sent check it
   if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
     alert("Unable to send sms!, The Java Script Yallo SMS Engine was not able to find the key word in the returned html page  which identify a sucessfull sent sms.");
-    return engineFeedBack("SMSError");
+    return engineFeedBack(SMSEngineFeedBack.smsSendingError);
   }
   
   //If we are here is because we have sent an sms
@@ -175,7 +175,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   }
 
   //There is no sms to send
-  return engineFeedBack("SMSOK");
+  return engineFeedBack(SMSEngineFeedBack.smsSent);
 
 }
 

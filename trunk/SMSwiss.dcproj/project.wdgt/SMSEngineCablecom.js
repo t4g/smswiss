@@ -76,7 +76,7 @@ function sendSMS(smsText,number){
 
 function sendSingleSMS(queue_mess,number){
 
-	engineStatusFeedBack("Sending");
+	engineStatusFeedBack(SMSEngineStatus.sendingSMS);
 		
 	var mess = queue_mess[queue_mess.length-1]; //Mess to send
 
@@ -97,7 +97,7 @@ function doAuthentication(queue_mess,number)
 {
 	isJustAuthenticated=true;
 	
-	engineStatusFeedBack("Logging");
+	engineStatusFeedBack(SMSEngineStatus.registeringUser);
 	
 		
 	
@@ -123,7 +123,7 @@ function doAuthentication(queue_mess,number)
 
 function loadSMS(queue_mess,number){
 
-	engineStatusFeedBack("Updating");
+	engineStatusFeedBack(SMSEngineStatus.loadingAccountStatus);
 	
 	var feedURL = "http://your.hispeed.ch/glue.cgi?http://messenger.hispeed.ch/walrus/app/login.do?language=de&amp;hostname=your.hispeed.ch";	
 	var onloadHandler = function() { responseHandler(xmlRequest,queue_mess,number,false,false); };
@@ -144,7 +144,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	if (xmlRequest.status != 200) {
 		alert("Error fetching session id data: HTTP status " + xmlRequest.status);
-		return engineFeedBack("ConnectionError");
+		return engineFeedBack(SMSEngineFeedBack.connectionError);
 	}
 	
 	
@@ -155,11 +155,11 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 		innerSessionID=-1;
 		if(withAutentication){ //In case we are doing the autentication do not check the session
 			alert("Unable to log in!");
-			return engineFeedBack("LogError");
+			return engineFeedBack(SMSEngineFeedBack.authenticationError);
 		}else{
 			if(isJustAuthenticated){
 				alert("Unable to set cookies!");
-				return engineFeedBack("CookieError");
+				return engineFeedBack(SMSEngineFeedBack.cookieError);
 			}else{
 				return doAuthentication(queue_mess,number);
 			}
@@ -178,17 +178,17 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	remainningSMS= getSMSCount(xmlRequest.responseText);
 	if (remainningSMS == -1) {
 			alert("Unable to retreive remaining sms");
-			return engineFeedBack("SMSCountError");
+			return engineFeedBack(SMSEngineFeedBack.smsCountError);
 	}
 
 	
 	if(queue_mess == null) //There is no sms to send it was a simply login
-		return engineFeedBack("LogOK");
+		return engineFeedBack(SMSEngineFeedBack.authenticationSuccessful);
 	
 	//If a sms was sent check it
 	if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
 		alert("Unable to send sms!");
-		return engineFeedBack("SMSError");
+		return engineFeedBack(SMSEngineFeedBack.smsSendingError);
 	}
 	
 	//If we are here is because we have sent an sms
@@ -205,7 +205,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	}
 
 	//There is no sms to send
-	return engineFeedBack("SMSOK");
+	return engineFeedBack(SMSEngineFeedBack.smsSent);
 
 }
 
