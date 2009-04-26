@@ -4,42 +4,60 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
-		<key>SMSwiss.js:10</key>
-		<string>-</string>
-		<key>SMSwiss.js:17</key>
-		<string>-load</string>
-		<key>SMSwiss.js:173</key>
-		<string>-globalSetRunningAccount</string>
-		<key>SMSwiss.js:185</key>
+		<key>SMSEngineETHZ.js:107</key>
+		<string>-responseHandler</string>
+		<key>SMSEngineETHZ.js:110</key>
+		<string>-responseHandler</string>
+		<key>SMSEngineETHZ.js:81</key>
+		<string>-sendSingleSMS</string>
+		<key>SMSEngineETHZ.js:84</key>
+		<string>-sendSingleSMS</string>
+		<key>SMSEngineETHZ.js:93</key>
+		<string>-doAuthentication</string>
+		<key>SMSwiss.js:105</key>
+		<string>-engineFeedBack</string>
+		<key>SMSwiss.js:123</key>
+		<string>-engineFeedBack</string>
+		<key>SMSwiss.js:220</key>
+		<string></string>
+		<key>SMSwiss.js:226</key>
 		<string>-showSettingPage</string>
-		<key>SMSwiss.js:20</key>
+		<key>SMSwiss.js:39</key>
 		<string>-</string>
-		<key>SMSwiss.js:22</key>
+		<key>SMSwiss.js:46</key>
+		<string>-load</string>
+		<key>SMSwiss.js:49</key>
 		<string>-</string>
-		<key>SettingsEngine.js:186</key>
-		<string>-saveAccountData</string>
+		<key>SMSwiss.js:51</key>
+		<string>-</string>
+		<key>SMSwiss.js:98</key>
+		<string>-engineStatusFeedBack</string>
 		<key>SettingsEngine.js:188</key>
 		<string>-saveAccountData</string>
 		<key>SettingsEngine.js:19</key>
 		<string>-SettingsEngine</string>
 		<key>SettingsEngine.js:190</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:196</key>
+		<key>SettingsEngine.js:192</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:209</key>
+		<key>SettingsEngine.js:198</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:210</key>
+		<key>SettingsEngine.js:211</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:220</key>
+		<key>SettingsEngine.js:212</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:222</key>
 		<string>-loadProxySetting</string>
-		<key>SettingsEngine.js:231</key>
+		<key>SettingsEngine.js:233</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:236</key>
-		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:237</key>
+		<key>SettingsEngine.js:238</key>
 		<string>-loadSelectAccountList</string>
 		<key>SettingsEngine.js:239</key>
 		<string>-loadSelectAccountList</string>
+		<key>SettingsEngine.js:241</key>
+		<string>-loadSelectAccountList</string>
+		<key>SettingsEngine.js:56</key>
+		<string>-setRunningAccount</string>
 		<key>SettingsEngine.js:57</key>
 		<string>-setRunningAccount</string>
 		<key>SettingsEngine.js:58</key>
@@ -47,7 +65,11 @@
 		<key>SettingsEngine.js:59</key>
 		<string>-setRunningAccount</string>
 		<key>SimpleHTTPRequest.js:45</key>
-		<string>send</string>
+		<string>-send</string>
+		<key>SimpleHTTPRequest.js:67</key>
+		<string>-system_handler</string>
+		<key>SimpleHTTPRequest.js:81</key>
+		<string>-system_handler</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -63,8 +85,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {984, 286}}</string>
-			<string>{{0, 296}, {984, 360}}</string>
+			<string>{{0, 0}, {950, 303}}</string>
+			<string>{{0, 313}, {950, 360}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -72,25 +94,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>6841f8683d46af41</string>
+		<string>3e210331c449af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojXamnUz/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojGtS9JU/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>2</integer>
+		<integer>3</integer>
 		<key>percent-x</key>
-		<real>0.19062499701976776</real>
+		<real>0.13359375298023224</real>
 		<key>percent-y</key>
-		<real>0.25624999403953552</real>
+		<real>0.15625</real>
 		<key>pos-x</key>
-		<integer>690</integer>
+		<integer>763</integer>
 		<key>pos-y</key>
-		<integer>205</integer>
+		<integer>463</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -108,12 +130,12 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 677}}</string>
-			<string>{{245, 0}, {985, 677}}</string>
+			<string>{{0, 0}, {244, 694}}</string>
+			<string>{{245, 0}, {951, 694}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>6 80 1229 698 0 0 1280 778 </string>
+	<string>14 63 1195 715 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -128,8 +150,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 300}}</string>
-			<string>{{0, 310}, {246, 346}}</string>
+			<string>{{0, 0}, {246, 308}}</string>
+			<string>{{0, 318}, {246, 355}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -155,8 +177,8 @@
 	<array>
 		<array>
 			<integer>0</integer>
-			<integer>1</integer>
-			<integer>5</integer>
+			<integer>0</integer>
+			<integer>8</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
@@ -167,7 +189,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>back</string>
+		<string>front</string>
 	</array>
 </dict>
 </plist>

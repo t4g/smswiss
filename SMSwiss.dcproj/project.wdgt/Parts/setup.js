@@ -19,6 +19,7 @@ var dashcodePartSpecs = {
     "proxyPortLabel": { "creationFunction": "CreateText", "text": "Proxy port:" },
     "selectedAccount": { "creationFunction": "CreatePopupButton", "leftImageWidth": 10, "onchange": "globalSetRunningAccount", "options": [["", "account0"], ["", "account1"], ["", "account2"], ["", "account3"], ["", "account4"]], "rightImageWidth": 16 },
     "sendButton": { "creationFunction": "CreateGlassButton", "onclick": "sendNewSMS", "text": "Send" },
+    "statusDesc": { "creationFunction": "CreateText" },
     "text": { "creationFunction": "CreateText", "text": "Addvanced:" },
     "text3": { "creationFunction": "CreateText", "text": "Vibration:" },
     "userNameLabel": { "creationFunction": "CreateText", "text": "User Name:" }

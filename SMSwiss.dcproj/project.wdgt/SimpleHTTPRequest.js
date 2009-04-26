@@ -75,7 +75,7 @@ function system_handler(systemCommand) {
 			return callBackFunction();
 	}
 			
-	var headerend=stdout.indexOf("<htm");
+	var headerend=stdout.indexOf("HTTP");
 		
 										
 	if (headerend == -1) {

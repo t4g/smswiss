@@ -168,10 +168,12 @@ function initSMSEngine(){
     if(provider == 2) //Yallo
         smsEngine = new SMSEngineYallo(userName,password);
         
-    //if(provider == 3) //ETHZ
-    //    smsEngine = new SMSEngineETHZ(userName,password);
+    if(provider == 3) //ETHZ
+        smsEngine = new SMSEngineETHZ(userName,password);
+    
+    //Start the authentication process and get the available sms count
+    smsEngine.getAvailSMS();
         
-
 }
 
 

@@ -79,7 +79,7 @@ function sendSMS(smsText,number){
 
 function sendSingleSMS(queue_mess,number){
 
-	engineStatusFeedBack("Sending");
+	engineStatusFeedBack(SMSEngineStatus.sendingSMS);
 		
 	var mess = queue_mess[queue_mess.length-1]; //Mess to send
 
@@ -103,7 +103,7 @@ function doAuthentication(queue_mess,number)
 
 	isJustAuthenticated=true;
 	
-	engineStatusFeedBack("Logging");
+	engineStatusFeedBack(SMSEngineStatus.registeringUser);
 	
 	var feedURL = "http://mip.sunrise.ch/mip/dyn/login/login?SAMLRequest=fVJLT8MwDL4j8R%2Bi3PsaQqBoLRogxCQe1dZx4Ja23hrW2iVON%2Fj3dB0T4wDHOJ%2B%2Fh%2B3x1UdTiw1YNoSxjPxQCsCCSoOrWC6yO%2B9SXiWnJ2PWTd2qSecqnMF7B%2BxE34msho9YdhYVaTasUDfAyhVqPnl8UCM%2FVK0lRwXVUkxvY4lr0%2BZ5uXwDRLOuqoZyXKOharkCg3n7ttZUEpEULwdbo52tKXMHU2Sn0fWlMLz0wnNvdJFFkTo%2FU%2BHoVYr0W%2Bna4D7Bf7byPYjVfZalXvo8zwaCjSnBPvXoWK6IVjX4BTVSTJjBut7ODSF3Ddg52I0pYDF7iGXlXMsqCLbbrf%2FTFOiAO7SG%2B1cV6IJ3IVLNbDY9ubMdyGQYrBqy2aOJ%2Fu9cH7zI5EdtHBxRJd8L2%2BWY3qZUm%2BJTTOqatjcWtDvIizuyjXZ%2Fq0V%2BNFRM6S0HqOqQWyjM0kApRZDsVX9fRn8vXw%3D%3D";
 
@@ -120,7 +120,7 @@ function doAuthentication(queue_mess,number)
 
 function loadSMS(){
 
-	engineStatusFeedBack("Updating");
+	engineStatusFeedBack(SMSEngineStatus.loadingAccountStatus);
 	
 		
 	var feedURL = "http://mip.sunrise.ch/mip/dyn/sms/sms?.lang=de";
@@ -142,7 +142,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	if (xmlRequest.status != 200) {
 		alert("Error fetching session id data: HTTP status " + xmlRequest.status);
-		return engineFeedBack("ConnectionError");
+		return engineFeedBack(SMSEngineFeedBack.connectionError);
 	}
 	
 	
@@ -152,11 +152,11 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 		innerSessionID=-1;
 		if(withAutentication){ //In case we are doing the autentication do not check the session
 			alert("Unable to log in!");
-			return engineFeedBack("LogError");
+			return engineFeedBack(SMSEngineFeedBack.authenticationError);
 		}else{
 			if(isJustAuthenticated){
 				alert("Unable to set cookies!");
-				return engineFeedBack("CookieError");
+				return engineFeedBack(SMSEngineFeedBack.cookieError);
 			}else{
 				return doAuthentication(queue_mess,number);
 			}
@@ -178,16 +178,16 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	remainningSMS= getSMSCount(xmlRequest.responseText);
 	if (remainningSMS == -1) {
 			alert("Unable to retreive remaining sms");
-			return engineFeedBack("SMSCountError");
+			return engineFeedBack(SMSEngineFeedBack.smsCountError);
 	}
 
 	if(queue_mess == null) //There is no sms to send it was a simply login
-		return engineFeedBack("LogOK");
+		return engineFeedBack(SMSEngineFeedBack.authenticationSuccessful);
 	
 	//If a sms was sent check it
 	if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
 		alert("Unable to send sms!");
-		return engineFeedBack("SMSError");
+		return engineFeedBack(SMSEngineFeedBack.smsSendingError);
 	}
 	
 	//If we are here is because we have sent an sms
@@ -205,7 +205,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	}
 
 	//There is no sms to send
-	return engineFeedBack("SMSOK");
+	return engineFeedBack(SMSEngineFeedBack.smsSent);
 
 }
 

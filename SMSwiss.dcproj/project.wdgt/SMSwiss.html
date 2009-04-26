@@ -14,6 +14,7 @@
     <script type="text/javascript" src="Parts/GlassButton.js" charset="utf-8"></script>
     <script type="text/javascript" src="Tools.js" charset="utf-8"></script>
     <script type="text/javascript" src="SimpleHTTPRequest.js" charset="utf-8"></script>
+    <script type="text/javascript" src="SMSEngineETHZ.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSEngineYallo.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSEngineCablecom.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSEngineSunriseMail.js" charset="utf-8"></script>
@@ -23,20 +24,6 @@
     <script type="text/javascript" src="Parts/PopupButton.js" charset="utf-8"></script>
     <script type="text/javascript" src="Parts/List.js" charset="utf-8"></script>
     <script type="text/javascript" src="Parts/ButtonHandler.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        var addressBoockEngine = new addressBoock();
-        var settingsEngine = new SettingsEngine();
-        
-        function globalSearchKeyPressed(event){
-            addressBoockEngine.searchKeyPressed(event);
-        }
-        function globalSearchContacts(event){
-            addressBoockEngine.searchContacts(event);
-        }
-        function globalSetRunningAccount(event){
-            settingsEngine.setRunningAccount(event);
-        }
-    </script>
 </head>
 <body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
     <div id="front">
@@ -48,6 +35,8 @@
         <input type="search" value="" placeholder="" results="10" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.searchfield" id="receiverNumberField" onsearch="globalSearchContacts(event)" incremental="incremental" onkeydown="globalSearchKeyPressed(event)">
         <textarea apple-part="com.apple.Dashcode.part.textarea" id="messageField"></textarea>
         <div apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" id="sendButton"></div>
+        <img src="Images/loading.gif" id="statusIcon">
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="statusDesc"></div>
     </div>
     <div id="back">
         <img src="Images/back.png" alt="" apple-part="com.apple.Dashcode.part.backimage" apple-style="image-radius: 12,12,12,12;" id="backImg" apple-locked="true">
