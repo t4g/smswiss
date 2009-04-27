@@ -113,7 +113,10 @@ function engineFeedBack(event){
         return;
     }
     if(event == SMSEngineFeedBack.authenticationSuccessful){
-        statusDesc.innerHTML = "SMS left: " + settingsEngine.getSMSEngine().getSMSCount();
+        if(settingsEngine.getSMSEngine().getSMSCount() != null)
+            statusDesc.innerHTML = "SMS left: " + settingsEngine.getSMSEngine().getSMSCount();
+        else
+            statusDesc.innerHTML = "";
         return;
     }
         
