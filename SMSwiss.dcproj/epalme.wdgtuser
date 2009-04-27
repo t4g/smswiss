@@ -36,25 +36,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>05c1f3b4cd30af41</string>
+		<string>fe0a3908d74baf41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojCUm1K5/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojPjF3SF/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>4</integer>
+		<integer>3</integer>
 		<key>percent-x</key>
-		<real>0.4088541567325592</real>
+		<real>0.35781249403953552</real>
 		<key>percent-y</key>
-		<real>0.39750000834465027</real>
+		<real>0.35749998688697815</real>
 		<key>pos-x</key>
-		<integer>785</integer>
+		<integer>885</integer>
 		<key>pos-y</key>
-		<integer>511</integer>
+		<integer>553</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -75,7 +75,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>249 146 1475 1032 0 0 1920 1178 </string>
+	<string>156 146 1475 1032 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -114,11 +114,7 @@
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array>
-		<array>
-			<integer>0</integer>
-		</array>
-	</array>
+	<array/>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>

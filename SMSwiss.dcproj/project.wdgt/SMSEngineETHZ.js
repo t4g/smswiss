@@ -7,11 +7,11 @@ this.name = "SMSEngineETHZ";
 var xmlRequest = new XMLHttpRequest();// XMLHttpRequest();
 
 var innerSessionID = -1;
-var remainningSMS = 100;
+var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 
-var smsChars = 130;
+var smsChars = 160;
 var innerSMSCount = 0;
 var isJustAuthenticated = false;
 
@@ -40,16 +40,16 @@ this.isConnected = function () {
 };
 
 this.isSMSCountCritical = function () {
-  return (innerSMSCount < 3);
+  return false;
 };
 
 this.isSMSCountWarning = function () {
-  return (innerSMSCount < 5);
+  return false;
 };
 
 this.hasEnoughCredits = function (messLenght) {
-  //return (messLenght <= smsChars * innerSMSCount);
-  return true;  
+  if(remainningSMS == null) return true;  
+  else return false; //if it is not null it means it is 0  
 };
 
 
@@ -59,38 +59,34 @@ function sendSMS(smsText,number){
   if(smsText == null)
     return;
 
-  //Partition mess in multiple sms
-  var queue_mess = new Array();
-  while(smsText.length>smsChars) {
-    queue_mess.push(smsText.substring(0, smsChars));
-    smsText=smsText.substring(smsChars, smsText.length);
-  }
-  queue_mess.push(smsText);
-  sendSingleSMS(queue_mess,number);
+  sendSingleSMS(smsText,number); //No need to split mess
 }
 
-function sendSingleSMS(queue_mess,number){
+function sendSingleSMS(mess,number){
   engineStatusFeedBack(SMSEngineStatus.sendingSMS);
-  var mess = queue_mess[queue_mess.length-1]; //Mess to send
-  var feedURL = "https://www.sms.ethz.ch/send.pl?action=sendsms&username="+username
-              +"&password="+password
-              +"&originator=auto"
-              +"&message="+mess
-              +"&number="+number;
-  
-  var onloadHandler = function() {responseHandler(xmlRequest, queue_mess, number, false, true);};
+  var onloadHandler = function() {responseHandler(xmlRequest, mess, number, false, true);};
   xmlRequest.onload = onloadHandler;
-  xmlRequest.open("GET",feedURL, true);
-  xmlRequest.send();
+
+  var smsgateway = "https://idn.ethz.ch/cgi-bin/sms/send.pl";	
+  xmlRequest.open("POST", smsgateway);
+  xmlRequest.setRequestHeader("Cache-Control", "no-cache");
+			
+  var params = "action=sendsms&username="+URLEncode(username)+
+							"&password="+URLEncode(password)+
+							"&originator=auto&message="+URLEncode(mess)+
+							"&number="+URLEncode(number);
+                            
+                            
+  xmlRequest.send(params);
 }
 
 //This is acctualy the authentication method but for this engine we have first to autenticate
-function doAuthentication(queue_mess,number) 
+function doAuthentication(mess,number) 
 {
   isJustAuthenticated=true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
   var feedURL = "https://www.sms.ethz.ch/send.pl?username="+username+"&password="+password;
-  var onloadHandler = function() { responseHandler(xmlRequest, queue_mess, number, true, false); };
+  var onloadHandler = function() { responseHandler(xmlRequest, mess, number, true, false); };
   xmlRequest.onload = onloadHandler;
   xmlRequest.open("GET", feedURL, true);
   xmlRequest.send();
@@ -102,15 +98,23 @@ function doAuthentication(queue_mess,number)
 // Single Respones Handler
 //----------------------------------------------------------------------------------
 
-function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSendSMS){
+function responseHandler(xmlRequest,mess,number,withAutentication,withSendSMS){
+  
+   if(checkIFsmsAreExided(xmlRequest.responseText)){
+        remainningSMS=0;
+        return engineFeedBack(SMSEngineFeedBack.smsSendingError);
+   }else
+        remainningSMS = null;
+   
+        
   
    if(withAutentication){
     
     if(getIsLogedIn(xmlRequest.responseText)){
         innerSessionID = 1;
         engineFeedBack(SMSEngineFeedBack.authenticationSuccessful);
-        if(queue_mess != null)
-            return sendSingleSMS(queue_mess, number);
+        if(mess != null)
+            return sendSingleSMS(mess, number);
     }else{
         innerSessionID = -1;
         alert("Unable to log in!  (SMSEngineETHZ)");
@@ -126,18 +130,6 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
     return engineFeedBack(SMSEngineFeedBack.smsSendingError);
   }
   
-  //If we are here is because we have sent an sms
-  queue_mess.pop(); //If no error happens remove the sent message from the queue
-
-  //If there is other sms to send send it;
-  if(queue_mess.length){
-    return setTimeout(sendTimeOutedSingleSMS, 2000);
-  }
-
-  //This function exist to create a local scope for the setTimeout call
-  function sendTimeOutedSingleSMS(){
-    return sendSingleSMS(queue_mess, number);
-  }
 
   //There is no sms to send
   return engineFeedBack(SMSEngineFeedBack.smsSent);
@@ -165,5 +157,15 @@ function getIsLogedIn(html){
   }
   return false;
 }
+
+
+function checkIFsmsAreExided(html){
+  if (html.indexOf("500") != -1 && html.indexOf("exceeded") != -1) { 
+    return true;
+  }
+  return false;
+}
+
+
 
 }
