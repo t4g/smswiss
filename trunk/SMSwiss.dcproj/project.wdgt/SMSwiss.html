@@ -28,14 +28,14 @@
 </head>
 <body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
     <div id="front">
-        <div id="receiverAutoComplete">
+        <div id="receiverAutoComplete" apple-default-image-visibility="hidden">
         </div>
         <img src="Images/Skin.png" id="background">
         <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
         <div apple-part="com.apple.Dashcode.part.lozengepopupbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 1; image-button-type: 1; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 10,10,10,10; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="selectedAccount"></div>
         <input type="search" value="" placeholder="" results="10" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.searchfield" id="receiverNumberField" onsearch="globalSearchContacts(event)" incremental="incremental" onkeydown="globalSearchKeyPressed(event)">
         <textarea apple-part="com.apple.Dashcode.part.textarea" id="messageField"></textarea>
-        <img src="Images/loading.gif" id="statusIcon">
+        <img src="Images/loading.gif" id="statusIcon" apple-default-image-visibility="hidden">
         <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="statusDesc"></div>
         <div apple-part="com.apple.Dashcode.part.lozengetextbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 1; image-button-type: 0; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 9,9,9,9; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="sendButton"></div>
     </div>

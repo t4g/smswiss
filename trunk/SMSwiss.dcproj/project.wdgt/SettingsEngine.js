@@ -287,11 +287,16 @@ function setPreferenceForKey(value,key){
         result = value;
     }
     widget.setPreferenceForKey(result,createInstancePreferenceKey(key));
+    widget.setPreferenceForKey(result,key);
 }
 //We have only instance preference key this because users can add multiple times the same widget to set up more
 //than only five accounts.
 function getPreferenceForKey(key){
     var result = widget.preferenceForKey(createInstancePreferenceKey(key));
+    //check global setting
+    if (!result) { 
+        result = widget.preferenceForKey(key);
+    }
   
     if (!result) { //If undefined return the default value
 		result = defaultPreferenceValues[key];

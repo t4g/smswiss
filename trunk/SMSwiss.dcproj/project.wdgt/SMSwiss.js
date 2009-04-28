@@ -31,7 +31,9 @@ var SMSEngineFeedBack = {
                 smsCountError :"SMS count error!",
                 smsSendingError: "SMS sending error!",
                 smsSent: "SMS successful sent!",
-                authenticationSuccessful: "User successful authenticated!"
+                authenticationSuccessful: "User successful authenticated!",
+                
+                invalidPhoneNumberError: "Invalid phone number!" //Special feedBack not used by the SMSEngine
 };
 
 //
@@ -137,9 +139,18 @@ function sendNewSMS()
                 var numCheckregex = new RegExp('^[+]?[0-9./ ]+');
 
                 if(numCheckregex.exec(phoneNumber) == null){ //The number is not valid
-                      //TODO: allert that the number is not valid
+                      engineFeedBack(SMSEngineFeedBack.invalidPhoneNumberError);
                       return;
-                }       
+                }   
+                phoneNumber =  phoneNumber.replace(/-/g, "");   //Remove all dash
+                phoneNumber =  phoneNumber.replace(/\//g, "");  //Remove all slash 
+                phoneNumber =  phoneNumber.replace(/\\/g, "");  //Remove all back slash
+                phoneNumber =  phoneNumber.replace(/ /g, "");   //Remove all spaces
+                phoneNumber =  phoneNumber.replace(/_/g, "");   //Remove all undersocer
+                phoneNumber =  phoneNumber.replace(/\./g, "");   //Remove all dot   
+                
+                
+                
                 settingsEngine.getSMSEngine().Send(messageField.value,phoneNumber);
         }else{
             alert("The sms engine is not in state to send sms");
