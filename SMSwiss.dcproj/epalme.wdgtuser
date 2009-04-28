@@ -12,6 +12,10 @@
 		<string>SMSEngineSunriseMail</string>
 		<key>SMSEngineSunriseMail.js:19</key>
 		<string>getAvailSMS</string>
+		<key>SMSwiss.js:145</key>
+		<string>sendNewSMS</string>
+		<key>SMSwiss.js:154</key>
+		<string>sendNewSMS</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -27,8 +31,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1230, 324}}</string>
-			<string>{{0, 334}, {1230, 656}}</string>
+			<string>{{0, 0}, {1225, 363}}</string>
+			<string>{{0, 373}, {1225, 656}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -36,25 +40,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>fe0a3908d74baf41</string>
+		<string>0ec05ee9144eaf41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojPjF3SF/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojybU6tG/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>3</integer>
+		<integer>4</integer>
 		<key>percent-x</key>
-		<real>0.35781249403953552</real>
+		<real>0.39270833134651184</real>
 		<key>percent-y</key>
-		<real>0.35749998688697815</real>
+		<real>0.16249999403953552</real>
 		<key>pos-x</key>
-		<integer>885</integer>
+		<integer>754</integer>
 		<key>pos-y</key>
-		<integer>553</integer>
+		<integer>787</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -70,12 +74,12 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 1011}}</string>
-			<string>{{245, 0}, {1231, 1011}}</string>
+			<string>{{0, 0}, {244, 1050}}</string>
+			<string>{{245, 0}, {1226, 1050}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>156 146 1475 1032 0 0 1920 1178 </string>
+	<string>156 107 1470 1071 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -90,8 +94,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 388}}</string>
-			<string>{{0, 398}, {246, 592}}</string>
+			<string>{{0, 0}, {246, 403}}</string>
+			<string>{{0, 413}, {246, 616}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -103,18 +107,13 @@
 			<integer>0</integer>
 			<integer>0</integer>
 		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>4</integer>
-		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array/>
+	<array>
+		<array>
+			<integer>0</integer>
+		</array>
+	</array>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>
