@@ -14,24 +14,24 @@
 		<string>-sendSingleSMS</string>
 		<key>SMSEngineETHZ.js:93</key>
 		<string>-doAuthentication</string>
-		<key>SMSwiss.js:105</key>
+		<key>SMSwiss.js:106</key>
+		<string>-</string>
+		<key>SMSwiss.js:124</key>
 		<string>-engineFeedBack</string>
-		<key>SMSwiss.js:123</key>
-		<string>-engineFeedBack</string>
-		<key>SMSwiss.js:220</key>
-		<string></string>
 		<key>SMSwiss.js:226</key>
-		<string>-showSettingPage</string>
+		<string>showFront</string>
+		<key>SMSwiss.js:232</key>
+		<string>-</string>
 		<key>SMSwiss.js:39</key>
 		<string>-</string>
 		<key>SMSwiss.js:46</key>
 		<string>-load</string>
-		<key>SMSwiss.js:49</key>
+		<key>SMSwiss.js:50</key>
 		<string>-</string>
-		<key>SMSwiss.js:51</key>
+		<key>SMSwiss.js:52</key>
 		<string>-</string>
-		<key>SMSwiss.js:98</key>
-		<string>-engineStatusFeedBack</string>
+		<key>SMSwiss.js:99</key>
+		<string>-</string>
 		<key>SettingsEngine.js:188</key>
 		<string>-saveAccountData</string>
 		<key>SettingsEngine.js:19</key>
@@ -94,11 +94,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>3e210331c449af41</string>
+		<string>8d9ac7d9184eaf41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojGtS9JU/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojvd9kdu/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -106,9 +106,9 @@
 		<key>percent-type</key>
 		<integer>3</integer>
 		<key>percent-x</key>
-		<real>0.13359375298023224</real>
+		<real>0.13203124701976776</real>
 		<key>percent-y</key>
-		<real>0.15625</real>
+		<real>0.14875000715255737</real>
 		<key>pos-x</key>
 		<integer>763</integer>
 		<key>pos-y</key>
@@ -178,7 +178,7 @@
 		<array>
 			<integer>0</integer>
 			<integer>0</integer>
-			<integer>8</integer>
+			<integer>5</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
