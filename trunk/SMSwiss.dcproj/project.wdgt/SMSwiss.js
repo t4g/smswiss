@@ -45,6 +45,7 @@ function load()
     settingsEngine.loadSettings();
     settingsEngine.loadAccountData(0); //Load the first account data into the account setting page by default
     dashcode.setupParts();
+    setTimeout("checkForUpdate()",50);
 }
 
 
@@ -126,6 +127,11 @@ function engineFeedBack(event){
     statusIcon.src = "images/error.png"
     statusIcon.style.visibility="visible";
     statusDesc.innerHTML = event;
+}
+
+function needUpdateFeedBack(version){
+	alert("A new version is avilable, please check our web site!");
+	messageField.value="A new version of the SMSwiss widget is available, download it from: http://code.google.com/p/smswiss/";
 }
 
 function sendNewSMS()
