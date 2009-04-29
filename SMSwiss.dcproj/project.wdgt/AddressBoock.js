@@ -54,7 +54,12 @@ function addressBoock(){
     
     //This metod catch the key event before the search method, some times depending on the pressed key the search is disabled.
     this.searchKeyPressed = function(event){
-
+        
+        if(event == null){
+            receiverAutoComplete.style.visibility="hidden";
+            return
+        }
+        
         performSearch = true; //by default the search has to be performed
         
         if(event.keyCode==40){  //down key   

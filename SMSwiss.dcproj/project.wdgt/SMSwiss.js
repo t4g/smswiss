@@ -260,3 +260,12 @@ function showSettingPage(event)
 
 
 }
+
+
+function clearSMS(event)
+{
+    receiverNumberField.value = "";
+    messageField.value="";
+    statusIcon.style.visibility="hidden";
+    addressBoockEngine.searchKeyPressed(null);
+}
