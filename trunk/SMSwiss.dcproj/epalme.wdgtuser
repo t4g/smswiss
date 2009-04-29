@@ -4,7 +4,7 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
-		<key>AddressBoock.js:62</key>
+		<key>AddressBoock.js:67</key>
 		<string>-searchKeyPressed</string>
 		<key>SMSEngineCablecom.js:19</key>
 		<string>getAvailSMS</string>
@@ -40,11 +40,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>0ec05ee9144eaf41</string>
+		<string>b3437c9d4551af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojybU6tG/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojlSOWls/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>

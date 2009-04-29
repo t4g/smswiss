@@ -11,6 +11,7 @@ var dashcodePartSpecs = {
     "done": { "creationFunction": "CreateGlassButton", "onclick": "showFront", "text": "Done" },
     "info": { "backgroundStyle": "black", "creationFunction": "CreateInfoButton", "foregroundStyle": "white", "frontID": "front", "onclick": "showBack" },
     "label": { "creationFunction": "CreateText", "text": "Item" },
+    "newButton": { "creationFunction": "CreateButton", "leftImageWidth": 10, "onclick": "clearSMS", "rightImageWidth": 10, "text": "New" },
     "passwordLabel": { "creationFunction": "CreateText", "text": "Password:" },
     "popup": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "showSettingPage", "options": ["Accounts", "Settings", "About"], "rightImageWidth": 16 },
     "providerLabel": { "creationFunction": "CreateText", "text": "Provider:" },

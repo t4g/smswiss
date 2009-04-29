@@ -71,10 +71,10 @@ function sendSingleSMS(mess,number){
   xmlRequest.open("POST", smsgateway);
   xmlRequest.setRequestHeader("Cache-Control", "no-cache");
 			
-  var params = "action=sendsms&username="+URLEncode(username)+
-							"&password="+URLEncode(password)+
-							"&originator=auto&message="+URLEncode(mess)+
-							"&number="+URLEncode(number);
+  var params = "action=sendsms&username="+escape(username)+
+							"&password="+escape(password)+
+							"&originator=auto&message="+escape(mess)+
+							"&number="+escape(number);
                             
                             
   xmlRequest.send(params);
@@ -85,7 +85,7 @@ function doAuthentication(mess,number)
 {
   isJustAuthenticated=true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
-  var feedURL = "https://www.sms.ethz.ch/send.pl?username="+username+"&password="+password;
+  var feedURL = "https://www.sms.ethz.ch/send.pl?username="+escape(username)+"&password="+escape(password);
   var onloadHandler = function() { responseHandler(xmlRequest, mess, number, true, false); };
   xmlRequest.onload = onloadHandler;
   xmlRequest.open("GET", feedURL, true);
