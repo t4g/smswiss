@@ -6,7 +6,7 @@ var xmlRequest = new SimpleHTTPRequest();// XMLHttpRequest();
 
 
 var innerSessionID = -1;
-var remainningSMS = 0;
+var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 
@@ -176,7 +176,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	// Retreive remaining SMS
 	remainningSMS= getSMSCount(xmlRequest.responseText);
-	if (remainningSMS == -1) {
+	if (remainningSMS == null) {
 			alert("Unable to retreive remaining sms");
 			return engineFeedBack(SMSEngineFeedBack.smsCountError);
 	}
@@ -216,16 +216,33 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 
 function getSMSisSent(html){
 	
-	//Check if the page contains contents that you obtain when login is successfull		
-	if (html.indexOf("SMS wurde gesendet") != -1) {
+//Init vars
+    var first = -1;
+    var second = -1;
+    var difference = -1;
+	var maxDistance = 50;	
+	
+    //German check
+    first = html.indexOf("SMS wurde");
+    second = html.indexOf("gesendet",first);
+    difference = second -first;
+    if (first!= -1 && second != -1 && difference < maxDistance) {
+			return true;
+	}
+    
+    //Franch check
+    first = html.indexOf("Un SMS");
+    second = html.indexOf("envoy&#233;",first);
+    difference = second -first;
+    if (first!= -1 && second != -1 && difference < maxDistance) {
 			return true;
 	}
 
-	if (html.indexOf("SMS inviato") != -1) {
-			return true;
-	}
-	
-	if (html.indexOf("Un SMS a &#233;t&#233; envoy&#233;") != -1) {
+     //Italian check
+    first = html.indexOf("SMS");
+    second = html.indexOf("inviato",first);
+    difference = second -first;
+    if (first!= -1 && second != -1 && difference < maxDistance) {
 			return true;
 	}
 
@@ -273,7 +290,7 @@ function getSMSCount(html){
 	
 	if (html.indexOf(smsDetecStr1) == -1) {
 		alert("Unable to retreive session id!");
-		return-1;
+		return null;
 	}
 	
 	var begin  = html.indexOf(smsDetecStr1) + smsDetecStr1.length;

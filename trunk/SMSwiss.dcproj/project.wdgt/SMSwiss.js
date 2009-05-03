@@ -15,6 +15,7 @@ function globalSearchContacts(event){
 }
 function globalSetRunningAccount(event){
             settingsEngine.setRunningAccount(event);
+            countChars(null);// Update the sms count in case the engine is changed
 }
  
  
@@ -27,7 +28,7 @@ var SMSEngineStatus = {
 var SMSEngineFeedBack = {
                 connectionError : "Connection error!",
                 authenticationError: "Authentication error!",
-                cookieError: "Cookie erro!r",
+                cookieError: "Cookie error!",
                 smsCountError :"SMS count error!",
                 smsSendingError: "SMS sending error!",
                 smsSent: "SMS successful sent!",
@@ -46,6 +47,7 @@ function load()
     settingsEngine.loadAccountData(0); //Load the first account data into the account setting page by default
     dashcode.setupParts();
     setTimeout("checkForUpdate()",50);
+    
 }
 
 
@@ -108,25 +110,35 @@ function engineFeedBack(event){
     alert(event);
     
     statusIcon.style.visibility="hidden";
+    statusDesc.innerHTML = "";
+    
+    if(settingsEngine.getSMSEngine().getSMSCount() != null){
+            statusDesc.innerHTML = "SMS left: " + settingsEngine.getSMSEngine().getSMSCount();
+    }
     
     if(event == SMSEngineFeedBack.smsSent){
         statusIcon.src = "images/sent.png"
         statusIcon.style.visibility="visible";
-        statusDesc.innerHTML = event;
+        
+        if(settingsEngine.getDoVibrate()){
+            setTimeout('shake_widget(0,3)', 40);
+        }
+        if(settingsEngine.getDoClear()){
+            clearSMS(null);
+        } 
+
         return;
     }
+    
+    
+    
     if(event == SMSEngineFeedBack.authenticationSuccessful){
-        if(settingsEngine.getSMSEngine().getSMSCount() != null)
-            statusDesc.innerHTML = "SMS left: " + settingsEngine.getSMSEngine().getSMSCount();
-        else
-            statusDesc.innerHTML = "";
         return;
     }
         
         
     statusIcon.src = "images/error.png"
     statusIcon.style.visibility="visible";
-    statusDesc.innerHTML = event;
 }
 
 function needUpdateFeedBack(version){
@@ -268,4 +280,29 @@ function clearSMS(event)
     messageField.value="";
     statusIcon.style.visibility="hidden";
     addressBoockEngine.searchKeyPressed(null);
+}
+
+
+function countChars(event)
+{
+	
+	if (messageField.value=="") {
+		counter.innerHTML="";
+		return;
+	}
+
+	//((... | 0) is like casting to integer
+	counter.innerHTML = ((messageField.value.length-1)/settingsEngine.getSMSEngine().GetSMSCharsCount() | 0)+1 + " - " + messageField.value.length;
+}
+
+function shake_widget(count,pad) {
+	front.style.left= pad + "px";
+	
+    pad *= -1;
+    count++;
+	if (count > 9) {
+		front.style.left="0px";
+        return;
+	} else
+		setTimeout('shake_widget('+count+','+pad+')', 40);
 }

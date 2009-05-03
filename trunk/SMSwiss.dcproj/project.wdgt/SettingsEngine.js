@@ -14,13 +14,20 @@ var defaultPreferenceValues = {
                 userNames: ["", "", "", "", ""],
                 passwords: ["", "", "", "", ""],
                 providers: [0, 0, 0,0,0],
-                ruuningAccount:0
+                ruuningAccount:0,
+                proxy:null,
+                proxyPort:null,
+                vibrate:true,
+                clearAfterSend:true
+                
     };
 
 
 var smsEngine = null;
 var proxy = null;
 var proxyPort = null;
+var vibrate = true;
+var clearAfterSend = true;
 
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
@@ -78,6 +85,15 @@ this.getProxyPort = function () {
 };
 
 
+this.getDoVibrate = function () {
+    return vibrate;
+};
+
+//Return the proxy user name for the requested accountID
+this.getDoClear = function () {
+    return clearAfterSend;
+};
+
 
 //Return the actual SMS account to use
 this.getSelectedAccount = function () {
@@ -130,6 +146,7 @@ this.loadSettings = function (){
     loadSelectAccountList(); //Set up the front selection list
     loadAccountsNames();
     loadProxySetting();
+    loadMixSettings();
     initSMSEngine(); //Load the SMSengine;
 }
 
@@ -194,6 +211,8 @@ function saveAccountData(){
             
             var proxy = document.getElementById("proxyText").value;
             var proxyPort = document.getElementById("proxyPortText").value;
+            var vibrate = checkboxVibrate.checked;
+            var clearAfterSend = checkboxClear.checked;
             
             if(proxy == ""){
                 proxy = undefined;
@@ -214,6 +233,8 @@ function saveAccountData(){
             setPreferenceForKey(accountsNames, "accountsNames");
             setPreferenceForKey(proxy, "proxy");
             setPreferenceForKey(proxyPort, "proxyPort");
+            setPreferenceForKey(vibrate, "vibrate");
+            setPreferenceForKey(clearAfterSend, "clearAfterSend");
 }
 
 //This function load the current proxy settings
@@ -221,10 +242,14 @@ function loadProxySetting(){
 
     proxy = getPreferenceForKey("proxy");
     proxyPort = getPreferenceForKey("proxyPort");
-    if(proxy == undefined){
-        proxy = null;
-        proxyPort = null;
-    }
+    
+}
+
+function loadMixSettings(){
+    vibrate = getPreferenceForKey("vibrate");
+    clearAfterSend = getPreferenceForKey("clearAfterSend");
+    checkboxVibrate.checked=vibrate;
+    checkboxClear.checked=clearAfterSend;
 }
 
 
@@ -294,11 +319,11 @@ function setPreferenceForKey(value,key){
 function getPreferenceForKey(key){
     var result = widget.preferenceForKey(createInstancePreferenceKey(key));
     //check global setting
-    if (!result) { 
+    if (result == undefined) { 
         result = widget.preferenceForKey(key);
     }
   
-    if (!result) { //If undefined return the default value
+    if (!result == undefined) { //If undefined return the default value
 		result = defaultPreferenceValues[key];
         return result;
 	}

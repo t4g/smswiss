@@ -7,7 +7,7 @@ this.name = "SMSEngineYallo";
 var xmlRequest = new SimpleHTTPRequest();// XMLHttpRequest();
 
 var innerSessionID = -1;
-var remainningSMS = 0;
+var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 
@@ -99,7 +99,7 @@ function doAuthentication(queue_mess,number)
 
 
 function loadSMS(){
-  engineStatusFeedBack(sendingSMS.loadingAccountStatus);
+  engineStatusFeedBack(SMSEngineStatus.loadingAccountStatus);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/pub/home/home.do";
   var onloadHandler = function() { responseHandler(xmlRequest, null, null, false, false); };
   xmlRequest.onload = onloadHandler;
@@ -147,7 +147,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   
   // Retreive remaining SMS
   remainningSMS = getSMSCount(xmlRequest.responseText);
-  if (remainningSMS == -1) {
+  if (remainningSMS == null) {
       alert("Unable to retreive remaining sms! (YalloSMSEngine)");
       return engineFeedBack(SMSEngineFeedBack.smsCountError);
   }
@@ -249,7 +249,7 @@ function getSMSCount(html){
   
   if (html.indexOf(smsDetecStr1) == -1) {
     alert("Unable to retreive SMS count!  (YalloSMSEngine)");
-    return -1;
+    return null;
   }
   
   var begin  = html.indexOf(smsDetecStr1) + smsDetecStr1.length;
