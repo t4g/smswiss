@@ -27,12 +27,12 @@
 	<key>CloseBoxInsetY</key>
 	<integer>14</integer>
 	<key>Height</key>
-	<integer>218</integer>
+	<integer>224</integer>
 	<key>MainHTML</key>
 	<string>SMSwiss.html</string>
 	<key>Plugin</key>
 	<string>AddressBook.widgetplugin</string>
 	<key>Width</key>
-	<integer>348</integer>
+	<integer>352</integer>
 </dict>
 </plist>

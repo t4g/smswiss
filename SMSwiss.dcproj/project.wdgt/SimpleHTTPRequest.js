@@ -74,16 +74,22 @@ function system_handler(systemCommand) {
 	if (systemCommand.status != 0) {
 			return callBackFunction();
 	}
+	
+    //Header check
+    if(stdout.indexOf("HTTP") ==-1)  return callBackFunction();
+    
+    var content = stdout;
+    //Header Remover
+    while(content.indexOf("HTTP") == 0){
+    
+        var headerend=content.indexOf("\r\n\r\n");
+        if(headerend<0) return callBackFunction();
+        content = content.substring(headerend+4, content.length);
+    }
+                    		
 			
-	var headerend=stdout.indexOf("HTTP");
-		
-										
-	if (headerend == -1) {
-			return callBackFunction();
-	}
-			
-	SimpleHTTPRequestObject.responseText=stdout.substring(headerend, stdout.length);    
-	SimpleHTTPRequestObject.header=stdout.substring(0, headerend);  
+	SimpleHTTPRequestObject.responseText=content;    
+	SimpleHTTPRequestObject.header=stdout.substring(0, stdout.length - content.length);  
 			
 		
 	SimpleHTTPRequestObject.status=200;

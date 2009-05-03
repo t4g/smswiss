@@ -4,7 +4,7 @@ this.name = "SMSEngineETHZ";
 
 // Since the AppleWebToolkit does not allow to set cookies
 // we are using a home made implementation of the XMLHttpRequest
-var xmlRequest = new XMLHttpRequest();// XMLHttpRequest();
+var xmlRequest = new SimpleHTTPRequest();// XMLHttpRequest();
 
 var innerSessionID = -1;
 var remainningSMS = null;

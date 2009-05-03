@@ -4,71 +4,97 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
+		<key>SMSEngineETHZ.js:103</key>
+		<string>-responseHandler</string>
 		<key>SMSEngineETHZ.js:107</key>
 		<string>-responseHandler</string>
 		<key>SMSEngineETHZ.js:110</key>
 		<string>-responseHandler</string>
+		<key>SMSEngineETHZ.js:35</key>
+		<string>-getSMSCount</string>
 		<key>SMSEngineETHZ.js:81</key>
 		<string>-sendSingleSMS</string>
 		<key>SMSEngineETHZ.js:84</key>
-		<string>-sendSingleSMS</string>
+		<string>-doAuthentication</string>
 		<key>SMSEngineETHZ.js:93</key>
 		<string>-doAuthentication</string>
-		<key>SMSwiss.js:106</key>
+		<key>SMSEngineYallo.js:117</key>
+		<string>-responseHandler</string>
+		<key>SMSwiss.js:101</key>
 		<string>-</string>
-		<key>SMSwiss.js:124</key>
+		<key>SMSwiss.js:108</key>
+		<string>-</string>
+		<key>SMSwiss.js:115</key>
 		<string>-engineFeedBack</string>
-		<key>SMSwiss.js:226</key>
-		<string>showFront</string>
-		<key>SMSwiss.js:232</key>
+		<key>SMSwiss.js:140</key>
+		<string>-engineFeedBack</string>
+		<key>SMSwiss.js:238</key>
+		<string>-showFront</string>
+		<key>SMSwiss.js:244</key>
 		<string>-</string>
-		<key>SMSwiss.js:39</key>
+		<key>SMSwiss.js:299</key>
+		<string>-shake_widget</string>
+		<key>SMSwiss.js:300</key>
+		<string>-shake_widget</string>
+		<key>SMSwiss.js:40</key>
 		<string>-</string>
-		<key>SMSwiss.js:46</key>
+		<key>SMSwiss.js:47</key>
 		<string>-load</string>
-		<key>SMSwiss.js:50</key>
-		<string>-</string>
 		<key>SMSwiss.js:52</key>
 		<string>-</string>
-		<key>SMSwiss.js:99</key>
+		<key>SMSwiss.js:54</key>
 		<string>-</string>
-		<key>SettingsEngine.js:188</key>
+		<key>SettingsEngine.js:205</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:19</key>
+		<key>SettingsEngine.js:207</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:209</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:214</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:217</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:230</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:231</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:236</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:237</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:24</key>
 		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:190</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:192</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:198</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:211</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:212</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:222</key>
+		<key>SettingsEngine.js:243</key>
 		<string>-loadProxySetting</string>
-		<key>SettingsEngine.js:233</key>
+		<key>SettingsEngine.js:249</key>
+		<string>-loadMixSettings</string>
+		<key>SettingsEngine.js:258</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:238</key>
+		<key>SettingsEngine.js:263</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:239</key>
+		<key>SettingsEngine.js:264</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:241</key>
+		<key>SettingsEngine.js:266</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:56</key>
+		<key>SettingsEngine.js:307</key>
+		<string>-setPreferenceForKey</string>
+		<key>SettingsEngine.js:321</key>
+		<string>-getPreferenceForKey</string>
+		<key>SettingsEngine.js:63</key>
 		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:57</key>
+		<key>SettingsEngine.js:64</key>
 		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:58</key>
+		<key>SettingsEngine.js:65</key>
 		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:59</key>
+		<key>SettingsEngine.js:66</key>
 		<string>-setRunningAccount</string>
 		<key>SimpleHTTPRequest.js:45</key>
 		<string>-send</string>
 		<key>SimpleHTTPRequest.js:67</key>
 		<string>-system_handler</string>
-		<key>SimpleHTTPRequest.js:81</key>
+		<key>SimpleHTTPRequest.js:79</key>
+		<string>-system_handler</string>
+		<key>SimpleHTTPRequest.js:90</key>
 		<string>-system_handler</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
@@ -94,30 +120,37 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>8d9ac7d9184eaf41</string>
+		<string>4622acd06e5caf41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojvd9kdu/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojfPy1VC/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>percent-x</key>
-		<real>0.13203124701976776</real>
+		<real>0.26093751192092896</real>
 		<key>percent-y</key>
-		<real>0.14875000715255737</real>
+		<real>0.2800000011920929</real>
 		<key>pos-x</key>
-		<integer>763</integer>
+		<integer>594</integer>
 		<key>pos-y</key>
-		<integer>463</integer>
+		<integer>224</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
 	<key>DeploymentOptions</key>
-	<dict/>
+	<dict>
+		<key>Save</key>
+		<true/>
+		<key>SavePath</key>
+		<string>/Users/Elia/Desktop</string>
+		<key>WidgetCompatibilityTag</key>
+		<integer>0</integer>
+	</dict>
 	<key>Design time language</key>
 	<string>en.lproj</string>
 	<key>MainSplitViewGeometry</key>
@@ -174,13 +207,7 @@
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>5</integer>
-		</array>
-	</array>
+	<array/>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>

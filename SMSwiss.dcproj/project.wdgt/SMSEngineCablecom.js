@@ -3,7 +3,7 @@ function SMSEngineCablecom(theUsername,thePassword) {
 
 var innerSessionID = -1;
 var innerJSessionID = -1
-var remainningSMS = -1;
+var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 var innerSMSCount=0;
@@ -176,7 +176,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	// Retreive remaining SMS
 	remainningSMS= getSMSCount(xmlRequest.responseText);
-	if (remainningSMS == -1) {
+	if (remainningSMS == null) {
 			alert("Unable to retreive remaining sms");
 			return engineFeedBack(SMSEngineFeedBack.smsCountError);
 	}
@@ -293,7 +293,7 @@ function getSMSCount(html){
 	
 	if (html.indexOf(smsDetecStr1) == -1) {
 		alert("Unable to retreive session id!");
-		return-1;
+		return null;
 	}
 	
 	var begin  = html.indexOf(smsDetecStr1) + smsDetecStr1.length;
