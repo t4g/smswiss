@@ -512,6 +512,7 @@ body {
     margin-top: 0px;
     top: 191px;
     left: 176px;
+    visibility: hidden;
 }
 
 #sendButton {

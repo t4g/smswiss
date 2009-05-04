@@ -93,6 +93,10 @@ function doAuthentication(queue_mess,number)
   xmlRequest.open("POST", feedURL, true);
   var postData = "j_username=" + URLEncode(username) + "&j_password=" + URLEncode(password);
   xmlRequest.setRequestHeader("Cookie", "captcha=0jfcCc8vQjJ4bTcAJxQYpw==___LGS/eRy/wlYtYrhd0/FFIw==;");
+  //xmlRequest.setRequestHeader("Cookie", "JSESSIONID=EF6737472FA878649F7F3C5BE4B6B23E.0905;");
+  
+  
+  
   xmlRequest.send(postData);
 }
 
