@@ -17,6 +17,13 @@ function globalSetRunningAccount(event){
             settingsEngine.setRunningAccount(event);
             countChars(null);// Update the sms count in case the engine is changed
 }
+
+function globalSaveMoreInfo(){
+    widget.setPreferenceForKey(moreInfoValue.value,moreInfoKey.innerHTML);
+    moreInfo.style.visibility="hidden";
+    settingsEngine.getSMSEngine().getAvailSMS();
+}
+
  
  
 var SMSEngineStatus = {
