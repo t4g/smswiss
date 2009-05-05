@@ -12,12 +12,26 @@
 		<string>SMSEngineSunriseMail</string>
 		<key>SMSEngineSunriseMail.js:19</key>
 		<string>getAvailSMS</string>
-		<key>SMSEngineYallo.js:121</key>
-		<string>responseHandler</string>
-		<key>SMSwiss.js:145</key>
+		<key>SMSEngineYallo.js:100</key>
+		<string>-doAuthentication</string>
+		<key>SMSEngineYallo.js:101</key>
+		<string>-doAuthentication</string>
+		<key>SMSEngineYallo.js:104</key>
+		<string>-doAuthentication</string>
+		<key>SMSEngineYallo.js:116</key>
+		<string>-doAuthentication</string>
+		<key>SMSEngineYallo.js:137</key>
+		<string>-responseHandler</string>
+		<key>SMSEngineYallo.js:92</key>
+		<string>-doAuthentication</string>
+		<key>SMSEngineYallo.js:95</key>
+		<string>-doAuthentication</string>
+		<key>SMSwiss.js:152</key>
 		<string>-needUpdateFeedBack</string>
-		<key>SMSwiss.js:154</key>
+		<key>SMSwiss.js:161</key>
 		<string>-sendNewSMS</string>
+		<key>SimpleHTTPRequest.js:70</key>
+		<string>-system_handler</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
@@ -42,25 +56,25 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>be17f7dfc95daf41</string>
+		<string>2f33bc5edc60af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojHhz64E/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojBOme7M/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>3</integer>
+		<integer>4</integer>
 		<key>percent-x</key>
-		<real>0.18020834028720856</real>
+		<real>0.3880208432674408</real>
 		<key>percent-y</key>
-		<real>0.31916666030883789</real>
+		<real>0.25499999523162842</real>
 		<key>pos-x</key>
-		<integer>1222</integer>
+		<integer>745</integer>
 		<key>pos-y</key>
-		<integer>593</integer>
+		<integer>670</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -81,7 +95,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>156 107 1470 1071 0 0 1920 1178 </string>
+	<string>306 107 1470 1071 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -118,8 +132,6 @@
 	<array>
 		<array>
 			<integer>0</integer>
-			<integer>0</integer>
-			<integer>6</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>

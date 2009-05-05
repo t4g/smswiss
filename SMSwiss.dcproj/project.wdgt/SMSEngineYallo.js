@@ -14,6 +14,7 @@ var password = thePassword;
 var smsChars = 130;
 var innerSMSCount = 0;
 var isJustAuthenticated = false;
+var captchaCode = undefined;
 
 this.getAvailSMS = function () {
   if(innerSessionID == -1)
@@ -85,14 +86,29 @@ function sendSingleSMS(queue_mess,number){
 //This is acctualy the authentication method but for this engine we have first to autenticate
 function doAuthentication(queue_mess,number) 
 {
+  
+  //Added by Elia Yallo special setup
+//--------------------------------------------------
+  captchaCode =  widget.preferenceForKey("Specila_YallocaptchaCode");
+
+  if(captchaCode == undefined){
+        moreInfoKey.innerHTML="Specila_YallocaptchaCode";
+        moreInfoText.innerHTML="Important note: the first time you want to use Yallow please provide us the value of the captcha cookie.If you don't know how to get it, please visit http://code.google.com/p/smswiss/w/yallo";
+        moreInfo.style.visibility="visible";
+        return engineFeedBack(SMSEngineFeedBack.smsSendingError);
+  }
+//--------------------------------------------------
+  
   isJustAuthenticated=true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/j_security_check.do";
+   
+  
   var onloadHandler = function() { responseHandler(xmlRequest, queue_mess, number, true, false); };
   xmlRequest.onload = onloadHandler;
   xmlRequest.open("POST", feedURL, true);
   var postData = "j_username=" + URLEncode(username) + "&j_password=" + URLEncode(password);
-  xmlRequest.setRequestHeader("Cookie", "captcha=0jfcCc8vQjJ4bTcAJxQYpw==___LGS/eRy/wlYtYrhd0/FFIw==;");
+  xmlRequest.setRequestHeader("Cookie", "captcha="+captchaCode+";");
   //xmlRequest.setRequestHeader("Cookie", "JSESSIONID=EF6737472FA878649F7F3C5BE4B6B23E.0905;");
   
   
