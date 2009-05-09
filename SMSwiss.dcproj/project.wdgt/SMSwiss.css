@@ -126,7 +126,7 @@ body {
     position: absolute;
     margin-top: 0px;
     left: 2px;
-    top: 41px;
+    top: 31px;
     width: auto;
     height: auto;
 }
@@ -140,7 +140,7 @@ body {
     position: absolute;
     margin-top: 0px;
     left: 2px;
-    top: 75px;
+    top: 56px;
     width: auto;
     height: auto;
 }
@@ -154,7 +154,7 @@ body {
     position: absolute;
     margin-top: 0px;
     left: 2px;
-    top: 103px;
+    top: 78px;
     width: auto;
     height: auto;
 }
@@ -175,8 +175,8 @@ body {
     font-family: HelveticaNeue;
     font-size: 10pt;
     left: 75px;
-    top: 69px;
     width: 128px;
+    top: 50px;
 }
 
 #passwordText {
@@ -185,8 +185,8 @@ body {
     font-family: HelveticaNeue;
     font-size: 10pt;
     left: 75px;
-    top: 98px;
     width: 128px;
+    top: 73px;
 }
 
 #providerList {
@@ -196,10 +196,10 @@ body {
     position: absolute;
     right: auto;
     margin-top: 0px;
-    top: 38px;
     left: 75px;
     width: 134px;
-    bottom: 65px;
+    top: 28px;
+    bottom: 75px;
     height: auto;
 }
 
@@ -683,4 +683,28 @@ body {
     height: auto;
     left: 8px;
     visibility: hidden;
+}
+
+#xtraAcountSettingLabel {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    left: 2px;
+    top: 101px;
+    width: auto;
+    height: auto;
+}
+
+#xtraAccountSettingText {
+    position: absolute;
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    left: 75px;
+    width: 128px;
+    top: 96px;
 }
