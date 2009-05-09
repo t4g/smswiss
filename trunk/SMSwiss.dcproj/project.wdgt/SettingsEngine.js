@@ -14,6 +14,7 @@ var defaultPreferenceValues = {
                 userNames: ["", "", "", "", ""],
                 passwords: ["", "", "", "", ""],
                 providers: [0, 0, 0,0,0],
+                xtras: ["", "", "", "", ""],
                 ruuningAccount:0,
                 proxy:null,
                 proxyPort:null,
@@ -53,8 +54,12 @@ this.loadAccountData= function(accountID){
             id.value=accountID;
             accountName.value = accountsNames[accountID];
             provider.object.setSelectedIndex(providers[accountID]);
+            provider.onchange = function(event) {
+                setXtraAccountSettings();
+            }
             userName.value=userNames[accountID];
             password.value=passwords[accountID];
+            setXtraAccountSettings();
 }
 
 //call this method to read from the selectedAccount list the selected item and store it
@@ -202,12 +207,14 @@ function saveAccountData(){
             var provider = document.getElementById("providerList");
             var userName = document.getElementById("userNameText");
             var password = document.getElementById("passwordText");
+            var xtra = document.getElementById("xtraAccountSettingText");
             
             var accountID = id.value;
             var accountsNames = getPreferenceForKey("accountsNames");
             var userNames = getPreferenceForKey("userNames");
             var passwords = getPreferenceForKey("passwords");
             var providers = getPreferenceForKey("providers");
+            var xtras = getPreferenceForKey("xtras");
             
             var proxy = document.getElementById("proxyText").value;
             var proxyPort = document.getElementById("proxyPortText").value;
@@ -226,11 +233,13 @@ function saveAccountData(){
             providers[accountID]=provider.object.getSelectedIndex();
             userNames[accountID]=userName.value;
             passwords[accountID]=password.value;
+            xtras[accountID] = xtra.value;
             
             setPreferenceForKey(providers, "providers");
             setPreferenceForKey(passwords, "passwords");
             setPreferenceForKey(userNames, "userNames");
             setPreferenceForKey(accountsNames, "accountsNames");
+            setPreferenceForKey(xtras, "xtras");
             setPreferenceForKey(proxy, "proxy");
             setPreferenceForKey(proxyPort, "proxyPort");
             setPreferenceForKey(vibrate, "vibrate");
@@ -316,14 +325,14 @@ function setPreferenceForKey(value,key){
 }
 //We have only instance preference key this because users can add multiple times the same widget to set up more
 //than only five accounts.
-function getPreferenceForKey(key){
+function getPreferenceForKey(key) {
     var result = widget.preferenceForKey(createInstancePreferenceKey(key));
     //check global setting
     if (result == undefined) { 
         result = widget.preferenceForKey(key);
     }
   
-    if (!result == undefined) { //If undefined return the default value
+    if (result == undefined) { //If undefined return the default value
 		result = defaultPreferenceValues[key];
         return result;
 	}
@@ -335,8 +344,22 @@ function getPreferenceForKey(key){
     return  [parts[1],parts[2],parts[3],parts[4],parts[5]];
 }
 
+function setXtraAccountSettings() {
+    var xtraLabel = document.getElementById("xtraAcountSettingLabel");
+    var xtraText = document.getElementById("xtraAccountSettingText");
+    var provider = document.getElementById("providerList");
+    if (provider.object.getSelectedIndex() == 2) {
+        xtraLabel.style.visibility = "visible";
+        xtraText.style.visibility = "visible";
+        xtraLabel.innerText = "Captcha";
+        xtraText.value = getPreferenceForKey("xtras");
+    } else {
+        xtraLabel.style.visibility = "hidden";
+        xtraText.style.visibility = "hidden";
+    }
 }
 
+}
 
 // This object implements the dataSource methods for the list.
 var accountDataSource = {
@@ -371,3 +394,4 @@ var accountDataSource = {
 		};
 	}
 };
+

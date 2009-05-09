@@ -27,5 +27,6 @@ var dashcodePartSpecs = {
     "statusDesc": { "creationFunction": "CreateText" },
     "text": { "creationFunction": "CreateText", "text": "Addvanced:" },
     "text3": { "creationFunction": "CreateText", "text": "Vibration:" },
-    "userNameLabel": { "creationFunction": "CreateText", "text": "User Name:" }
+    "userNameLabel": { "creationFunction": "CreateText", "text": "User Name:" },
+    "xtraAcountSettingLabel": { "creationFunction": "CreateText", "text": "x" }
 };
