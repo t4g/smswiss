@@ -9,27 +9,25 @@
 		<key>SMSEngineCablecom.js:19</key>
 		<string>getAvailSMS</string>
 		<key>SMSEngineSunriseMail.js:1</key>
-		<string>SMSEngineSunriseMail</string>
+		<string>-SMSEngineSunriseMail</string>
 		<key>SMSEngineSunriseMail.js:19</key>
-		<string>getAvailSMS</string>
-		<key>SMSEngineYallo.js:100</key>
+		<string>-getAvailSMS</string>
+		<key>SMSEngineYallo.js:107</key>
 		<string>-doAuthentication</string>
-		<key>SMSEngineYallo.js:101</key>
-		<string>-doAuthentication</string>
-		<key>SMSEngineYallo.js:104</key>
-		<string>-doAuthentication</string>
-		<key>SMSEngineYallo.js:116</key>
-		<string>-doAuthentication</string>
-		<key>SMSEngineYallo.js:137</key>
+		<key>SMSEngineYallo.js:128</key>
 		<string>-responseHandler</string>
 		<key>SMSEngineYallo.js:92</key>
 		<string>-doAuthentication</string>
+		<key>SMSEngineYallo.js:93</key>
+		<string>-doAuthentication</string>
 		<key>SMSEngineYallo.js:95</key>
 		<string>-doAuthentication</string>
-		<key>SMSwiss.js:152</key>
+		<key>SMSwiss.js:171</key>
 		<string>-needUpdateFeedBack</string>
-		<key>SMSwiss.js:161</key>
+		<key>SMSwiss.js:180</key>
 		<string>-sendNewSMS</string>
+		<key>SMSwiss.js:19</key>
+		<string>-globalSetRunningAccount</string>
 		<key>SimpleHTTPRequest.js:70</key>
 		<string>-system_handler</string>
 	</dict>
@@ -56,11 +54,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>2f33bc5edc60af41</string>
+		<string>e1d0fb7c3170af41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojBOme7M/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojX9Apbk/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -95,7 +93,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>306 107 1470 1071 0 0 1920 1178 </string>
+	<string>320 107 1470 1071 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -127,11 +125,26 @@
 			<integer>0</integer>
 			<integer>0</integer>
 		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>3</integer>
+		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>3</integer>
+			<integer>1</integer>
+		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
 			<integer>0</integer>
+			<integer>1</integer>
+			<integer>3</integer>
+			<integer>1</integer>
+			<integer>3</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
@@ -140,7 +153,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>front</string>
+		<string>back</string>
 	</array>
 </dict>
 </plist>
