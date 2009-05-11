@@ -18,6 +18,25 @@ function globalSetRunningAccount(event){
             countChars(null);// Update the sms count in case the engine is changed
 }
 
+
+function globalSetXtraAccountSettings(event){
+
+    var xtraLabel = document.getElementById("xtraAcountSettingLabel");
+    var xtraText = document.getElementById("xtraAccountSettingText");
+    var provider = document.getElementById("providerList");
+    
+    if (provider.object.getSelectedIndex() == 2) {  //Yallow
+        xtraLabel.style.visibility = "visible";
+        xtraText.style.visibility = "visible";
+        xtraLabel.innerText = "Captcha";
+    } else {
+        xtraLabel.style.visibility = "hidden";
+        xtraText.style.visibility = "hidden";
+    }
+}
+
+
+
 function globalSaveMoreInfo(){
     widget.setPreferenceForKey(moreInfoValue.value,moreInfoKey.innerHTML);
     moreInfo.style.visibility="hidden";

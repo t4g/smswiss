@@ -45,21 +45,23 @@ this.loadAccountData= function(accountID){
             var provider = document.getElementById("providerList");
             var userName = document.getElementById("userNameText");
             var password = document.getElementById("passwordText");
+            var xtraText = document.getElementById("xtraAccountSettingText");
+            
             
             var accountsNames = getPreferenceForKey("accountsNames");
             var userNames = getPreferenceForKey("userNames");
             var passwords = getPreferenceForKey("passwords");
             var providers = getPreferenceForKey("providers");
+            var extras = getPreferenceForKey("xtras");
             
             id.value=accountID;
             accountName.value = accountsNames[accountID];
             provider.object.setSelectedIndex(providers[accountID]);
-            provider.onchange = function(event) {
-                setXtraAccountSettings();
-            }
             userName.value=userNames[accountID];
             password.value=passwords[accountID];
-            setXtraAccountSettings();
+            xtraText.value = extras[accountID];
+            
+            globalSetXtraAccountSettings(null); //The methos is called to hidden the xtravalue field if not necessary
 }
 
 //call this method to read from the selectedAccount list the selected item and store it
@@ -174,6 +176,7 @@ function initSMSEngine(){
     //-------------------------------------- 
         var userName = getCurrentUserName();
         var password = getCurrentPassword();
+        var extra    = getCurrentExtra();
         var provider = getCurrentProvider();
     
         if(userName == undefined || userName.length == 0)//A username as to be difined
@@ -182,16 +185,16 @@ function initSMSEngine(){
     
         
     if(provider == 0) //Sunrise
-        smsEngine = new SMSEngineSunriseMail(userName,password);           
+        smsEngine = new SMSEngineSunriseMail(userName,password,extra);           
     
     if(provider == 1) //Cablecom
-        smsEngine = new SMSEngineCablecom(userName,password);
+        smsEngine = new SMSEngineCablecom(userName,password,extra);
                         
     if(provider == 2) //Yallo
-        smsEngine = new SMSEngineYallo(userName,password);
+        smsEngine = new SMSEngineYallo(userName,password,extra);
         
     if(provider == 3) //ETHZ
-        smsEngine = new SMSEngineETHZ(userName,password);
+        smsEngine = new SMSEngineETHZ(userName,password,extra);
     
     //Start the authentication process and get the available sms count
     smsEngine.getAvailSMS();
@@ -293,6 +296,14 @@ function getCurrentPassword(){
     var passwords = getPreferenceForKey("passwords");
     return passwords[ruuningAccount];
 }
+
+function getCurrentExtra(){
+    var ruuningAccount = getPreferenceForKey("ruuningAccount");
+    var extras = getPreferenceForKey("xtras");
+    return extras[ruuningAccount];
+}
+
+
 //Return the SMS provider attacched to the running account
 function getCurrentProvider(){
     var ruuningAccount = getPreferenceForKey("ruuningAccount");
@@ -344,20 +355,7 @@ function getPreferenceForKey(key) {
     return  [parts[1],parts[2],parts[3],parts[4],parts[5]];
 }
 
-function setXtraAccountSettings() {
-    var xtraLabel = document.getElementById("xtraAcountSettingLabel");
-    var xtraText = document.getElementById("xtraAccountSettingText");
-    var provider = document.getElementById("providerList");
-    if (provider.object.getSelectedIndex() == 2) {
-        xtraLabel.style.visibility = "visible";
-        xtraText.style.visibility = "visible";
-        xtraLabel.innerText = "Captcha";
-        xtraText.value = getPreferenceForKey("xtras");
-    } else {
-        xtraLabel.style.visibility = "hidden";
-        xtraText.style.visibility = "hidden";
-    }
-}
+
 
 }
 

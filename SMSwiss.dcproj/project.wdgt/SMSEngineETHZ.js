@@ -1,4 +1,4 @@
-function SMSEngineETHZ(theUsername,thePassword) {
+function SMSEngineETHZ(theUsername,thePassword,extra) {
 
 this.name = "SMSEngineETHZ";
 

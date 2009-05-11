@@ -1,4 +1,4 @@
-function SMSEngineYallo(theUsername,thePassword) {
+function SMSEngineYallo(theUsername,thePassword,extra) {
 
 this.name = "SMSEngineYallo";
 
@@ -10,6 +10,8 @@ var innerSessionID = -1;
 var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
+
+var captchaCode = extra;
 
 var smsChars = 130;
 var innerSMSCount = 0;
@@ -87,18 +89,7 @@ function sendSingleSMS(queue_mess,number){
 function doAuthentication(queue_mess,number) 
 {
   
-  //Added by Elia Yallo special setup
-//--------------------------------------------------
-  captchaCode =  widget.preferenceForKey("Specila_YallocaptchaCode");
 
-  if(captchaCode == undefined){
-        moreInfoKey.innerHTML="Specila_YallocaptchaCode";
-        moreInfoText.innerHTML="Important note: the first time you want to use Yallow please provide us the value of the captcha cookie.If you don't know how to get it, please visit http://code.google.com/p/smswiss/w/yallo";
-        moreInfo.style.visibility="visible";
-        return engineFeedBack(SMSEngineFeedBack.smsSendingError);
-  }
-//--------------------------------------------------
-  
   isJustAuthenticated=true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/j_security_check.do";

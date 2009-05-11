@@ -1,4 +1,4 @@
-function SMSEngineSunriseMail(theUsername,thePassword) {
+function SMSEngineSunriseMail(theUsername,thePassword,extra) {
 
 //Since the AppleWebToolkit do not allow to set cookie
 //we are using a home made implementation of the XMLHttpRequest

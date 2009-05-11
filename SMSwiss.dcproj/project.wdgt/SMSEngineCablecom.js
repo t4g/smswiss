@@ -1,4 +1,4 @@
-function SMSEngineCablecom(theUsername,thePassword) {
+function SMSEngineCablecom(theUsername,thePassword,extra) {
 
 
 var innerSessionID = -1;
