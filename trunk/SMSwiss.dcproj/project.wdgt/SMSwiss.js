@@ -23,15 +23,20 @@ function globalSetXtraAccountSettings(event){
 
     var xtraLabel = document.getElementById("xtraAcountSettingLabel");
     var xtraText = document.getElementById("xtraAccountSettingText");
+    var xtraInfo = document.getElementById("xtraAcountSettingInfo");
+    
     var provider = document.getElementById("providerList");
     
     if (provider.object.getSelectedIndex() == 2) {  //Yallow
         xtraLabel.style.visibility = "visible";
         xtraText.style.visibility = "visible";
+        xtraInfo.style.visibility = "visible";
+        xtraInfo.setAttribute('onclick', 'widget.openURL("http://code.google.com/p/smswiss/wiki/YalloAccountSetUp")'); 
         xtraLabel.innerText = "Captcha";
     } else {
         xtraLabel.style.visibility = "hidden";
         xtraText.style.visibility = "hidden";
+        xtraInfo.style.visibility = "hidden";
     }
 }
 
@@ -128,7 +133,7 @@ function sync()
 function engineStatusFeedBack(event){
     alert(event);
     statusDesc.innerHTML = event;
-    statusIcon.src = "images/loading.gif"
+    statusIcon.src = "Images/loading.gif"
     statusIcon.style.visibility="visible";
 }
 //TODO: complete feed back
@@ -143,7 +148,7 @@ function engineFeedBack(event){
     }
     
     if(event == SMSEngineFeedBack.smsSent){
-        statusIcon.src = "images/sent.png"
+        statusIcon.src = "Images/sent.png"
         statusIcon.style.visibility="visible";
         
         if(settingsEngine.getDoVibrate()){
@@ -163,7 +168,7 @@ function engineFeedBack(event){
     }
         
         
-    statusIcon.src = "images/error.png"
+    statusIcon.src = "Images/error.png"
     statusIcon.style.visibility="visible";
 }
 
@@ -304,7 +309,6 @@ function clearSMS(event)
 {
     receiverNumberField.value = "";
     messageField.value="";
-    statusIcon.style.visibility="hidden";
     addressBoockEngine.searchKeyPressed(null);
 }
 
