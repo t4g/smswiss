@@ -591,6 +591,8 @@ body {
 
 #aboutPage {
     visibility: hidden;
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
 }
 
 #checkboxVibrate {
@@ -693,10 +695,12 @@ body {
     overflow: hidden;
     position: absolute;
     margin-top: 0px;
-    left: 2px;
     top: 101px;
     width: auto;
     height: auto;
+    right: auto;
+    bottom: auto;
+    left: 2px;
 }
 
 #xtraAccountSettingText {
@@ -705,6 +709,17 @@ body {
     font-family: HelveticaNeue;
     font-size: 10pt;
     left: 75px;
-    width: 128px;
     top: 96px;
+    width: 106px;
+}
+
+#xtraAcountSettingInfo {
+    height: 18px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 20px;
+    left: 189px;
+    top: 99px;
 }
