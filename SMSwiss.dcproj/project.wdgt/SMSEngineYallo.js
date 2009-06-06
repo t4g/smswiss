@@ -16,54 +16,53 @@ var captchaCode = extra;
 var smsChars = 130;
 var innerSMSCount = 0;
 var isJustAuthenticated = false;
-var captchaCode = undefined;
 
-this.getAvailSMS = function () {
-  if(innerSessionID == -1)
+this.getAvailSMS = function() {
+  if (innerSessionID == -1)
     doAuthentication(null, null);
   else
     loadSMS();
 };
 
-this.Send = function (smsText, number) {
+this.Send = function(smsText, number) {
   sendSMS(smsText,number);
 };
 
 
-this.GetSMSCharsCount = function () {
+this.GetSMSCharsCount = function() {
   return smsChars;
 };
 
-this.getSMSCount = function () {
+this.getSMSCount = function() {
   return remainningSMS;
 };
 
-this.isConnected = function () {
+this.isConnected = function() {
   return innerSessionID != -1;
 };
 
-this.isSMSCountCritical = function () {
+this.isSMSCountCritical = function() {
   return (innerSMSCount < 3);
 };
 
-this.isSMSCountWarning = function () {
+this.isSMSCountWarning = function() {
   return (innerSMSCount < 5);
 };
 
-this.hasEnoughCredits = function (messLenght) {
+this.hasEnoughCredits = function(messLenght) {
   return (messLenght <= smsChars * innerSMSCount);  
 };
 
 
 //The main function, only this function has to be called
 
-function sendSMS(smsText,number){
-  if(smsText == null)
+function sendSMS(smsText,number) {
+  if (smsText == null)
     return loadSMS(null, null);
 
   //Partition mess in multiple sms
   var queue_mess = new Array();
-  while(smsText.length>smsChars) {
+  while (smsText.length > smsChars) {
     queue_mess.push(smsText.substring(0, smsChars));
     smsText=smsText.substring(smsChars, smsText.length);
   }
@@ -71,7 +70,7 @@ function sendSMS(smsText,number){
   sendSingleSMS(queue_mess,number);
 }
 
-function sendSingleSMS(queue_mess,number){
+function sendSingleSMS(queue_mess,number) {
   engineStatusFeedBack(SMSEngineStatus.sendingSMS);
   var mess = queue_mess[queue_mess.length-1]; //Mess to send
   var feedURL = "https://www.yallo.ch/kp/dyn/web/sec/acc/sms/sendSms.do";
@@ -85,31 +84,22 @@ function sendSingleSMS(queue_mess,number){
   xmlRequest.send(postData);
 }
 
-//This is acctualy the authentication method but for this engine we have first to autenticate
-function doAuthentication(queue_mess,number) 
-{
-  
-
-  isJustAuthenticated=true;
+//This is actually the authentication method but for this engine we have first to authenticate
+function doAuthentication(queue_mess, number) {
+  isJustAuthenticated = true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/j_security_check.do";
-   
-  
   var onloadHandler = function() { responseHandler(xmlRequest, queue_mess, number, true, false); };
   xmlRequest.onload = onloadHandler;
   xmlRequest.open("POST", feedURL, true);
   var postData = "j_username=" + URLEncode(username) + "&j_password=" + URLEncode(password);
   xmlRequest.setRequestHeader("Cookie", "captcha="+captchaCode+";");
-  //xmlRequest.setRequestHeader("Cookie", "JSESSIONID=EF6737472FA878649F7F3C5BE4B6B23E.0905;");
-  
-  
-  
   xmlRequest.send(postData);
 }
 
 
 
-function loadSMS(){
+function loadSMS() {
   engineStatusFeedBack(SMSEngineStatus.loadingAccountStatus);
   var feedURL = "https://www.yallo.ch/kp/dyn/web/pub/home/home.do";
   var onloadHandler = function() { responseHandler(xmlRequest, null, null, false, false); };
@@ -124,30 +114,35 @@ function loadSMS(){
 // Single Respones Handler
 //----------------------------------------------------------------------------------
 
-function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSendSMS){
+function responseHandler(xmlRequest, queue_mess, number, withAutentication, withSendSMS) {
+
   if (xmlRequest.status != 200) {
     alert("Error fetching session id data: HTTP status " + xmlRequest.status + " (YalloSMSEngine)");
     return engineFeedBack(SMSEngineFeedBack.connectionError);
   }
-  if(getIsLogedIn(xmlRequest.responseText)){
+
+  if (getIsLogedIn(xmlRequest.responseText)) {
     innerSessionID = getSessionID(xmlRequest.getAllResponseHeaders());
   } else {
     innerSessionID = -1;
-    if(withAutentication) { //In case we are doing the autentication do not check the session
-      alert("Unable to log in!  (YalloSMSEngine)");
+    if (getHasCaptcha(xmlRequest.responseText)) {
+      alert("The captcha (cookie) did not work.")
       return engineFeedBack(SMSEngineFeedBack.authenticationError);
-    } else {
-      if(isJustAuthenticated) {
+    }
+    alert("Unable to log in!  (YalloSMSEngine)");
+    return engineFeedBack(SMSEngineFeedBack.authenticationError);
+    /*} else {
+      if (isJustAuthenticated) {
         alert("Unable to set cookies!  (YalloSMSEngine)");
         return engineFeedBack(SMSEngineFeedBack.cookieError);
       } else {
-        return doAuthentication(queue_mess,number);
+        return doAuthentication(queue_mess, number);
       }
-    }
+    } */
   }
   
-  if(withAutentication){
-    if(queue_mess == null){
+  if (withAutentication) {
+    if (queue_mess == null) {
       return loadSMS();
     } else {
       return sendSingleSMS(queue_mess, number);
@@ -163,11 +158,11 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
       return engineFeedBack(SMSEngineFeedBack.smsCountError);
   }
 
-  if(queue_mess == null) //There is no sms to send it was a simple login
+  if (queue_mess == null) //There is no sms to send it was a simple login
     return engineFeedBack(SMSEngineFeedBack.authenticationSuccessful);
   
   //If a sms was sent check it
-  if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
+  if (withSendSMS && !getSMSisSent(xmlRequest.responseText)) {
     alert("Unable to send sms!, The Java Script Yallo SMS Engine was not able to find the key word in the returned html page  which identify a sucessfull sent sms.");
     return engineFeedBack(SMSEngineFeedBack.smsSendingError);
   }
@@ -181,7 +176,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
   }
 
   //This function exist to create a local scope for the setTimeout call
-  function sendTimeOutedSingleSMS(){
+  function sendTimeOutedSingleSMS() {
     return sendSingleSMS(queue_mess, number);
   }
 
@@ -197,51 +192,40 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 
   
 //Check if the page contains contents that you obtain when the sms was successfull sent
-function getSMSisSent(html){
+function getSMSisSent(html) {
 
   //Init vars
   var first = -1;
   var second = -1;
-  var difference = -1;
-  var maxDistance = 50;  
-
-  //German check
-  first = html.indexOf("Ihre Nachricht wurde an die Nummer");
-  second = html.indexOf("gesendet",first);
-  difference = second -first;
-  if (first!= -1 && second != -1 && difference < maxDistance) {
-    return true;
-  }
+  var maxDistance = 100;
   
-  //Franch check
-  first = html.indexOf("Un SMS");
-  second = html.indexOf("envoy&#233;",first);
-  difference = second -first;
-  if (first!= -1 && second != -1 && difference < maxDistance) {
+  first = html.indexOf('<div class="formMessage">');
+  second = html.indexOf('</div>');
+  difference = second - first;
+  if (first != -1 && second != -1 && second - first < maxDistance) {
     return true;
   }
-
-   //Italian check
-  first = html.indexOf("SMS");
-  second = html.indexOf("inviato",first);
-  difference = second -first;
-  if (first!= -1 && second != -1 && difference < maxDistance) {
-    return true;
-  }
-
   return false;
 }
 
 
-function getIsLogedIn(html){
+function getIsLogedIn(html) {
   if (html.indexOf("customer_balance") != -1) { //By authentication
     return true;
   }
   return false;
 }
 
+function getHasCaptcha(html) {
+  var str1 = '<title>404 Not Found</title>';
+  var str2 = '<input type="text" name="j_captcha" id="j_captcha"/>';
+  if (html.indexOf(str1) != -1 || html.indexOf(str2) != -1) {
+    return true;
+  }
+  return false;
+}
 
-function getSessionID(header){
+function getSessionID(header) {
   var sessionDetecStr = "JSESSIONID=";
   if (header.lastIndexOf(sessionDetecStr) == -1) {
     return innerSessionID; //If a new sessionID is not detected return the old one
@@ -253,25 +237,19 @@ function getSessionID(header){
 }
 
 
-function getSMSCount(html){
-    
+function getSMSCount(html) {
   var smsDetecStr1 = '<div id="sms_counter">';
   var smsDetecStr2 = '</div>';
-  
   if (html.indexOf(smsDetecStr1) == -1) {
     alert("Unable to retreive SMS count!  (YalloSMSEngine)");
     return null;
   }
-  
-  var begin  = html.indexOf(smsDetecStr1) + smsDetecStr1.length;
-    
+  var begin = html.indexOf(smsDetecStr1) + smsDetecStr1.length;
   var end = html.indexOf(smsDetecStr2, begin);
-  
   if (end - begin  > 200 || end - begin  < 0) {
     alert("Unable to retreive remaining free sms from html! (YalloSMSEngine)");
     return 0;
   }
-  
   var str = html.substring(begin, end).trim();
   var re = /\s*([0-9]+).*/; 
   a = re.exec(str);
@@ -279,23 +257,29 @@ function getSMSCount(html){
     alert("Unable to retrieve remaining free sms from html! (YalloSMSEngine)");
     return 0;
   }
-  
   innerSMSCount = parseInt(a[1]);
-  return parseInt(a[1]) + " SMS left";
-    
-/*  begin  = html.indexOf("Bezahlt ",end) + "Bezahlt ".length;
-  end = html.indexOf("</td>",begin);
   
-  if (end - begin  > 200 || end - begin  < 0) {
-    alert("Unable to retreive remaining payed sms from html!");
-    return gratisSMS;
+  smsDetectStr1 = '<a href="/kp/dyn/web/sec/rf/sms/start.do">';
+  smsDetectStr2 = '</a>';
+  if (html.indexOf(smsDetectStr1) == -1) {
+    alert('Unable to retreive purchased SMS count! (YalloSMSEngine)');
+    return innerSMSCount;
   }
-  
-  var payedSMS = html.substring(begin, end).trim();
-  
-  innerSMSCount = parseInt(gratisSMS) + parseInt(payedSMS);
+  begin = html.indexOf(smsDetectStr1) + smsDetectStr1.length;
+  end = html.indexOf(smsDetectStr2, begin);
+  if (end - begin > 20 || end - begin < 5) {
+    alert("Unable to retreive remaining purchased SMS from html! (YalloSMSEngine)");
+    return innerSMSCount;
+  }
+  str = html.substring(begin, end).trim();
+  re = /([0-9]+) SMS.*/;
+  a = re.exec(str);
+  if (a == null) {
+    alert("Unable to retrieve remaining purchased SMS from html! (YalloSMSEngine)");
+    return innerSMSCount;
+  }
 
-  return parseInt(gratisSMS) + parseInt(payedSMS) + " SMS left"; */
+  return innerSMSCount + parseInt(a[1]);
 }
 
 }
