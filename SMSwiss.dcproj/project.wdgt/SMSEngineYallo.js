@@ -56,7 +56,7 @@ this.hasEnoughCredits = function(messLenght) {
 
 //The main function, only this function has to be called
 
-function sendSMS(smsText,number) {
+function sendSMS(smsText, number) {
   if (smsText == null)
     return loadSMS(null, null);
 
@@ -67,17 +67,17 @@ function sendSMS(smsText,number) {
     smsText=smsText.substring(smsChars, smsText.length);
   }
   queue_mess.push(smsText);
-  sendSingleSMS(queue_mess,number);
+  sendSingleSMS(queue_mess, number);
 }
 
-function sendSingleSMS(queue_mess,number) {
+function sendSingleSMS(queue_mess, number) {
   engineStatusFeedBack(SMSEngineStatus.sendingSMS);
   var mess = queue_mess[queue_mess.length-1]; //Mess to send
   var feedURL = "https://www.yallo.ch/kp/dyn/web/sec/acc/sms/sendSms.do";
   var onloadHandler = function() {responseHandler(xmlRequest, queue_mess, number, false, true);};
   xmlRequest.onload = onloadHandler;
-  xmlRequest.open("POST",feedURL, true);
-  xmlRequest.setRequestHeader("Cookie", "JSESSIONID="+innerSessionID);
+  xmlRequest.open("POST", feedURL, true);
+  xmlRequest.setRequestHeader("Cookie", "JSESSIONID=" + innerSessionID);
   var postData = "destination=" + URLEncode(number);
   postData += "&message=" + URLEncode(mess);
   postData += "&send=%A0senden";
@@ -125,20 +125,16 @@ function responseHandler(xmlRequest, queue_mess, number, withAutentication, with
     innerSessionID = getSessionID(xmlRequest.getAllResponseHeaders());
   } else {
     innerSessionID = -1;
-    if (getHasCaptcha(xmlRequest.responseText)) {
-      alert("The captcha (cookie) did not work.")
-      return engineFeedBack(SMSEngineFeedBack.authenticationError);
-    }
+    if (isJustAuthenticated) {
+      if (getHasCaptcha(xmlRequest.responseText)) {
+        alert("The captcha (cookie) did not work.")
+        return engineFeedBack(SMSEngineFeedBack.authenticationError);
+      }
     alert("Unable to log in!  (YalloSMSEngine)");
     return engineFeedBack(SMSEngineFeedBack.authenticationError);
-    /*} else {
-      if (isJustAuthenticated) {
-        alert("Unable to set cookies!  (YalloSMSEngine)");
-        return engineFeedBack(SMSEngineFeedBack.cookieError);
-      } else {
-        return doAuthentication(queue_mess, number);
-      }
-    } */
+    } else {
+      return doAuthentication(queue_mess, number);
+    }
   }
   
   if (withAutentication) {
