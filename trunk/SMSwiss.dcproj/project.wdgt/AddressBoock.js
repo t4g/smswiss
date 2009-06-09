@@ -33,7 +33,9 @@ function addressBoock(){
                 AddressBookPlugin.displayCardAtIndex(i);
                 for (var j = 0; j < AddressBookPlugin.displayedItemCount(); j++){
                       
-                      if(AddressBookPlugin.displayedPropertyAtIndex(j) =="Phone"){
+                      if(AddressBookPlugin.displayedPropertyAtIndex(j) =="Phone" &&
+                        (settingsEngine.getPhoneBookFilterType() == null ||
+							 AddressBookPlugin.displayedLabelAtIndex(j) == settingsEngine.getPhoneBookFilterType())){
                             receiverAutoComplete.appendChild(createContactDiv(AddressBookPlugin.displayedName(),
                                                              AddressBookPlugin.displayedValueAtIndex(j),
                                                              displayedContact));

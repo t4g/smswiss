@@ -15,6 +15,7 @@
     <script type="text/javascript" src="Tools.js" charset="utf-8"></script>
     <script type="text/javascript" src="SimpleHTTPRequest.js" charset="utf-8"></script>
     <script type="text/javascript" src="UpdateCheck.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Statistics.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSEngineETHZ.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSEngineYallo.js" charset="utf-8"></script>
     <script type="text/javascript" src="SMSEngineCablecom.js" charset="utf-8"></script>
@@ -41,12 +42,6 @@
         <div apple-part="com.apple.Dashcode.part.lozengetextbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 1; image-button-type: 0; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.615400016,0.615400016,0.615400016,1; image-radius: 9,9,9,9; image-border: 1; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="newButton"></div>
         <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="counter" apple-style="part-height-dependent: true;"></div>
         <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="statusDesc" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-        <div apple-part="com.apple.Dashcode.part.box" id="moreInfo" apple-default-image-visibility="hidden">
-            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="moreInfoText" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-            <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="moreInfoValue">
-            <div apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" id="MoreInfoSaveButton"></div>
-            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="moreInfoKey" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
-        </div>
     </div>
     <div id="back">
         <img src="Images/back.png" alt="" apple-part="com.apple.Dashcode.part.backimage" apple-style="image-radius: 12,12,12,12;" id="backImg" apple-locked="true">
@@ -71,7 +66,7 @@
                 <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="accountID">
                 <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="xtraAcountSettingLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
                 <input type="text" name="" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="xtraAccountSettingText">
-                <div id="xtraAcountSettingInfo"><a href="#"><img src="Images/info.png" ></a></div></div>
+                <div id="xtraAcountSettingInfo"><a href="#"><img src="Images/info.png"></a></div></div>
         </div>
         <!-- END Account Page -->
         <!-- Setting Page -->
@@ -97,9 +92,28 @@
         <!-- END Setting Page -->
         <!-- About Page -->
         <div apple-part="com.apple.Dashcode.part.box" id="aboutPage">
-            <div apple-part="com.apple.Dashcode.part.box" id="aboutBox"></div>
+            <div apple-part="com.apple.Dashcode.part.box" id="aboutBox">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="text4" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <span href="http://www.mysunrise.ch" style="text-decoration: underline;" onclick="widget.openURL('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=elia%2epalme%40gmail%2ecom&amp;item_name=SMSunrise%20Thanks%20to%20Support%20us%20to%20Support%20you&amp;no_shipping=0&amp;return=http%3a%2f%2fcode%2egoogle%2ecom%2fp%2fsmswiss%2fwiki%2fThanks&amp;cn=Remarks%3a&amp;tax=0&amp;currency_code=CHF&amp;lc=CH&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8');donate='donate';setTimeout('TrackWidget(donate)',100);" id="span">
+                    <img src="images/donate.gif" id="img">
+                </span>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="text5" apple-style="part-height-dependent: true;"></div>
+            </div>
         </div>
         <!-- END About Page -->
+        <!-- Phone Book Page -->
+        <div apple-part="com.apple.Dashcode.part.box" id="phoneBookPage">
+            <div apple-part="com.apple.Dashcode.part.box" id="phoneBookBox">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="phoneBookLabel" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <div apple-part="com.apple.Dashcode.part.checkboxbutton" id="phoneBookFiltering" apple-group="checkboxbutton">
+                    <input type="checkbox" name="phoneBookFiltering" id="phoneBookFilteringCheckBox" apple-group="checkboxbutton">
+                </div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="text2" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+                <input type="text" name="phoneBookFilterType" value="mobile" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="phoneBookFilterType">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="text1"></div>
+            </div>
+        </div>
+        <!-- END Phone Book Page -->
     </div>
 </body>
 </html>

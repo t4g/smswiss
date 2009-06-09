@@ -20,74 +20,78 @@
 		<string>-doAuthentication</string>
 		<key>SMSEngineYallo.js:117</key>
 		<string>-responseHandler</string>
-		<key>SMSwiss.js:101</key>
+		<key>SMSwiss.js:102</key>
+		<string>-hide</string>
+		<key>SMSwiss.js:109</key>
 		<string>-</string>
-		<key>SMSwiss.js:108</key>
+		<key>SMSwiss.js:116</key>
 		<string>-</string>
-		<key>SMSwiss.js:115</key>
+		<key>SMSwiss.js:141</key>
 		<string>-engineFeedBack</string>
-		<key>SMSwiss.js:140</key>
-		<string>-engineFeedBack</string>
-		<key>SMSwiss.js:238</key>
-		<string>-showFront</string>
-		<key>SMSwiss.js:244</key>
+		<key>SMSwiss.js:239</key>
+		<string>-showBack</string>
+		<key>SMSwiss.js:245</key>
 		<string>-</string>
-		<key>SMSwiss.js:299</key>
-		<string>-shake_widget</string>
-		<key>SMSwiss.js:300</key>
-		<string>-shake_widget</string>
+		<key>SMSwiss.js:303</key>
+		<string>-showSettingPage</string>
+		<key>SMSwiss.js:304</key>
+		<string>-showSettingPage</string>
 		<key>SMSwiss.js:40</key>
-		<string>-</string>
+		<string>-globalSetXtraAccountSettings</string>
 		<key>SMSwiss.js:47</key>
-		<string>-load</string>
-		<key>SMSwiss.js:52</key>
+		<string>-globalSaveMoreInfo</string>
+		<key>SMSwiss.js:53</key>
 		<string>-</string>
-		<key>SMSwiss.js:54</key>
+		<key>SMSwiss.js:55</key>
 		<string>-</string>
-		<key>SettingsEngine.js:205</key>
+		<key>SettingsEngine.js:222</key>
+		<string>-SettingsEngine</string>
+		<key>SettingsEngine.js:224</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:207</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:209</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:214</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:217</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:230</key>
+		<key>SettingsEngine.js:226</key>
 		<string>-saveAccountData</string>
 		<key>SettingsEngine.js:231</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:236</key>
+		<key>SettingsEngine.js:235</key>
 		<string>-saveAccountData</string>
 		<key>SettingsEngine.js:237</key>
 		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:24</key>
+		<key>SettingsEngine.js:250</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:251</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:256</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:257</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:26</key>
 		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:243</key>
-		<string>-loadProxySetting</string>
-		<key>SettingsEngine.js:249</key>
-		<string>-loadMixSettings</string>
-		<key>SettingsEngine.js:258</key>
-		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:263</key>
-		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:264</key>
-		<string>-loadSelectAccountList</string>
 		<key>SettingsEngine.js:266</key>
-		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:307</key>
-		<string>-setPreferenceForKey</string>
-		<key>SettingsEngine.js:321</key>
-		<string>-getPreferenceForKey</string>
-		<key>SettingsEngine.js:63</key>
-		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:64</key>
-		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:65</key>
-		<string>-setRunningAccount</string>
-		<key>SettingsEngine.js:66</key>
-		<string>-setRunningAccount</string>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:272</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:288</key>
+		<string>-loadMixSettings</string>
+		<key>SettingsEngine.js:293</key>
+		<string>-loadMixSettings</string>
+		<key>SettingsEngine.js:294</key>
+		<string>-loadMixSettings</string>
+		<key>SettingsEngine.js:296</key>
+		<string>-SettingsEngine</string>
+		<key>SettingsEngine.js:337</key>
+		<string>-SettingsEngine</string>
+		<key>SettingsEngine.js:351</key>
+		<string>-SettingsEngine</string>
+		<key>SettingsEngine.js:67</key>
+		<string>-loadAccountData</string>
+		<key>SettingsEngine.js:68</key>
+		<string>-loadAccountData</string>
+		<key>SettingsEngine.js:69</key>
+		<string>-loadAccountData</string>
+		<key>SettingsEngine.js:70</key>
+		<string>-SettingsEngine</string>
+		<key>SettingsEngine.js:94</key>
+		<string>-SettingsEngine</string>
 		<key>SimpleHTTPRequest.js:45</key>
 		<string>-send</string>
 		<key>SimpleHTTPRequest.js:67</key>
@@ -116,29 +120,29 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>4622acd06e5caf41</string>
+		<string>e143e9e3c7bdaf41</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojfPy1VC/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojZn4WG8/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>percent-x</key>
-		<real>0.26093751192092896</real>
+		<real>0.3046875</real>
 		<key>percent-y</key>
-		<real>0.2800000011920929</real>
+		<real>0.35874998569488525</real>
 		<key>pos-x</key>
-		<integer>594</integer>
+		<integer>390</integer>
 		<key>pos-y</key>
-		<integer>224</integer>
+		<integer>287</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -191,23 +195,32 @@
 	<array>
 		<array>
 			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
 			<integer>1</integer>
 			<integer>7</integer>
 		</array>
 		<array>
 			<integer>0</integer>
+			<integer>1</integer>
+			<integer>7</integer>
 			<integer>0</integer>
 		</array>
 		<array>
 			<integer>0</integer>
 			<integer>1</integer>
+			<integer>6</integer>
+			<integer>0</integer>
+			<integer>2</integer>
+		</array>
+		<array>
+			<integer>0</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array/>
+	<array>
+		<array>
+			<integer>5</integer>
+		</array>
+	</array>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>
@@ -216,7 +229,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>front</string>
+		<string>back</string>
 	</array>
 </dict>
 </plist>
