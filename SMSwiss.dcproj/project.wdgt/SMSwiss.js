@@ -78,6 +78,7 @@ function load()
     settingsEngine.loadAccountData(0); //Load the first account data into the account setting page by default
     dashcode.setupParts();
     setTimeout("checkForUpdate()",50);
+    setTimeout("TrackWidget('init')",100);
     
 }
 
@@ -198,7 +199,7 @@ function sendNewSMS()
                 phoneNumber =  phoneNumber.replace(/_/g, "");   //Remove all undersocer
                 phoneNumber =  phoneNumber.replace(/\./g, "");   //Remove all dot   
                 
-                
+                setTimeout("TrackWidget('sms(" + settingsEngine.getCurrentProviderName() + ")')" ,100);
                 
                 settingsEngine.getSMSEngine().Send(messageField.value,phoneNumber);
         }else{
@@ -289,7 +290,7 @@ function showSettingPage(event)
     accountPage.style.visibility='hidden';
     settingPage.style.visibility='hidden';
     aboutPage.style.visibility='hidden';
-
+    phoneBookPage.style.visibility='hidden';
     
     if(event.srcElement.value == "Accounts"){
         accountPage.style.visibility='visible';
@@ -299,6 +300,9 @@ function showSettingPage(event)
     }
     if(event.srcElement.value == "About"){
         aboutPage.style.visibility='visible';
+    }
+    if(event.srcElement.value == "PhoneBook"){
+        phoneBookPage.style.visibility='visible';
     }
 
 

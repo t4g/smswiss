@@ -19,16 +19,20 @@ var defaultPreferenceValues = {
                 proxy:null,
                 proxyPort:null,
                 vibrate:true,
-                clearAfterSend:true
+                clearAfterSend:true,
+                phoneBookFiltering:false,
+                phoneBookFilterType:"mobile"
                 
     };
 
-
+//No need to instanciate the variables with some valued since the lodings methods will init then with the default pref. values
 var smsEngine = null;
 var proxy = null;
 var proxyPort = null;
-var vibrate = true;
-var clearAfterSend = true;
+var vibrate = null;
+var clearAfterSend = null;
+var phoneBookFiltering  = null;
+var phoneBookFilterType = null;
 
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
@@ -80,6 +84,13 @@ this.getSMSEngine = function(){
     return smsEngine;
 }
 
+//Get the name of the current selected SMS provide
+this.getCurrentProviderName = function(){
+
+return getCurrentProvider();
+
+}
+
 
 //Return the proxy for the requested accountID
 this.getProxy = function () {
@@ -89,6 +100,12 @@ this.getProxy = function () {
 //Return the proxy user name for the requested accountID
 this.getProxyPort = function () {
     return proxyPort;
+};
+
+//Return null if the phone book filter is disabled or the filter type label
+this.getPhoneBookFilterType = function () {
+    if(phoneBookFiltering == false) return null;
+    else return phoneBookFilterType;
 };
 
 
@@ -153,7 +170,7 @@ this.loadSettings = function (){
     loadSelectAccountList(); //Set up the front selection list
     loadAccountsNames();
     loadProxySetting();
-    loadMixSettings();
+    loadMixSettings();  //Settings + PhoneBook filer
     initSMSEngine(); //Load the SMSengine;
 }
 
@@ -224,6 +241,9 @@ function saveAccountData(){
             var vibrate = checkboxVibrate.checked;
             var clearAfterSend = checkboxClear.checked;
             
+            var phoneBookFiltering = phoneBookFilteringCheckBox.checked;
+            var phoneBookFilterType = document.getElementById("phoneBookFilterType").value;
+            
             if(proxy == ""){
                 proxy = undefined;
                 proxyPort = undefined;
@@ -247,6 +267,9 @@ function saveAccountData(){
             setPreferenceForKey(proxyPort, "proxyPort");
             setPreferenceForKey(vibrate, "vibrate");
             setPreferenceForKey(clearAfterSend, "clearAfterSend");
+            
+            setPreferenceForKey(phoneBookFiltering, "phoneBookFiltering");
+            setPreferenceForKey(phoneBookFilterType, "phoneBookFilterType");
 }
 
 //This function load the current proxy settings
@@ -260,8 +283,15 @@ function loadProxySetting(){
 function loadMixSettings(){
     vibrate = getPreferenceForKey("vibrate");
     clearAfterSend = getPreferenceForKey("clearAfterSend");
+    
+    phoneBookFiltering  = getPreferenceForKey("phoneBookFiltering");
+    phoneBookFilterType = getPreferenceForKey("phoneBookFilterType");
+        
     checkboxVibrate.checked=vibrate;
     checkboxClear.checked=clearAfterSend;
+    
+    phoneBookFilteringCheckBox.checked = phoneBookFiltering;
+    document.getElementById("phoneBookFilterType").value= phoneBookFilterType;
 }
 
 
