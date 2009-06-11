@@ -593,6 +593,7 @@ body {
     -khtml-margin-top-collapse: separate;
     -khtml-margin-bottom-collapse: separate;
     margin-top: 0px;
+    visibility: hidden;
 }
 
 #checkboxVibrate {
