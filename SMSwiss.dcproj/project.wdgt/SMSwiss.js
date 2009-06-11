@@ -51,9 +51,9 @@ function globalSaveMoreInfo(){
  
  
 var SMSEngineStatus = {
-                registeringUser : "Loging...",
-                sendingSMS: "Sending SMS...",
-                loadingAccountStatus: "Loading account..."
+                registeringUser : "Logging in ...",
+                sendingSMS: "Sending SMS ...",
+                loadingAccountStatus: "Loading account ..."
 };
 
 var SMSEngineFeedBack = {
@@ -62,8 +62,8 @@ var SMSEngineFeedBack = {
                 cookieError: "Cookie error!",
                 smsCountError :"SMS count error!",
                 smsSendingError: "SMS sending error!",
-                smsSent: "SMS successful sent!",
-                authenticationSuccessful: "User successful authenticated!",
+                smsSent: "SMS successfully sent!",
+                authenticationSuccessful: "User successfully authenticated!",
                 
                 invalidPhoneNumberError: "Invalid phone number!" //Special feedBack not used by the SMSEngine
 };
