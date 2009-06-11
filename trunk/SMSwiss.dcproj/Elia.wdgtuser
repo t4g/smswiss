@@ -2,105 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Breakpoints</key>
-	<dict>
-		<key>SMSEngineETHZ.js:103</key>
-		<string>-responseHandler</string>
-		<key>SMSEngineETHZ.js:107</key>
-		<string>-responseHandler</string>
-		<key>SMSEngineETHZ.js:110</key>
-		<string>-responseHandler</string>
-		<key>SMSEngineETHZ.js:35</key>
-		<string>-getSMSCount</string>
-		<key>SMSEngineETHZ.js:81</key>
-		<string>-sendSingleSMS</string>
-		<key>SMSEngineETHZ.js:84</key>
-		<string>-doAuthentication</string>
-		<key>SMSEngineETHZ.js:93</key>
-		<string>-doAuthentication</string>
-		<key>SMSEngineYallo.js:117</key>
-		<string>-responseHandler</string>
-		<key>SMSwiss.js:102</key>
-		<string>-hide</string>
-		<key>SMSwiss.js:109</key>
-		<string>-</string>
-		<key>SMSwiss.js:116</key>
-		<string>-</string>
-		<key>SMSwiss.js:141</key>
-		<string>-engineFeedBack</string>
-		<key>SMSwiss.js:239</key>
-		<string>-showBack</string>
-		<key>SMSwiss.js:245</key>
-		<string>-</string>
-		<key>SMSwiss.js:303</key>
-		<string>-showSettingPage</string>
-		<key>SMSwiss.js:304</key>
-		<string>-showSettingPage</string>
-		<key>SMSwiss.js:40</key>
-		<string>-globalSetXtraAccountSettings</string>
-		<key>SMSwiss.js:47</key>
-		<string>-globalSaveMoreInfo</string>
-		<key>SMSwiss.js:53</key>
-		<string>-</string>
-		<key>SMSwiss.js:55</key>
-		<string>-</string>
-		<key>SettingsEngine.js:222</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:224</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:226</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:231</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:235</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:237</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:250</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:251</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:256</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:257</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:26</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:266</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:272</key>
-		<string>-saveAccountData</string>
-		<key>SettingsEngine.js:288</key>
-		<string>-loadMixSettings</string>
-		<key>SettingsEngine.js:293</key>
-		<string>-loadMixSettings</string>
-		<key>SettingsEngine.js:294</key>
-		<string>-loadMixSettings</string>
-		<key>SettingsEngine.js:296</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:337</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:351</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:67</key>
-		<string>-loadAccountData</string>
-		<key>SettingsEngine.js:68</key>
-		<string>-loadAccountData</string>
-		<key>SettingsEngine.js:69</key>
-		<string>-loadAccountData</string>
-		<key>SettingsEngine.js:70</key>
-		<string>-SettingsEngine</string>
-		<key>SettingsEngine.js:94</key>
-		<string>-SettingsEngine</string>
-		<key>SimpleHTTPRequest.js:45</key>
-		<string>-send</string>
-		<key>SimpleHTTPRequest.js:67</key>
-		<string>-system_handler</string>
-		<key>SimpleHTTPRequest.js:79</key>
-		<string>-system_handler</string>
-		<key>SimpleHTTPRequest.js:90</key>
-		<string>-system_handler</string>
-	</dict>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -115,48 +16,14 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {950, 303}}</string>
-			<string>{{0, 313}, {950, 360}}</string>
+			<string>{{0, 0}, {759, 215}}</string>
+			<string>{{0, 225}, {759, 391}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>5</integer>
-	<key>Dashboard Widget Prefs</key>
-	<dict>
-		<key>id</key>
-		<string>e143e9e3c7bdaf41</string>
-		<key>in-layer</key>
-		<true/>
-		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojZn4WG8/SMSwiss.dcproj/project.wdgt/</string>
-		<key>percent-offset-x</key>
-		<integer>0</integer>
-		<key>percent-offset-y</key>
-		<integer>0</integer>
-		<key>percent-type</key>
-		<integer>1</integer>
-		<key>percent-x</key>
-		<real>0.3046875</real>
-		<key>percent-y</key>
-		<real>0.35874998569488525</real>
-		<key>pos-x</key>
-		<integer>390</integer>
-		<key>pos-y</key>
-		<integer>287</integer>
-		<key>rosetta</key>
-		<false/>
-	</dict>
+	<integer>0</integer>
 	<key>DeploymentOptions</key>
-	<dict>
-		<key>Save</key>
-		<true/>
-		<key>SavePath</key>
-		<string>/Users/Elia/Desktop</string>
-		<key>WidgetCompatibilityTag</key>
-		<integer>0</integer>
-	</dict>
-	<key>Design time language</key>
-	<string>en.lproj</string>
+	<dict/>
 	<key>MainSplitViewGeometry</key>
 	<dict>
 		<key>_collapsingFrameDimension</key>
@@ -167,12 +34,12 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 694}}</string>
-			<string>{{245, 0}, {951, 694}}</string>
+			<string>{{0, 0}, {244, 637}}</string>
+			<string>{{245, 0}, {760, 637}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>14 63 1195 715 0 0 1280 778 </string>
+	<string>138 46 1004 717 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -187,49 +54,33 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 308}}</string>
-			<string>{{0, 318}, {246, 355}}</string>
+			<string>{{0, 0}, {246, 352}}</string>
+			<string>{{0, 362}, {246, 254}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
 	<array>
 		<array>
 			<integer>0</integer>
-			<integer>1</integer>
-			<integer>7</integer>
 		</array>
 		<array>
 			<integer>0</integer>
 			<integer>1</integer>
-			<integer>7</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>6</integer>
-			<integer>0</integer>
-			<integer>2</integer>
-		</array>
-		<array>
-			<integer>0</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
-			<integer>5</integer>
+			<integer>0</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>
-		<integer>1</integer>
-		<integer>2</integer>
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>back</string>
+		<string>front</string>
 	</array>
 </dict>
 </plist>
