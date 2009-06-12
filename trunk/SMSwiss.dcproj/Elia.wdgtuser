@@ -16,14 +16,42 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {759, 215}}</string>
-			<string>{{0, 225}, {759, 391}}</string>
+			<string>{{0, 0}, {759, 299}}</string>
+			<string>{{0, 309}, {759, 307}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
 	<integer>0</integer>
+	<key>Dashboard Widget Prefs</key>
+	<dict>
+		<key>id</key>
+		<string>008f18a876c3af41</string>
+		<key>in-layer</key>
+		<true/>
+		<key>path</key>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojF09b9P/SMSwiss.dcproj/project.wdgt/</string>
+		<key>percent-offset-x</key>
+		<integer>0</integer>
+		<key>percent-offset-y</key>
+		<integer>0</integer>
+		<key>percent-type</key>
+		<integer>2</integer>
+		<key>percent-x</key>
+		<real>0.31718748807907104</real>
+		<key>percent-y</key>
+		<real>0.33750000596046448</real>
+		<key>pos-x</key>
+		<integer>522</integer>
+		<key>pos-y</key>
+		<integer>270</integer>
+		<key>rosetta</key>
+		<false/>
+	</dict>
 	<key>DeploymentOptions</key>
-	<dict/>
+	<dict>
+		<key>SavePath</key>
+		<string>/Users/Elia/Desktop</string>
+	</dict>
 	<key>MainSplitViewGeometry</key>
 	<dict>
 		<key>_collapsingFrameDimension</key>
