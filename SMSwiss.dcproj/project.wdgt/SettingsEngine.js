@@ -87,7 +87,22 @@ this.getSMSEngine = function(){
 //Get the name of the current selected SMS provide
 this.getCurrentProviderName = function(){
 
-return getCurrentProvider();
+ var provider =getCurrentProvider();
+
+ if(provider == 0) //Sunrise
+        return "Sunrise";           
+    
+ if(provider == 1) //Cablecom
+        return "Cablecom";
+                        
+ if(provider == 2) //Yallo
+        return  "Yallo";
+        
+ if(provider == 3) //ETHZ
+        return "ETHZ";
+
+ 
+ return provider; //Default case should never happens
 
 }
 
