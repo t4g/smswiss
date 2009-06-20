@@ -88,6 +88,7 @@ function addressBoock(){
                 }             
                 receiverAutoComplete.style.visibility="hidden";
                 performSearch = false;
+                event.returnValue = false;
                 focusMessage();
                 return;
         }
