@@ -70,6 +70,22 @@ body {
     border-color: rgb(224, 224, 224);
 }
 
+li.listRowActive {
+    background-color: rgb(179, 179, 179);
+    position: relative;
+    list-style-type: none;
+    height: 24px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-color: rgb(224, 224, 224);
+}
+
 .label_template {
     position: absolute;
     left: 10px;
