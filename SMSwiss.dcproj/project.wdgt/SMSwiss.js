@@ -18,6 +18,13 @@ function globalSetRunningAccount(event){
             countChars(null);// Update the sms count in case the engine is changed
 }
 
+function globalHideContactList(event)
+{
+   //if the text field is in focus it does not make sens to show the
+   //address boock contact list
+   addressBoockEngine.hideContactList();
+}
+
 
 function globalSetXtraAccountSettings(event){
 
@@ -340,3 +347,6 @@ function shake_widget(count,pad) {
 	} else
 		setTimeout('shake_widget('+count+','+pad+')', 40);
 }
+
+
+
