@@ -431,9 +431,10 @@ var accountDataSource = {
             
             //First save the old loaded data in case the user has changed some data
             settingsEngine.saveSettings();
-             settingsEngine.loadSettings();
+            settingsEngine.loadSettings();
             //Once saved load the selected account data
             settingsEngine.loadAccountData(rowIndex);
+            document.getElementById("accountList").object.rows[rowIndex].setAttribute("class", "listRowActive");
 		};
 	}
 };
