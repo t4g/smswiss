@@ -1,4 +1,3 @@
-
 function addressBoock(){
 
     var selectedContatcIndex=0;
@@ -133,6 +132,10 @@ function addressBoock(){
         receiverNumberField.value=number+" ("+name +")";
         receiverAutoComplete.style.visibility="hidden";       
     }
+    
+    this.hideContactList = function(){
+      receiverAutoComplete.style.visibility="hidden"; 
+    }
 
 
     function createContactDiv(name, number,index){
@@ -152,12 +155,6 @@ function addressBoock(){
         return enclosingDiv;     
     }
 }
-
-
-
-
-
-
 
 
 
