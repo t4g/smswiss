@@ -21,15 +21,15 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>e6243c4f3d8daf41</string>
+		<string>5001c0726f07b041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojB2zqAG/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojGdRMLW/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -48,7 +48,10 @@
 		<false/>
 	</dict>
 	<key>DeploymentOptions</key>
-	<dict/>
+	<dict>
+		<key>SavePath</key>
+		<string>/Users/epalme/Desktop</string>
+	</dict>
 	<key>MainSplitViewGeometry</key>
 	<dict>
 		<key>_collapsingFrameDimension</key>
@@ -125,16 +128,16 @@
 		</array>
 		<array>
 			<integer>0</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
 			<integer>1</integer>
 			<integer>6</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array/>
+	<array>
+		<array>
+			<integer>5</integer>
+		</array>
+	</array>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>
