@@ -4,7 +4,7 @@
  according to the license.txt file included in the project.
  */
  
- var addressBoockEngine = new addressBoock();
+var addressBoockEngine = new addressBoock();
 var settingsEngine = new SettingsEngine();
         
 function globalSearchKeyPressed(event){
@@ -244,6 +244,7 @@ function showBack(event)
     if (window.widget) {
         setTimeout('widget.performTransition();', 0);
     }
+    document.getElementById("accountList").object.rows[settingsEngine.accountForSettingsIndex].setAttribute("class", "listRowActive");
 }
 
 //

@@ -34,6 +34,8 @@ var clearAfterSend = null;
 var phoneBookFiltering  = null;
 var phoneBookFilterType = null;
 
+var accountForSettingsIndex = 0;
+
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
 
@@ -66,6 +68,9 @@ this.loadAccountData= function(accountID){
             xtraText.value = extras[accountID];
             
             globalSetXtraAccountSettings(null); //The methos is called to hidden the xtravalue field if not necessary
+            document.getElementById("accountList").object.rows[accountID].setAttribute("class", "listRowActive");
+            this.accountForSettingsIndex = accountID;
+            
 }
 
 //call this method to read from the selectedAccount list the selected item and store it
@@ -199,7 +204,7 @@ this.saveSettings = function (){
 //-----------------------------------------------------------
 
 //This is a privat method used to initialize the privat smsEngine object.
-//Any thame the running account is changed or user mofify some setting the engine 
+//Every time the running account is changed or the user modifies some setting the engine 
 //has to be reinitialized.
 function initSMSEngine(){
 
@@ -434,7 +439,6 @@ var accountDataSource = {
             settingsEngine.loadSettings();
             //Once saved load the selected account data
             settingsEngine.loadAccountData(rowIndex);
-            document.getElementById("accountList").object.rows[rowIndex].setAttribute("class", "listRowActive");
 		};
 	}
 };
