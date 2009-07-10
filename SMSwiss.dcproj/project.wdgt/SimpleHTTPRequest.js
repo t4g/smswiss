@@ -76,7 +76,7 @@ function system_handler(systemCommand) {
 	}
 	
     //Header check
-    if(stdout.indexOf("HTTP") ==-1)  return callBackFunction();
+    if(stdout == null || stdout.indexOf("HTTP") ==-1)  return callBackFunction();
     
     var content = stdout;
     //Header Remover
