@@ -233,7 +233,7 @@ function showBack(event)
 {
     //Reload data to ensure that the running account is selected
     document.getElementById("accountList").object.reloadData();
-    
+    settingsEngine.loadAccountData(settingsEngine.getRunningAccount());
     
     //settingsEngine.loadSettings(); reloading settings is probably non needed when showing the back of the widget
     
