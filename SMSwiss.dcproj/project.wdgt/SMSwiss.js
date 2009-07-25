@@ -14,7 +14,9 @@ function globalSearchContacts(event){
             addressBoockEngine.searchContacts(event);
 }
 function globalSetRunningAccount(event){
-            settingsEngine.setRunningAccount(event);
+            var accountSelectList = document.getElementById("selectedAccount").object;
+            var ruuningAccount = accountSelectList.getSelectedIndex();
+            settingsEngine.setRunningAccount(ruuningAccount);
             countChars(null);// Update the sms count in case the engine is changed
 }
 
@@ -229,6 +231,10 @@ function focusMessage(){
 //
 function showBack(event)
 {
+    //Reload data to ensure that the running account is selected
+    document.getElementById("accountList").object.reloadData();
+    
+    
     //settingsEngine.loadSettings(); reloading settings is probably non needed when showing the back of the widget
     
     var front = document.getElementById("front");
@@ -244,7 +250,9 @@ function showBack(event)
     if (window.widget) {
         setTimeout('widget.performTransition();', 0);
     }
-    document.getElementById("accountList").object.rows[settingsEngine.accountForSettingsIndex].setAttribute("class", "listRowActive");
+    
+
+    
 }
 
 //
@@ -255,13 +263,6 @@ function showBack(event)
 //
 function showFront(event)
 {
-    settingsEngine.saveSettings();
-    settingsEngine.loadSettings(); //After saving reload all settings
-    
-    //GET sms count
-    //if(settingsEngine.getSMSEngine() != null){
-    //    settingsEngine.getSMSEngine().getAvailSMS();
-    //}
     
     
     
@@ -275,6 +276,10 @@ function showFront(event)
 
     front.style.display="block";
     back.style.display="none";
+    
+    //only load setting after the style of the fron pane has changed
+    settingsEngine.saveSettings();
+    settingsEngine.loadSettings(); //After saving reload all settings
 
     if (window.widget) {
         setTimeout('widget.performTransition();', 0);
