@@ -10,7 +10,7 @@ function SettingsEngine() {
 //existing if not he add the default values, and so on...
 
 var defaultPreferenceValues = {
-                accountsNames : ["-", "-", "-", "-", "-"],
+                accountsNames : ["", "", "", "", ""],
                 userNames: ["", "", "", "", ""],
                 passwords: ["", "", "", "", ""],
                 providers: [0, 0, 0,0,0],
@@ -34,7 +34,6 @@ var clearAfterSend = null;
 var phoneBookFiltering  = null;
 var phoneBookFilterType = null;
 
-var accountForSettingsIndex = 0;
 
 //Public methods, Setting Engine Interface 
 //-----------------------------------------------------------
@@ -68,19 +67,21 @@ this.loadAccountData= function(accountID){
             xtraText.value = extras[accountID];
             
             globalSetXtraAccountSettings(null); //The methos is called to hidden the xtravalue field if not necessary
-            document.getElementById("accountList").object.rows[accountID].setAttribute("class", "listRowActive");
-            this.accountForSettingsIndex = accountID;
-            
+           
 }
 
 //call this method to read from the selectedAccount list the selected item and store it
 //as the new account to use for sending sms
-this.setRunningAccount = function(){
-        var accountSelectList = document.getElementById("selectedAccount").object;
-        var ruuningAccount = accountSelectList.getSelectedIndex();
+this.setRunningAccount = function(ruuningAccount){
         setPreferenceForKey(ruuningAccount, "ruuningAccount");
         initSMSEngine(); //Reload the SMSengine
 }
+
+//call this method to get the id of the running account
+this.getRunningAccount = function(){
+        return  getPreferenceForKey("ruuningAccount");
+}
+
 
 //Call this method to retreive the SMS engine
 //NOTE: Since the SMS engine can change at any time, you should always call this method to use it
@@ -208,6 +209,10 @@ this.saveSettings = function (){
 //has to be reinitialized.
 function initSMSEngine(){
 
+
+    //Do not init the widget if the back is displayed
+    if(document.getElementById("back").style.display == "block") return;
+
     smsEngine = null;
     //Check if the current account is valid
     //-------------------------------------- 
@@ -321,13 +326,17 @@ function loadSelectAccountList(){
                         
         var accountSelectList = document.getElementById("selectedAccount").object;
         var accountsNames = getPreferenceForKey("accountsNames");
+        //var i;
+        for(var i=0;i<5;i++){
+            if(accountsNames[i]==""){
+                accountSelectList.select[i].text="";
+                accountSelectList.select[i].disabled=true;
+            }else{
+                accountSelectList.select[i].text=accountsNames[i];
+                accountSelectList.select[i].disabled=false;
+            }
              
-        accountSelectList.select[0].text=accountsNames[0];
-        accountSelectList.select[1].text=accountsNames[1];
-        accountSelectList.select[2].text=accountsNames[2];
-        accountSelectList.select[3].text=accountsNames[3];
-        accountSelectList.select[4].text=accountsNames[4];
-        
+        }     
         var ruuningAccount = getPreferenceForKey("ruuningAccount");
       
         accountSelectList.setSelectedIndex(ruuningAccount);
@@ -428,6 +437,9 @@ var accountDataSource = {
 		if (templateElements.label) {
 			templateElements.label.innerText = this._rowData[rowIndex];
 		}
+        
+        if(settingsEngine.getRunningAccount() == rowIndex)
+            rowElement.className= "listRowActive";
 
 		// Assign a click event handler for the row.
 		rowElement.onclick = function(event) {
@@ -435,6 +447,7 @@ var accountDataSource = {
             //rowElement.innerText="";
             
             //First save the old loaded data in case the user has changed some data
+            settingsEngine.setRunningAccount(rowIndex)
             settingsEngine.saveSettings();
             settingsEngine.loadSettings();
             //Once saved load the selected account data
