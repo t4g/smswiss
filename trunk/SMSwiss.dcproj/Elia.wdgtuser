@@ -58,15 +58,15 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>d7bfeb4d141bb041</string>
+		<string>4354a553171bb041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojSgbB2j/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojuI51sf/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -152,13 +152,17 @@
 			<integer>1</integer>
 			<integer>3</integer>
 		</array>
+		<array>
+			<integer>0</integer>
+			<integer>1</integer>
+			<integer>3</integer>
+			<integer>1</integer>
+		</array>
 	</array>
 	<key>Objects view last selections</key>
 	<array>
 		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-			<integer>3</integer>
+			<integer>5</integer>
 		</array>
 	</array>
 	<key>Opened Steps</key>
@@ -167,7 +171,7 @@
 	</array>
 	<key>Visible StackLayout Views</key>
 	<array>
-		<string>front</string>
+		<string>back</string>
 	</array>
 </dict>
 </plist>
