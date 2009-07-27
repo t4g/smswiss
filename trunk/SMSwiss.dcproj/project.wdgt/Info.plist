@@ -19,9 +19,9 @@
 	<key>CFBundleName</key>
 	<string>SMSwiss</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.5</string>
+	<string>0.6</string>
 	<key>CFBundleVersion</key>
-	<string>0.5</string>
+	<string>0.6</string>
 	<key>CloseBoxInsetX</key>
 	<integer>11</integer>
 	<key>CloseBoxInsetY</key>
