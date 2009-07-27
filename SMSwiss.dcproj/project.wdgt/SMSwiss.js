@@ -83,11 +83,12 @@ var SMSEngineFeedBack = {
 //
 function load()
 {
-    settingsEngine.loadSettings();
-    settingsEngine.loadAccountData(0); //Load the first account data into the account setting page by default
-    dashcode.setupParts();
     setTimeout("checkForUpdate()",50);
     setTimeout("TrackWidget('init')",100);
+    dashcode.setupParts();
+    
+    settingsEngine.loadSettings();
+    if(!settingsEngine.hasAtLeastOneAccountSet()){ showBack()};
     
 }
 

@@ -20,23 +20,27 @@
 		<string>-searchKeyPressed</string>
 		<key>AddressBoock.js:82</key>
 		<string>-searchKeyPressed</string>
-		<key>SMSwiss.js:235</key>
+		<key>SMSwiss.js:236</key>
 		<string>-showBack</string>
-		<key>SMSwiss.js:255</key>
+		<key>SMSwiss.js:256</key>
 		<string>-showBack</string>
-		<key>SettingsEngine.js:214</key>
+		<key>SettingsEngine.js:226</key>
 		<string>-initSMSEngine</string>
-		<key>SettingsEngine.js:329</key>
+		<key>SettingsEngine.js:264</key>
+		<string>-saveAccountData</string>
+		<key>SettingsEngine.js:346</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:341</key>
+		<key>SettingsEngine.js:358</key>
 		<string>-loadSelectAccountList</string>
-		<key>SettingsEngine.js:437</key>
+		<key>SettingsEngine.js:454</key>
 		<string>-prepareRow</string>
-		<key>SettingsEngine.js:441</key>
+		<key>SettingsEngine.js:458</key>
 		<string>-prepareRow</string>
-		<key>SettingsEngine.js:450</key>
+		<key>SettingsEngine.js:467</key>
 		<string>-onclick</string>
-		<key>SettingsEngine.js:76</key>
+		<key>SettingsEngine.js:75</key>
+		<string>-hasAtLeastOneAccountSet</string>
+		<key>SettingsEngine.js:88</key>
 		<string>-setRunningAccount</string>
 	</dict>
 	<key>ContentSplitViewGeometry</key>
@@ -62,11 +66,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>4354a553171bb041</string>
+		<string>eb8c07158b1db041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojuI51sf/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojnj5n5f/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -127,36 +131,6 @@
 	<array>
 		<array>
 			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>5</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>5</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>3</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>3</integer>
-			<integer>1</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>

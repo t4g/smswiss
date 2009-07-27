@@ -70,6 +70,18 @@ this.loadAccountData= function(accountID){
            
 }
 
+this.hasAtLeastOneAccountSet = function(){
+
+    var accounts = this.getAccountNames();
+
+    for(var i=0; i<accounts.length;i++){
+        if(accounts[i]!="") return true;
+    }
+    
+    return false;
+}
+
+
 //call this method to read from the selectedAccount list the selected item and store it
 //as the new account to use for sending sms
 this.setRunningAccount = function(ruuningAccount){
@@ -275,6 +287,11 @@ function saveAccountData(){
             }else if(proxyPort == ""){
                 proxyPort = "80";
             }
+            
+              //if the account name is leaved empty set it to default if at least the user name is set
+            if(accountName.value =="" && userName.value!="") accountName.value="Account"+accountID;
+            
+
             
             
             accountsNames[accountID]=accountName.value;

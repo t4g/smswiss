@@ -644,7 +644,6 @@ li.listRowActive {
     position: relative;
     -khtml-margin-top-collapse: separate;
     -khtml-margin-bottom-collapse: separate;
-    margin-top: -125px;
     margin-left: 22px;
     color: rgb(201, 201, 201);
     background-color: rgb(231, 231, 231);
@@ -652,9 +651,10 @@ li.listRowActive {
     -webkit-border-top-right-radius: 0px 0px;
     -webkit-border-bottom-left-radius: 0px 0px;
     -webkit-border-bottom-right-radius: 0px 0px;
-    width: auto;
     margin-right: 12px;
-    min-height: 124px;
+    margin-top: -126px;
+    width: auto;
+    min-height: 125px;
     height: auto;
 }
 
@@ -671,13 +671,14 @@ li.listRowActive {
     text-overflow: ellipsis;
     overflow: hidden;
     position: relative;
-    width: auto;
-    margin-right: 0px;
-    margin-left: 0px;
-    min-height: 15px;
-    height: auto;
     -khtml-margin-top-collapse: separate;
     -khtml-margin-bottom-collapse: separate;
+    margin-top: 6px;
+    margin-right: 0px;
+    margin-left: 2px;
+    width: auto;
+    min-height: 45px;
+    height: auto;
 }
 
 #text2 {
@@ -705,11 +706,11 @@ li.listRowActive {
     overflow: hidden;
     position: absolute;
     margin-top: 0px;
-    top: 53px;
     left: 3px;
+    top: 57px;
     right: 118px;
     width: auto;
-    bottom: 52px;
+    bottom: 48px;
     height: auto;
 }
 
@@ -747,13 +748,14 @@ li.listRowActive {
     text-overflow: ellipsis;
     overflow: hidden;
     position: relative;
-    width: auto;
-    margin-right: 0px;
-    margin-left: 0px;
-    min-height: 15px;
-    height: auto;
     -khtml-margin-top-collapse: separate;
     -khtml-margin-bottom-collapse: separate;
+    margin-top: 4px;
+    margin-left: 2px;
+    width: auto;
+    margin-right: 4px;
+    min-height: 45px;
+    height: auto;
 }
 
 #span {
@@ -778,8 +780,8 @@ li.listRowActive {
     position: absolute;
     margin-top: 0px;
     top: 63px;
-    left: 0px;
-    right: 8px;
+    left: 2px;
+    right: 2px;
     width: auto;
     height: auto;
 }
