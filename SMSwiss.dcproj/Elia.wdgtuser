@@ -20,9 +20,15 @@
 		<string>-searchKeyPressed</string>
 		<key>AddressBoock.js:82</key>
 		<string>-searchKeyPressed</string>
-		<key>SMSwiss.js:236</key>
+		<key>SMSEngineCablecom.js:151</key>
+		<string>responseHandler</string>
+		<key>SMSEngineCablecom.js:170</key>
+		<string>-responseHandler</string>
+		<key>SMSEngineCablecom.js:172</key>
+		<string>-responseHandler</string>
+		<key>SMSwiss.js:239</key>
 		<string>-showBack</string>
-		<key>SMSwiss.js:256</key>
+		<key>SMSwiss.js:259</key>
 		<string>-showBack</string>
 		<key>SettingsEngine.js:226</key>
 		<string>-initSMSEngine</string>
@@ -62,29 +68,29 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>5</integer>
+	<integer>0</integer>
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>eb8c07158b1db041</string>
+		<string>6fd7cb556427b041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojnj5n5f/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojyZvaTm/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
 		<integer>0</integer>
 		<key>percent-type</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>percent-x</key>
-		<real>0.16484375298023224</real>
+		<real>0.25390625</real>
 		<key>percent-y</key>
-		<real>0.30625000596046448</real>
+		<real>0.14875000715255737</real>
 		<key>pos-x</key>
-		<integer>717</integer>
+		<integer>603</integer>
 		<key>pos-y</key>
-		<integer>331</integer>
+		<integer>119</integer>
 		<key>rosetta</key>
 		<false/>
 	</dict>
@@ -134,11 +140,7 @@
 		</array>
 	</array>
 	<key>Objects view last selections</key>
-	<array>
-		<array>
-			<integer>5</integer>
-		</array>
-	</array>
+	<array/>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>

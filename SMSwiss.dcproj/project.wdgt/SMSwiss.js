@@ -177,7 +177,10 @@ function engineFeedBack(event){
     if(event == SMSEngineFeedBack.authenticationSuccessful){
         return;
     }
-        
+    
+    if(event == SMSEngineFeedBack.smsSendingError){
+            statusDesc.innerHTML = "Unable to send SMS!";
+    }        
         
     statusIcon.src = "Images/error.png"
     statusIcon.style.visibility="visible";

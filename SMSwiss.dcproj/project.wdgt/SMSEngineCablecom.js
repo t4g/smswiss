@@ -41,11 +41,11 @@ this.isConnected = function () {
 };
 
 this.isSMSCountCritical = function () {
-	return (innerSMSCount < 150);
+	return (innerSMSCount < 125);
 };
 
 this.isSMSCountWarning = function () {
-	return (innerSMSCount < 350);
+	return (innerSMSCount < 375);
 };
 
 
@@ -150,7 +150,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	if(getIsLogedIn(xmlRequest.responseText)){
 		innerSessionID=getSessionID(xmlRequest.getAllResponseHeaders());
-		innerJSessionID= getJSessionID(xmlRequest.getAllResponseHeaders())
+		innerJSessionID=getJSessionID(xmlRequest.getAllResponseHeaders());
 	}else{
 		innerSessionID=-1;
 		if(withAutentication){ //In case we are doing the autentication do not check the session
@@ -167,7 +167,9 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	}
 	
 	if(withAutentication){
-		return loadSMS(queue_mess,number);
+        //if we are here we just needed to logon
+        //No sms to send simply recuperate the ammount of points
+            return loadSMS(queue_mess,number);
 	}
 	
 	
@@ -184,6 +186,13 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	if(queue_mess == null) //There is no sms to send it was a simply login
 		return engineFeedBack(SMSEngineFeedBack.authenticationSuccessful);
+        
+    if(queue_mess != null && withSendSMS ==false){
+            //this is a special case it hapens when the session expire
+            //if the queue_mess is not empty but the withSendSMS is false it measn
+            //that the sms has to be send
+            return sendSingleSMS(queue_mess,number);
+    }
 	
 	//If a sms was sent check it
 	if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
