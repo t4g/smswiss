@@ -17,7 +17,7 @@ var dashcodePartSpecs = {
     "phoneBookLabel": { "creationFunction": "CreateText", "text": "This option allows to filter the result of the phone book search. Only phone numbers of the specified type are shown." },
     "popup": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "showSettingPage", "options": ["Accounts", "Settings", ["Phone Book", "PhoneBook"], "About"], "rightImageWidth": 16 },
     "providerLabel": { "creationFunction": "CreateText", "text": "Provider:" },
-    "providerList": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "globalSetXtraAccountSettings", "options": [["Sunrise", "0"], ["Calecom", "1"], ["Yallo", "2"], ["ETHZ", "3"]], "rightImageWidth": 16 },
+    "providerList": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "globalSetXtraAccountSettings", "options": [["Sunrise", "0"], ["Cablecom", "1"], ["Yallo", "2"], ["ETHZ", "3"]], "rightImageWidth": 16 },
     "proxyLabel": { "creationFunction": "CreateText", "text": "Proxy address:" },
     "proxyPortLabel": { "creationFunction": "CreateText", "text": "Proxy port:" },
     "selectedAccount": { "creationFunction": "CreatePopupButton", "leftImageWidth": 10, "onchange": "globalSetRunningAccount", "options": [["", "account0"], ["", "account1"], ["", "account2"], ["", "account3"], ["", "account4"]], "rightImageWidth": 16 },

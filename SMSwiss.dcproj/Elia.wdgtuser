@@ -21,7 +21,7 @@
 		<key>AddressBoock.js:82</key>
 		<string>-searchKeyPressed</string>
 		<key>SMSEngineCablecom.js:151</key>
-		<string>responseHandler</string>
+		<string>-responseHandler</string>
 		<key>SMSEngineCablecom.js:170</key>
 		<string>-responseHandler</string>
 		<key>SMSEngineCablecom.js:172</key>
@@ -68,15 +68,15 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>6fd7cb556427b041</string>
+		<string>cd5b414b6f27b041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojyZvaTm/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/dW/dWJsHy8KFEiS78gd5kdKjk+++TI/-Tmp-/Dashcode/.SMSwiss.dcprojcvYKgQ/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -134,13 +134,13 @@
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
+	<array/>
+	<key>Objects view last selections</key>
 	<array>
 		<array>
-			<integer>0</integer>
+			<integer>5</integer>
 		</array>
 	</array>
-	<key>Objects view last selections</key>
-	<array/>
 	<key>Opened Steps</key>
 	<array>
 		<integer>0</integer>
