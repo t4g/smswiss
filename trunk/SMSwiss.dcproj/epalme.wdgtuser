@@ -16,8 +16,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1187, 531}}</string>
-			<string>{{0, 541}, {1187, 263}}</string>
+			<string>{{0, 0}, {1242, 434}}</string>
+			<string>{{0, 444}, {1242, 436}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -25,11 +25,11 @@
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
-		<string>5001c0726f07b041</string>
+		<string>6afa68b58229b041</string>
 		<key>in-layer</key>
 		<true/>
 		<key>path</key>
-		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcprojGdRMLW/SMSwiss.dcproj/project.wdgt/</string>
+		<string>/private/var/folders/RA/RAvAaRrUFQOpeIxswuQDzbHCn7Y/-Tmp-/Dashcode/.SMSwiss.dcproj0Afqgv/SMSwiss.dcproj/project.wdgt/</string>
 		<key>percent-offset-x</key>
 		<integer>0</integer>
 		<key>percent-offset-y</key>
@@ -62,12 +62,12 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 825}}</string>
-			<string>{{245, 0}, {1188, 825}}</string>
+			<string>{{0, 0}, {244, 901}}</string>
+			<string>{{245, 0}, {1243, 901}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>249 226 1432 846 0 0 1920 1178 </string>
+	<string>235 256 1487 922 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -82,8 +82,8 @@
 		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 420}}</string>
-			<string>{{0, 430}, {246, 374}}</string>
+			<string>{{0, 0}, {246, 460}}</string>
+			<string>{{0, 470}, {246, 410}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -94,42 +94,9 @@
 		<array>
 			<integer>0</integer>
 			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>3</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>3</integer>
-			<integer>1</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>3</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>3</integer>
-			<integer>0</integer>
-			<integer>0</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
 			<integer>3</integer>
 			<integer>1</integer>
 			<integer>11</integer>
-		</array>
-		<array>
-			<integer>0</integer>
-			<integer>1</integer>
-			<integer>6</integer>
 		</array>
 	</array>
 	<key>Objects view last selections</key>
