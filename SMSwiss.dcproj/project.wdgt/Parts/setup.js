@@ -29,7 +29,7 @@ var dashcodePartSpecs = {
     "text3": { "creationFunction": "CreateText", "text": "Vibration:" },
     "text4": { "creationFunction": "CreateText", "text": "SMSwiss is an open source widget created and supported by: Elia Palme, Beat Birkhofer, David and Vladimir Knobel" },
     "text5": { "creationFunction": "CreateText", "text": "If you like SMSwiss please make a donation and support us to improve the widget and make it even better!" },
-    "userNameLabel": { "creationFunction": "CreateText", "text": "User name:" },
+    "userNameLabel": { "creationFunction": "CreateText", "text": "E-mail:" },
     "webSite": { "creationFunction": "CreateText", "text": "http://code.google.com/p/smswiss/" },
     "xtraAcountSettingLabel": { "creationFunction": "CreateText", "text": "x" }
 };

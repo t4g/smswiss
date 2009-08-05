@@ -42,10 +42,17 @@ function globalSetXtraAccountSettings(event){
         xtraInfo.style.visibility = "visible";
         xtraInfo.setAttribute('onclick', 'widget.openURL("http://code.google.com/p/smswiss/wiki/YalloAccountSetUp")'); 
         xtraLabel.innerText = "Captcha";
+        userNameLabel.innerHTML="Number:";
+    }else if (provider.object.getSelectedIndex() == 3) {  //ETHZ
+        xtraLabel.style.visibility = "hidden";
+        xtraText.style.visibility = "hidden";
+        xtraInfo.style.visibility = "hidden";
+        userNameLabel.innerHTML="User name:";
     } else {
         xtraLabel.style.visibility = "hidden";
         xtraText.style.visibility = "hidden";
         xtraInfo.style.visibility = "hidden";
+        userNameLabel.innerHTML="E-mail:";
     }
 }
 
