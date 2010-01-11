@@ -2,22 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Breakpoints</key>
+	<dict>
+		<key>widget.wdgt/SettingsEngine.js:458</key>
+		<string>-prepareRow</string>
+	</dict>
+	<key>CYLastWindowPosition</key>
+	<string>{1044, 866}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
 		<integer>8</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1242, 434}}</string>
-			<string>{{0, 444}, {1242, 436}}</string>
+			<string>{{0, 0}, {1242, 402}}</string>
+			<string>{{0, 412}, {1242, 468}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -49,17 +52,21 @@
 	</dict>
 	<key>DeploymentOptions</key>
 	<dict>
+		<key>Destination</key>
+		<string>aos.default</string>
+		<key>Save</key>
+		<true/>
 		<key>SavePath</key>
 		<string>/Users/epalme/Desktop</string>
+		<key>enableSimulation</key>
+		<true/>
+		<key>simulatedHost</key>
+		<string>web.me.com</string>
 	</dict>
 	<key>MainSplitViewGeometry</key>
 	<dict>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
 			<string>{{0, 0}, {244, 901}}</string>
@@ -67,23 +74,19 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>235 256 1487 922 0 0 1920 1178 </string>
+	<string>251 189 1487 922 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
 		<integer>5</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 460}}</string>
-			<string>{{0, 470}, {246, 410}}</string>
+			<string>{{0, 0}, {246, 353}}</string>
+			<string>{{0, 363}, {246, 517}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -113,5 +116,24 @@
 	<array>
 		<string>back</string>
 	</array>
+	<key>Widget</key>
+	<dict>
+		<key>Objects view expanded items</key>
+		<array>
+			<array>
+				<integer>0</integer>
+			</array>
+		</array>
+		<key>Objects view last selections</key>
+		<array>
+			<array>
+				<integer>5</integer>
+			</array>
+		</array>
+		<key>Visible StackLayout Views</key>
+		<array>
+			<string>back</string>
+		</array>
+	</dict>
 </dict>
 </plist>
