@@ -1,8 +1,9 @@
 HTTP/1.1 200 OK
-Date: Mon, 11 Jan 2010 14:32:36 GMT
+Date: Mon, 11 Jan 2010 15:23:05 GMT
 Server: Apache/2.2.3 (Red Hat)
 Vary: Accept-Encoding,User-Agent
 Transfer-Encoding: chunked
 Content-Type: text/html; charset=ISO-8859-1
 
-400 Action not recognized
+200 OK
+ORIGINATOR,+41765454024
