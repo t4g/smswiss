@@ -152,7 +152,7 @@ if (html.indexOf("200") != -1) { //By authentication
 
 
 function getIsLogedIn(html){
-  if (html.indexOf("400 Action not recognized") != -1) { //By authentication
+  if (html.indexOf("400 no action specified") != -1) { //By authentication
     return true;
   }
   return false;

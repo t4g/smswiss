@@ -4,11 +4,15 @@
 <dict>
 	<key>Breakpoints</key>
 	<dict>
+		<key>widget.wdgt/SMSEngineETHZ.js:86</key>
+		<string>-SMSEngineETHZ</string>
+		<key>widget.wdgt/SMSEngineETHZ.js:89</key>
+		<string>-SMSEngineETHZ</string>
 		<key>widget.wdgt/SettingsEngine.js:458</key>
 		<string>-prepareRow</string>
 	</dict>
 	<key>CYLastWindowPosition</key>
-	<string>{1044, 866}</string>
+	<string>{748, 638}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
