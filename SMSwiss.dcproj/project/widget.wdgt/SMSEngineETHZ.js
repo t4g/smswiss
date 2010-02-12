@@ -129,7 +129,12 @@ function responseHandler(xmlRequest,mess,number,withAutentication,withSendSMS){
   //If a sms was sent check it
   if(withSendSMS && !getSMSisSent(xmlRequest.responseText)){
         alert("Unable to send sms!, The Java Script Yallo SMS Engine was not able to find the key word in the returned html page  which identify a sucessfull sent sms.");
-    return engineFeedBack(SMSEngineFeedBack.smsSendingError);
+        
+        if(checkIFsmsAreRemaining(xmlRequest.responseText)){
+            return engineFeedBack(SMSEngineFeedBack.smsSendingErrorNoSMSLeft);
+        }else{
+            return engineFeedBack(SMSEngineFeedBack.smsSendingError);
+        }
   }
   
 
@@ -163,6 +168,13 @@ function getIsLogedIn(html){
 
 function checkIFsmsAreExided(html){
   if (html.indexOf("500") != -1 && html.indexOf("exceeded") != -1) { 
+    return true;
+  }
+  return false;
+}
+
+function checkIFsmsAreRemaining(html){
+  if (html.indexOf("412") != -1) { 
     return true;
   }
   return false;

@@ -78,6 +78,7 @@ var SMSEngineFeedBack = {
                 cookieError: "Cookie error!",
                 smsCountError :"SMS count error!",
                 smsSendingError: "SMS sending error!",
+                smsSendingErrorNoSMSLeft: "No sms left!",
                 smsSent: "SMS successfully sent!",
                 authenticationSuccessful: "User successfully authenticated!",
                 
@@ -187,7 +188,12 @@ function engineFeedBack(event){
     
     if(event == SMSEngineFeedBack.smsSendingError){
             statusDesc.innerHTML = "Unable to send SMS!";
-    }        
+    }
+    if(event == SMSEngineFeedBack.smsSendingErrorNoSMSLeft){
+            statusDesc.innerHTML = "No SMS Left!";
+    }    
+    
+            
         
     statusIcon.src = "Images/error.png"
     statusIcon.style.visibility="visible";

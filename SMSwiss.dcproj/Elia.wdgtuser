@@ -50,7 +50,7 @@
 		<string>-setRunningAccount</string>
 	</dict>
 	<key>CYLastWindowPosition</key>
-	<string>{767, 509}</string>
+	<string>{468, 535}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -114,7 +114,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>124 99 1122 679 0 0 1280 778 </string>
+	<string>325 99 1122 679 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
