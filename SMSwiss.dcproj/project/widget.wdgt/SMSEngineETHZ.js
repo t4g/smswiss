@@ -59,6 +59,8 @@ function sendSMS(smsText,number){
   if(smsText == null)
     return;
 
+  number = number.replace("+","00");
+
   sendSingleSMS(smsText,number); //No need to split mess
 }
 

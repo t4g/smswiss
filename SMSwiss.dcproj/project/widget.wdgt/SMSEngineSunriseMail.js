@@ -64,6 +64,7 @@ function sendSMS(smsText,number){
 	if(smsText==null)
 		return loadSMS(null,null);
 	
+    /* OLD method with SMS splitting
 	//Partition mess in multiple sms
 	var queue_mess=new Array();
 	while(smsText.length>smsChars){
@@ -71,8 +72,10 @@ function sendSMS(smsText,number){
 		smsText=smsText.substring(smsChars, smsText.length);
 	}
 	queue_mess.push(smsText);
+    sendSingleSMS(queue_mess,number);
+    */
 		
-	sendSingleSMS(queue_mess,number);
+	sendSingleSMS(smsText,number);
 }
 
 
