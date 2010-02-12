@@ -1,8 +1,8 @@
 HTTP/1.1 200 OK
-Date: Fri, 12 Feb 2010 13:53:32 GMT
+Date: Fri, 12 Feb 2010 22:50:36 GMT
 Server: Apache/2.2.3 (Red Hat)
 Vary: Accept-Encoding,User-Agent
 Transfer-Encoding: chunked
 Content-Type: text/html; charset=ISO-8859-1
 
-400 no action specified
+412 no more SMS allowed for today (0 available, message length 1)
