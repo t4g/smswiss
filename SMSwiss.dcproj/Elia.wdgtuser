@@ -49,26 +49,24 @@
 		<key>SettingsEngine.js:88</key>
 		<string>-setRunningAccount</string>
 	</dict>
+	<key>CYLastWindowPosition</key>
+	<string>{767, 509}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
 		<integer>8</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {877, 320}}</string>
-			<string>{{0, 330}, {877, 307}}</string>
+			<string>{{0, 0}, {877, 268}}</string>
+			<string>{{0, 278}, {877, 359}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>5</integer>
+	<integer>0</integer>
 	<key>Dashboard Widget Prefs</key>
 	<dict>
 		<key>id</key>
@@ -96,17 +94,19 @@
 	</dict>
 	<key>DeploymentOptions</key>
 	<dict>
+		<key>Destination</key>
+		<string>aos.default</string>
 		<key>SavePath</key>
 		<string>/Users/Elia/Desktop</string>
+		<key>enableSimulation</key>
+		<true/>
+		<key>simulatedHost</key>
+		<string>web.me.com</string>
 	</dict>
 	<key>MainSplitViewGeometry</key>
 	<dict>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
 			<string>{{0, 0}, {244, 658}}</string>
@@ -121,16 +121,12 @@
 		<integer>5</integer>
 		<key>SplitViewConfig</key>
 		<integer>3</integer>
-		<key>_collapsingFrameDimension</key>
-		<real>0.0</real>
 		<key>_indexOfCollapsedView</key>
 		<integer>0</integer>
-		<key>_percentageOfCollapsedView</key>
-		<real>0.0</real>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 364}}</string>
-			<string>{{0, 374}, {246, 263}}</string>
+			<string>{{0, 0}, {246, 352}}</string>
+			<string>{{0, 362}, {246, 275}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -149,5 +145,14 @@
 	<array>
 		<string>back</string>
 	</array>
+	<key>Widget</key>
+	<dict>
+		<key>Objects view last selections</key>
+		<array/>
+		<key>Visible StackLayout Views</key>
+		<array>
+			<string>front</string>
+		</array>
+	</dict>
 </dict>
 </plist>
