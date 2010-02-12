@@ -83,8 +83,10 @@ function sendSMS(smsText,number){
 function sendSingleSMS(queue_mess,number){
 
 	engineStatusFeedBack(SMSEngineStatus.sendingSMS);
-		
-	var mess = queue_mess[queue_mess.length-1]; //Mess to send
+	
+    // OLD SEND FULL SMS NOW    	
+	//var mess = queue_mess[queue_mess.length-1]; //Mess to send
+    var mess = queue_mess;
 
 	var feedURL = "http://mip.sunrise.ch/mip/dyn/sms/sms?.lang=de";
 	var onloadHandler = function() {responseHandler(xmlRequest,queue_mess,number,false,true); };
@@ -193,6 +195,8 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 		return engineFeedBack(SMSEngineFeedBack.smsSendingError);
 	}
 	
+    //OLD CODE FOR MULTIPLE MESS
+    /*
 	//If we are here is because we have sent an sms
 	queue_mess.pop(); //If no error happens remove the sent message from the queue
 	
@@ -206,7 +210,9 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	function sendTimeOutedSingleSMS(){
 		return sendSingleSMS(queue_mess,number);
 	}
-
+    */
+    
+    
 	//There is no sms to send
 	return engineFeedBack(SMSEngineFeedBack.smsSent);
 
