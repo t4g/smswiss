@@ -1,8 +1,557 @@
 HTTP/1.1 200 OK
-Date: Fri, 12 Feb 2010 22:50:36 GMT
-Server: Apache/2.2.3 (Red Hat)
+Date: Thu, 18 Feb 2010 15:46:18 GMT
+Server: Apache
+Pragma: No-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Cache-Control: no-cache
+Cache-Control: no-store
+Content-Language: de-CH
 Vary: Accept-Encoding,User-Agent
 Transfer-Encoding: chunked
-Content-Type: text/html; charset=ISO-8859-1
+Content-Type: text/html;charset=UTF-8
 
-412 no more SMS allowed for today (0 available, message length 1)
+
+
+<script type="text/javascript">
+<!--
+
+function convertRecipient(recipient) {
+
+	//remove all non digit numbers but not +
+	recipient = recipient.replace(/[^\d|^\+]+/g, "");
+	
+	if (recipient.length >= 3) {
+		//IF first char=0 and 2nd not 0 THEN replace 0 by +41
+		if (recipient.match("^0[^0]\d+")) {
+			recipient = recipient.replace("^0", "+41");
+		}
+		
+		//IF first and 2nd char=0 THEN replace 00 by +
+		if (recipient.match("^00\d+")) {
+			recipient = recipient.replace("^00", "+");
+		}
+	}
+
+	return recipient;
+}
+
+
+//-->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<link rel="stylesheet" href="https://www.sunrise.ch/content.css" type="text/css" media="screen,projection" charset="utf-8" />
+<link rel="stylesheet" href="https://www.sunrise.ch/general.css" type="text/css" media="all" title="no title" charset="utf-8" />
+<link rel="stylesheet" href="https://www.sunrise.ch/screen.css" type="text/css" media="screen,projection" charset="utf-8" />
+<link rel="stylesheet" href="https://www.sunrise.ch/header.css" type="text/css" media="screen,projection" charset="utf-8" />
+<link rel="stylesheet" href="https://www.sunrise.ch/images.css" type="text/css" media="all" charset="utf-8" />
+<link rel="shortcut icon" href="https://www.sunrise.ch/favicon.ico" type="image/gif" media="all" />
+<link rel="icon" href="https://www.sunrise.ch/favicon.ico" type="image/gif" media="all" />
+<!--[if IE]>
+  <link rel="stylesheet" href="https://www.sunrise.ch/screen_ie.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+<!--[if lt IE 7]>
+    <link rel="stylesheet" href="https://www.sunrise.ch/screen_ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+<!--[if lt IE 6]>
+    <link rel="stylesheet" href="https://www.sunrise.ch/screen_ltie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+<STYLE TYPE="text/css">
+<!--
+BODY {margin: 0;}
+INPUT {border: 1px solid #C1B2B4;}
+TEXTAREA {border: 1px solid #C1B2B4;}
+textarea.error {
+  background-color:#FCE5F1;
+  color:black;
+}
+.radio_b {
+  border: none !important;
+  vertical-align: middle !important;
+  padding-left: 10px;
+  padding-right: 2px 2px 2px 0px;
+}
+.attachment_b {border: 1px solid #C1B2B4 !important;}
+.attachment_b_opera {border: none !important;}
+
+.accordion h2 {
+   background-color:#E0CED0;
+   padding:0pt;
+   margin:0pt;
+   cursor: pointer;
+}
+.accordion h2 span {
+   padding:0px;
+   margin:0pt;
+}
+.accordion h2 span img {
+   float:right;
+   margin:0.4em 0.4em 0pt 0pt;
+   padding-right:0.4em;
+}
+.contacts div {
+   height:2.0em;
+   line-height:2.0em;
+   padding-left:0.4em;
+}
+.header {
+   padding-bottom:0.5em;
+   padding-top:0.5em;
+}
+.contact_item div {
+   display: inline;
+   cursor: pointer;
+}
+.button div {
+   display:table-cell;
+}
+ 
+* html .button {
+   display:inline-block;
+}
+
+.pg-normal {
+ 	font-weight: normal;
+}
+ 
+.pg-selected {
+ 	font-weight: bold;
+}
+-->
+</STYLE>
+
+<title>SMS-/MMS-Sender</title>
+
+	
+	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/paging.js"></script>
+	
+	
+	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/motionpack.js"></script>
+	
+	
+	
+	<link rel="stylesheet" href="/mip/ext/css/wick.css" type="text/css" media="all" title="no title" charset="utf-8" />
+	
+	
+	
+	
+	
+	
+		<script type="text/javascript" language="JavaScript">
+		//<!--
+			
+			collection = [
+				'+41786020621 simone baby'
+			];
+		//-->
+		</script>
+	
+	
+	
+	
+	
+	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/wick.js"></script>
+	
+	
+	
+	   <script type="text/javascript" language="JavaScript">
+	   //<!--
+	    function checkForm() {
+	    	answer = true;
+
+	  		if ( document.getElementById('mmsRB').checked) {
+				document.getElementById('mmsAttachmentFileName').value = document.getElementById('mmsAttachment').value;
+			}
+	    
+	    	if (siw && siw.selectingSomething)
+	      		answer = false;
+	    	
+	    	return answer;
+	    }
+	   //-->
+	</script>
+	
+
+	
+	
+	
+	
+	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/cookieTools.js"></script>
+
+
+</head>
+
+<body onload="onBodyLoadFn()" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0">
+
+  
+  <p>
+    
+      <span id="errorBlock" class="error">
+        
+          
+			
+			
+				SMS wurde an +41765454024 gesendet.<br/>
+			
+		   
+         
+   		 <!-- SMS limit reached warning -->
+		 <div id="smsWarningTR" style="display:none;">
+           Die maximale Nachrichtenl&#228;nge wurde erreicht.
+		 </div>
+       </span>
+     
+  </p>
+
+  
+
+  
+
+  <table border="0" width="100%" style="margin: 0pt">
+    <!-- set up proportions -->
+    <tr>
+      <td width="30%"></td>
+      <td width="50%"></td>
+      <td></td>
+    </tr>
+
+    <!-- Here begins the form -->
+    <form id="smsMmsSenderForm" method="post" action="/mip/dyn/sms/sms?.lang=de" enctype="multipart/form-data" onsubmit="return checkForm()">
+
+    <!-- Sender -->
+    <tr>
+      <td>
+        Absender
+      </td>
+      <td  colspan="2">
+		
+			0765446839
+		
+      </td>
+    </tr>
+
+    <!-- Recipient input text + message length counter -->
+    <tr>
+      <td>
+        Empf&#228;nger
+      </td>
+      <td>
+        <input id="recipient" name="recipient" class="wickEnabled" style="width:100%" tabindex="1" onblur="this.value=convertRecipient(this.value)" type="text" value="" maxlength="40" autocomplete="off"/>
+      </td>
+      <td style="text-align: right">
+        <div style="float:right;"><input style="width: 45px;" type="text" name="charsLeft" readonly="readonly" maxlength="10" tabindex="-1" value="160" /></div>
+      </td>
+    </tr>
+
+    <!-- SMS / MMS Switch -->
+    <tr>
+      <td>
+		&nbsp;
+      </td>
+      <td style="padding-left: 0px;" colspan="2">
+		<div style="vertical-align: middle; padding: 4px 2px 0px 0px;">
+	        <input id="smsRB" name="type" class="radio_b" tabindex="-1" onclick="hideErrorBlock(); switchToSmsView(this.form);" type="radio" value="sms" checked="checked"/>SMS
+	        <input id="mmsRB" name="type" class="radio_b" tabindex="-1" onclick="hideErrorBlock(); switchToMmsView(this.form);" type="radio" value="mms"/>MMS
+		</div>
+      </td>
+    </tr>
+
+    <!-- Message textarea -->
+      <tr>
+        <td>
+          Nachricht
+        </td>
+        <td colspan="2">
+          <textarea id="message" name="message" style="width: 100%; overflow=auto;" tabindex="2" onkeypress="sms_message_change(this.form)" onkeyup="sms_message_change(this.form)" rows="4" cols="40"></textarea>
+        </td>
+      </tr>
+
+    <!-- MMS Attachment -->
+    <tr id="mmsAttachmentTR" style="display:none;">
+      <td>
+        Bild hinzuf&#252;gen:
+      </td>
+      <td colspan="2">
+        <input type="file" class="attachment_b" id="mmsAttachment" name="mmsAttachment" size="10" accept="image/*" tabindex="3">
+        <input id="mmsAttachmentFileName" name="mmsAttachmentFileName" type="hidden" value=""/>
+      </td>
+    </tr>
+
+    <!-- SMS counters -->
+      <tr>
+        <td>
+          Gratis 0<br/>
+          Bezahlt 40
+        </td>
+
+        <!-- Show [Send] button if it is possible -->
+        <td colspan="2">
+          
+            
+              <div class="submit">
+                <button type="submit" value="send" name="send" tabindex="4">Senden</button>
+                <input type="hidden" name="task" value="send"/>
+              </div>
+            
+          
+        </td>
+      </tr>
+    </form>
+
+    <!-- Show [Buy] button if it is possible -->
+    <tr>
+      <td colspan="3">
+        <form method="post" action="">
+          
+            
+              <div class="submit">
+                <button type="submit" value="buy" name="buy">Zus&#228;tzlich 50 Nachrichten f&#252;r CHF 5.&#8211; kaufen</button>
+                <input type="hidden" name="task" value="buy"/>
+              </div>
+            
+          
+        </form>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class="accordion">
+    <h2 class="header first-child" onClick="toggle('contacts','slide_toggle','https://www.sunrise.ch/bus_plus_n.gif','https://www.sunrise.ch/bus_minus_n.gif');">
+      <span><img src="https://www.sunrise.ch/bus_plus_n.gif" id="slide_toggle"/></span>
+      <span style="padding-left:0.4em;">Handynummern</span>
+    </h2>
+
+    <div class="contacts" id="contacts" style="overflow:hidden;">
+        <div class="header">
+          <form id="SMSCommand" method="post" action="/mip/dyn/sms/sms?.lang=de">
+          
+          <div style="float:left;width:70%;padding-left:0.3em;">
+            <input id="contact" name="contact" class="normal" style="width:97%" tabindex="5" onfocus="if(this.value=='Hans Muster, 0761234567') {this.value='';this.style.color='#000000';}" onblur="if(this.value=='') {this.value='Hans Muster, 0761234567';this.style.color='#afafaf';}" type="text" value="" maxlength="40"/>
+            <script type="text/javascript">
+            //<!--
+              document.getElementById('contact').value = 'Hans Muster, 0761234567';
+              document.getElementById('contact').style.color = '#afafaf';
+            //-->
+            </script>
+          </div>
+          <div class="button">
+            <div class="submit">
+            
+              <button type="submit" onclick="if(document.getElementById('contact').value=='Hans Muster, 0761234567') {document.getElementById('contact').value='';this.style.color='#000000';}"
+                value="addContact" name="add">hinzuf&#252;gen</button>
+              <input type="hidden" name="task" value="addContact"/>
+            
+            </div>
+          </div>
+          </form>
+        </div>
+        
+        <div id="pageNavPosition" class="pagenavigation" style="padding-left:1.2em;display:none;"></div>
+        
+        
+          
+          
+            
+
+            
+              
+            
+          
+          <div class="contact" style="background-color:#F9F3F4;">
+            <div style="float:left;width:70%;" class="contact_item">
+            	<div onclick="document.getElementById('recipient').value=convertRecipient(this.innerHTML)">+41786020621 simone baby</div>
+            </div>
+            <div class="button">
+                <form id="SMSCommand" name="delContact" method="post" action="/mip/dyn/sms/sms?.lang=de">
+                  
+                    <input type="hidden" name="contactId" value="1618082"/>
+                  
+                  
+                  	<div class="submit">
+						<button type="submit" value="delContact" name="del">entfernen</button>
+					</div>
+                    <input type="hidden" name="task" value="delContact"/>
+                  
+                </form>
+            </div>
+          </div>
+        
+    </div>
+  </div>
+
+  
+  <script type="text/javascript">
+  //<!--
+	var cookieName = 'mip_msg_dispContacts';
+	
+	var x = readCookie(cookieName)
+	if (x == "1") {
+		document.getElementById('contacts').style.display = "block";
+		document.getElementById('slide_toggle').src = "https://www.sunrise.ch/bus_minus_n.gif";
+	} else if (x == "0") {
+		document.getElementById('contacts').style.display = "none";
+		document.getElementById('slide_toggle').src = "https://www.sunrise.ch/bus_plus_n.gif";
+	} else if (x == null) {
+		//default setting
+		document.getElementById('contacts').style.display = "none";
+		document.getElementById('slide_toggle').src = "https://www.sunrise.ch/bus_plus_n.gif";
+		//create cookie
+		createCookie(cookieName,'0',1000);
+	}
+	
+	function toggle(objname,controller,img_open,img_close){
+	
+		if(document.getElementById(objname).style.display == "none") {
+		  //open
+		  document.getElementById(controller).src = img_close;
+		  slidedown(objname);
+		  createCookie(cookieName,'1',1000);
+		} else if (document.getElementById(objname).style.display == "block") {
+		  //close
+		  document.getElementById(controller).src = img_open;
+		  slideup(objname);
+		  createCookie(cookieName,'0',1000);
+		} else {
+		  return;
+		}
+		
+		_IG_AdjustIFrameHeight();
+	}
+	
+	function onBodyLoadFn() {
+		if (window.opera) {
+			var box = document.getElementById('mmsAttachment');
+			box.className = 'attachment_b_opera';
+		}
+		
+		switchToProperSmsMmsView();
+	}
+	 
+	function switchToProperSmsMmsView() {
+		var thisform = document.getElementById('smsMmsSenderForm');
+		if ( document.getElementById('mmsRB').checked) {
+			switchToMmsView(thisform);
+		} else {
+			switchToSmsView(thisform);
+		}
+	}
+		
+	function switchToSmsView(thisform) {
+		document.getElementById('mmsAttachmentTR').style.display = 'none';
+		
+		sms_message_change(thisform);
+		
+		_IG_AdjustIFrameHeight();
+	}
+	
+	function switchToMmsView(thisform){
+		document.getElementById('mmsAttachmentTR').style.display = '';
+
+		sms_message_change(thisform);
+	
+		_IG_AdjustIFrameHeight();
+	}
+	 
+	function hideErrorBlock() {
+		document.getElementById('errorBlock').style.display = 'none';
+	}
+
+    //get contact setting
+	contactsPerPage = parseInt(queryString('up_contactsPerPage'));
+	
+	if (isNaN(contactsPerPage)) {
+		contactsPerPage = 10;
+	}
+	
+	var pager = new Pager('contact', contactsPerPage);
+	pager.init('pageNavPosition');
+	pager.showPageNav('pager', 'pageNavPosition');
+	pager.showPage(1);
+	
+	function queryString(parameter) {
+		var loc = location.search.substring(1, location.search.length);
+		var param_value = false;
+		
+		var params = loc.split("&");
+		for (i=0; i<params.length;i++) {
+		    param_name = params[i].substring(0,params[i].indexOf('='));
+		    if (param_name == parameter) {
+		        param_value = params[i].substring(params[i].indexOf('=')+1)
+		    }
+		}
+		if (param_value) {
+		    return param_value;
+		} else {
+		    return false; //Here determine return if no parameter is found
+		}
+	 }
+
+     function sms_message_change(thisform) {
+	 	
+        var maxLength;
+        var msg = thisform.message.value;
+
+		var newlineCount = msg.split("\n").length - 1;
+
+		if (navigator.userAgent.indexOf("MSIE") > 0) {
+			newlineCount = msg.split("\r\n|\r|\n").length - 1;
+		}
+
+		var charcount    = msg.length + newlineCount;	
+		
+        if (document.getElementById('mmsAttachmentTR').style.display == '') {
+         	maxLength = 3000;
+			thisform.charsLeft.value = maxLength - charcount;
+			if(charcount > maxLength) {
+	            thisform.message.value = msg.slice(0, maxLength - newlineCount);
+	            return;
+			}
+        } else {
+		 	maxLength = 160;
+			var maxSms = 3;
+			
+			if (charcount > maxLength * maxSms) {
+				thisform.message.value = msg.slice(0, (maxLength * maxSms) - newlineCount);	
+				document.getElementById('smsWarningTR').style.display = '';
+				_IG_AdjustIFrameHeight();
+			} else {
+				document.getElementById('smsWarningTR').style.display = 'none';
+			}
+			
+			numberOfSms = Math.floor((charcount-1) / maxLength) + 1;
+			
+			if (numberOfSms == 0) {
+				thisform.charsLeft.value = maxLength + " / 1";
+			} else {
+				thisform.charsLeft.value = (maxLength * numberOfSms - charcount) + " / " + numberOfSms;
+			}
+		}
+		 
+        if((navigator.userAgent.indexOf("MSIE") == -1) && (navigator.userAgent.indexOf("Mozilla/4") != -1)) {
+            thisform.message.blur();
+            thisform.message.focus();
+        }
+    }
+	//-->
+	
+	</script>
+
+  
+  
+</body>
+</html>

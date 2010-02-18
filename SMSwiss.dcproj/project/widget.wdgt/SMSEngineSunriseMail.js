@@ -83,16 +83,16 @@ function sendSMS(smsText,number){
 function sendSingleSMS(queue_mess,number){
 
 	engineStatusFeedBack(SMSEngineStatus.sendingSMS);
-	
-    // OLD SEND FULL SMS NOW    	
+		
 	//var mess = queue_mess[queue_mess.length-1]; //Mess to send
+    
     var mess = queue_mess;
 
 	var feedURL = "http://mip.sunrise.ch/mip/dyn/sms/sms?.lang=de";
 	var onloadHandler = function() {responseHandler(xmlRequest,queue_mess,number,false,true); };
 	xmlRequest.onload = onloadHandler;
 	xmlRequest.open("POST",feedURL,true);
-	xmlRequest.setRequestHeader("Cookie", "SMIP="+innerSessionID);
+    xmlRequest.setRequestHeader("Cookie", "JSESSIONID="+innerSessionID+";");
 	var postData = "task=send";
 
 	postData +="&" + "recipient="+URLEncode(number);
@@ -128,11 +128,11 @@ function loadSMS(){
 	engineStatusFeedBack(SMSEngineStatus.loadingAccountStatus);
 	
 		
-	var feedURL = "http://mip.sunrise.ch/mip/dyn/sms/sms?.lang=de";
+	var feedURL = "https://mip.sunrise.ch/mip/dyn/sms/sms?up_contactsPerPage=6&lang=en&country=us&.lang=en&.country=us";
 	var onloadHandler = function() { responseHandler(xmlRequest,null,null,false,false); };
 	xmlRequest.onload = onloadHandler;
 	xmlRequest.open("GET",feedURL,true);
-	xmlRequest.setRequestHeader("Cookie", "SMIP="+innerSessionID+";");
+	xmlRequest.setRequestHeader("Cookie", "JSESSIONID="+innerSessionID+";");
 	xmlRequest.send(null);
 	
 }
@@ -195,24 +195,20 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 		return engineFeedBack(SMSEngineFeedBack.smsSendingError);
 	}
 	
-    //OLD CODE FOR MULTIPLE MESS
-    /*
 	//If we are here is because we have sent an sms
-	queue_mess.pop(); //If no error happens remove the sent message from the queue
+	//queue_mess.pop(); //If no error happens remove the sent message from the queue
 	
 
 	//If there is other sms to send send it;
-	if(queue_mess.length){
-		return setTimeout(sendTimeOutedSingleSMS, 2000);
-	}
+	//if(queue_mess.length){
+	//	return setTimeout(sendTimeOutedSingleSMS, 2000);
+	//}
 
 	//This function exist to create a local scope for the setTimeout call
-	function sendTimeOutedSingleSMS(){
-		return sendSingleSMS(queue_mess,number);
-	}
-    */
-    
-    
+	//function sendTimeOutedSingleSMS(){
+	//	return sendSingleSMS(queue_mess,number);
+	//}
+
 	//There is no sms to send
 	return engineFeedBack(SMSEngineFeedBack.smsSent);
 
@@ -278,7 +274,7 @@ function getIsLogedIn(html){
 
 function getSessionID(header){
 
-	var sessionDetecStr = "SMIP=";
+	var sessionDetecStr = "JSESSIONID=";
 	
 	if (header.indexOf(sessionDetecStr) == -1) {
 		return innerSessionID; //If a new sessionID is not detected return the old one

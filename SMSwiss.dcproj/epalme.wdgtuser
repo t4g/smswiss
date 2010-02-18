@@ -8,11 +8,17 @@
 		<string>-SMSEngineETHZ</string>
 		<key>widget.wdgt/SMSEngineETHZ.js:91</key>
 		<string>-SMSEngineETHZ</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:277</key>
+		<string>-SMSEngineSunriseMail</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:300</key>
+		<string>-SMSEngineSunriseMail</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:301</key>
+		<string>-SMSEngineSunriseMail</string>
 		<key>widget.wdgt/SettingsEngine.js:458</key>
 		<string>-prepareRow</string>
 	</dict>
 	<key>CYLastWindowPosition</key>
-	<string>{821, 713}</string>
+	<string>{1096, 651}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -78,7 +84,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>443 256 1487 922 0 0 1920 1178 </string>
+	<string>228 256 1487 922 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -126,6 +132,15 @@
 		<array>
 			<array>
 				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>5</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>
