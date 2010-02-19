@@ -1,4 +1,5 @@
 #summary How to add the yallo captcha cookie content
+#labels Featured
 
 = Introduction =
 
