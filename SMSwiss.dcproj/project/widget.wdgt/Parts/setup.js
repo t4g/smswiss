@@ -17,7 +17,7 @@ var dashcodePartSpecs = {
     "phoneBookLabel": { "text": "This option allows to filter the result of the phone book search. Only phone numbers of the specified type are shown.", "view": "DC.Text" },
     "popup": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "showSettingPage", "options": ["Accounts", "Settings", ["Phone Book", "PhoneBook"], "About"], "rightImageWidth": 16, "view": "DC.View" },
     "providerLabel": { "text": "Provider:", "view": "DC.Text" },
-    "providerList": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "globalSetXtraAccountSettings", "options": [["Sunrise", "0"], ["Cablecom", "1"], ["Yallo", "2"], ["ETHZ", "3"]], "rightImageWidth": 16, "view": "DC.View" },
+    "providerList": { "creationFunction": "CreatePopupButton", "leftImageWidth": 5, "onchange": "globalSetXtraAccountSettings", "options": [["Sunrise", "0"], ["Cablecom", "1"], ["Yallo", "2"], ["ETHZ", "3"], ["Xtra-Zone Swisscom", "4"]], "rightImageWidth": 16, "view": "DC.View" },
     "proxyLabel": { "text": "Proxy address:", "view": "DC.Text" },
     "proxyPortLabel": { "text": "Proxy port:", "view": "DC.Text" },
     "selectedAccount": { "creationFunction": "CreatePopupButton", "leftImageWidth": 10, "onchange": "globalSetRunningAccount", "options": [["", "account0"], ["", "account1"], ["", "account2"], ["", "account3"], ["", "account4"]], "rightImageWidth": 16, "view": "DC.View" },
@@ -33,4 +33,5 @@ var dashcodePartSpecs = {
     "webSite": { "text": "http://code.google.com/p/smswiss/", "view": "DC.Text" },
     "xtraAcountSettingLabel": { "text": "x", "view": "DC.Text" }
 };
+
 

@@ -1,557 +1,408 @@
-HTTP/1.1 200 OK
-Date: Thu, 18 Feb 2010 15:46:18 GMT
+HTTP/1.1 302 Found
+Date: Mon, 22 Feb 2010 14:19:04 GMT
 Server: Apache
-Pragma: No-cache
-Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Pragma: no-cache
+Set-Cookie: Navajo=IQWgu7xOa5UzGoyATj0yyGDPJCUb2NgB82OPnxnAwEFMABv/xrZtAi1IyRjU/oZWsP6sYy89t2c-; path=/; secure
+Connection: close
+Location: https://www.swisscom-mobile.ch/youth/youth_zone_home-de.aspx
 Cache-Control: no-cache
-Cache-Control: no-store
-Content-Language: de-CH
-Vary: Accept-Encoding,User-Agent
-Transfer-Encoding: chunked
-Content-Type: text/html;charset=UTF-8
+Expires: Thu, 1 Jan 1970 00:00:00 GMT
+Content-Length: 293
+Content-Type: text/html
+
+HTTP/1.1 200 OK
+Date: Mon, 22 Feb 2010 14:19:04 GMT
+Server: Apache
+Set-Cookie: ARPT=NIRIKNS10.235.61.30CKMII; path=/
+Set-Cookie: ASP.NET_SessionId=d0yaqlrjrtn5csfxezi0plrl; path=/
+Content-Type: text/html; charset=utf-8
+X-ContentSig: adsasdfasgkls ejjklsdfcvjklflvgjdbvklgjdfkljbgxfcv
+Content-Length: 14917
+Cache-Control: private
+newphoton.pmb: iQA/AwUAQsLG7k24PFrR40f5EQI2AwCglW5KqxaC1+K55Ls8I9/10v5rlJwAnjksEnObcO0wsyhSJRwDCah2J9+l
+X-AspNet-Version: 1.1.4322
+X-Rim-Content-Location: /appdata/rim/idlescreen/carrier/idle
+X-Powered-By: ASP.NET
+Connection: close
 
 
-
-<script type="text/javascript">
-<!--
-
-function convertRecipient(recipient) {
-
-	//remove all non digit numbers but not +
-	recipient = recipient.replace(/[^\d|^\+]+/g, "");
-	
-	if (recipient.length >= 3) {
-		//IF first char=0 and 2nd not 0 THEN replace 0 by +41
-		if (recipient.match("^0[^0]\d+")) {
-			recipient = recipient.replace("^0", "+41");
-		}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<TITLE>
+			Swisscom Privatkunden - Xtra-Zone Home</TITLE>
 		
-		//IF first and 2nd char=0 THEN replace 00 by +
-		if (recipient.match("^00\d+")) {
-			recipient = recipient.replace("^00", "+");
-		}
-	}
-
-	return recipient;
-}
-
-
-//-->
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<html>
-<head>
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-
-<link rel="stylesheet" href="https://www.sunrise.ch/content.css" type="text/css" media="screen,projection" charset="utf-8" />
-<link rel="stylesheet" href="https://www.sunrise.ch/general.css" type="text/css" media="all" title="no title" charset="utf-8" />
-<link rel="stylesheet" href="https://www.sunrise.ch/screen.css" type="text/css" media="screen,projection" charset="utf-8" />
-<link rel="stylesheet" href="https://www.sunrise.ch/header.css" type="text/css" media="screen,projection" charset="utf-8" />
-<link rel="stylesheet" href="https://www.sunrise.ch/images.css" type="text/css" media="all" charset="utf-8" />
-<link rel="shortcut icon" href="https://www.sunrise.ch/favicon.ico" type="image/gif" media="all" />
-<link rel="icon" href="https://www.sunrise.ch/favicon.ico" type="image/gif" media="all" />
-<!--[if IE]>
-  <link rel="stylesheet" href="https://www.sunrise.ch/screen_ie.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
-<!--[if lt IE 7]>
-    <link rel="stylesheet" href="https://www.sunrise.ch/screen_ie6.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
-<!--[if lt IE 6]>
-    <link rel="stylesheet" href="https://www.sunrise.ch/screen_ltie6.css" type="text/css" media="screen" charset="utf-8" />
-<![endif]-->
-
-<STYLE TYPE="text/css">
-<!--
-BODY {margin: 0;}
-INPUT {border: 1px solid #C1B2B4;}
-TEXTAREA {border: 1px solid #C1B2B4;}
-textarea.error {
-  background-color:#FCE5F1;
-  color:black;
-}
-.radio_b {
-  border: none !important;
-  vertical-align: middle !important;
-  padding-left: 10px;
-  padding-right: 2px 2px 2px 0px;
-}
-.attachment_b {border: 1px solid #C1B2B4 !important;}
-.attachment_b_opera {border: none !important;}
-
-.accordion h2 {
-   background-color:#E0CED0;
-   padding:0pt;
-   margin:0pt;
-   cursor: pointer;
-}
-.accordion h2 span {
-   padding:0px;
-   margin:0pt;
-}
-.accordion h2 span img {
-   float:right;
-   margin:0.4em 0.4em 0pt 0pt;
-   padding-right:0.4em;
-}
-.contacts div {
-   height:2.0em;
-   line-height:2.0em;
-   padding-left:0.4em;
-}
-.header {
-   padding-bottom:0.5em;
-   padding-top:0.5em;
-}
-.contact_item div {
-   display: inline;
-   cursor: pointer;
-}
-.button div {
-   display:table-cell;
-}
- 
-* html .button {
-   display:inline-block;
-}
-
-.pg-normal {
- 	font-weight: normal;
-}
- 
-.pg-selected {
- 	font-weight: bold;
-}
--->
-</STYLE>
-
-<title>SMS-/MMS-Sender</title>
-
-	
-	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/paging.js"></script>
-	
-	
-	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/motionpack.js"></script>
-	
-	
-	
-	<link rel="stylesheet" href="/mip/ext/css/wick.css" type="text/css" media="all" title="no title" charset="utf-8" />
-	
-	
-	
-	
-	
-	
-		<script type="text/javascript" language="JavaScript">
-		//<!--
-			
-			collection = [
-				'+41786020621 simone baby'
-			];
-		//-->
-		</script>
-	
-	
-	
-	
-	
-	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/wick.js"></script>
-	
-	
-	
-	   <script type="text/javascript" language="JavaScript">
-	   //<!--
-	    function checkForm() {
-	    	answer = true;
-
-	  		if ( document.getElementById('mmsRB').checked) {
-				document.getElementById('mmsAttachmentFileName').value = document.getElementById('mmsAttachment').value;
-			}
-	    
-	    	if (siw && siw.selectingSomething)
-	      		answer = false;
-	    	
-	    	return answer;
-	    }
-	   //-->
-	</script>
-	
-
-	
-	
-	
-	
-	<script type="text/javascript" language="JavaScript" src="/mip/ext/js/cookieTools.js"></script>
-
-
-</head>
-
-<body onload="onBodyLoadFn()" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0">
-
-  
-  <p>
-    
-      <span id="errorBlock" class="error">
-        
-          
-			
-			
-				SMS wurde an +41765454024 gesendet.<br/>
-			
-		   
-         
-   		 <!-- SMS limit reached warning -->
-		 <div id="smsWarningTR" style="display:none;">
-           Die maximale Nachrichtenl&#228;nge wurde erreicht.
-		 </div>
-       </span>
-     
-  </p>
-
-  
-
-  
-
-  <table border="0" width="100%" style="margin: 0pt">
-    <!-- set up proportions -->
-    <tr>
-      <td width="30%"></td>
-      <td width="50%"></td>
-      <td></td>
-    </tr>
-
-    <!-- Here begins the form -->
-    <form id="smsMmsSenderForm" method="post" action="/mip/dyn/sms/sms?.lang=de" enctype="multipart/form-data" onsubmit="return checkForm()">
-
-    <!-- Sender -->
-    <tr>
-      <td>
-        Absender
-      </td>
-      <td  colspan="2">
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="content-language" content="de" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="generator" content="Kolibri">
+<meta name="date" content="2010-02-19" />
+<meta name="robots" content="follow,index" />
 		
-			0765446839
+		<link href="assets/css/service_nav.css" type=text/css rel=stylesheet></link>
+		<link href="assets/css/ie_style.css" type=text/css rel=stylesheet></link>
+		<script language="JavaScript" src="../assets/js/globalFunctions.js" type="text/javascript"></script>
+		<!-- WT SDC Start -->
+<!--WEBSIDESTORY CODE HBX1.0 (Universal)-->
+<!--COPYRIGHT 1997-2004 WEBSIDESTORY,INC. ALL RIGHTS RESERVED. U.S.PATENT No.6,393,479B1 & 6,766,370. INFO:http://websidestory.com/privacy-->
+<script language="javascript">
+var _hbEC=0,_hbE=new Array;function _hbEvent(a,b){b=_hbE[_hbEC++]=new Object();b._N=a;b._C=0;return b;}
+var hbx=_hbEvent("pv");hbx.vpc="HBX0103u";hbx.gn="ehg-swisscom.hitbox.com";
+hbx.acct="DM551012K1ND";//ACCOUNT NUMBER(S)
+hbx.pn="";//PAGE NAME(S)
+hbx.mlc="/swisscom-mobile/youth/de/";//MULTI-LEVEL CONTENT CATEGORY
+hbx.pndef="title";//DEFAULT PAGE NAME
+hbx.ctdef="full";//DEFAULT CONTENT CATEGORY
+hbx.lt="auto";
+</script><script language="javascript1.1" defer src="../assets/js/hbx.js"></script>
+<!--END WEBSIDESTORY CODE-->
+
+
+		<!-- WT SDC End -->
+	</HEAD>
+	<body>
+		<form name="Form1" method="post" action="youth_zone_home-de.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE_SCM" value="1" />
+<input type="hidden" name="__VIEWSTATE" value="" />
 		
-      </td>
-    </tr>
-
-    <!-- Recipient input text + message length counter -->
-    <tr>
-      <td>
-        Empf&#228;nger
-      </td>
-      <td>
-        <input id="recipient" name="recipient" class="wickEnabled" style="width:100%" tabindex="1" onblur="this.value=convertRecipient(this.value)" type="text" value="" maxlength="40" autocomplete="off"/>
-      </td>
-      <td style="text-align: right">
-        <div style="float:right;"><input style="width: 45px;" type="text" name="charsLeft" readonly="readonly" maxlength="10" tabindex="-1" value="160" /></div>
-      </td>
-    </tr>
-
-    <!-- SMS / MMS Switch -->
-    <tr>
-      <td>
-		&nbsp;
-      </td>
-      <td style="padding-left: 0px;" colspan="2">
-		<div style="vertical-align: middle; padding: 4px 2px 0px 0px;">
-	        <input id="smsRB" name="type" class="radio_b" tabindex="-1" onclick="hideErrorBlock(); switchToSmsView(this.form);" type="radio" value="sms" checked="checked"/>SMS
-	        <input id="mmsRB" name="type" class="radio_b" tabindex="-1" onclick="hideErrorBlock(); switchToMmsView(this.form);" type="radio" value="mms"/>MMS
+		<table style="LEFT: 0px; POSITION: absolute; TOP: 0px" cellSpacing="0" cellPadding="0"
+			width="970" border="0">
+			<TBODY>
+				<tr>
+					<td width="970" colSpan="2">
+						<!-- Head  -->
+						
+<LINK href="../assets/css/header.css" type="text/css" rel="StyleSheet">
+<LINK href="../assets/css/header-de.css" type=text/css rel=StyleSheet >
+<script src="../assets/js/swisscom_search.js" type="text/javascript"></script>
+<div id="headerMainContainerXtra">
+	<div id="headerLogoContainer">
+		
+		<a href="http://www.swisscom.ch/privatkunden"><IMG class="logo" height="75" alt="" src="../assets/images/logo_swisscom.gif" width="101"></a>
+		
+	</div>
+	<div id="headerMetanavContainer">
+		<div class="languageSelection">DE&nbsp;|&nbsp;<a href='/youth/youth_zone_home-fr.aspx' class='link'>FR</a>&nbsp;|&nbsp;<a href='/youth/youth_zone_home-it.aspx' class='link'>IT</a></div>
+		<div class="searchBox">&nbsp;</div>
+		<div class="linkList">
+			
+			<div class="iconContact"></div>
+			<div class="linkText"><A class="link" href="kontakt-de.aspx">Kontakt</A></div>
+			<div class="iconOnlineShop"></div>
+			<div class="linkText"><A class="link" href="http://swisscomonlineshop.sso.bluewin.ch/onlineshop/pages/Category/Category.aspx?cat=OS_Home(MasterProducts)&amp;lang=DE">Online-Shop</A></div>
+			
 		</div>
-      </td>
-    </tr>
-
-    <!-- Message textarea -->
-      <tr>
-        <td>
-          Nachricht
-        </td>
-        <td colspan="2">
-          <textarea id="message" name="message" style="width: 100%; overflow=auto;" tabindex="2" onkeypress="sms_message_change(this.form)" onkeyup="sms_message_change(this.form)" rows="4" cols="40"></textarea>
-        </td>
-      </tr>
-
-    <!-- MMS Attachment -->
-    <tr id="mmsAttachmentTR" style="display:none;">
-      <td>
-        Bild hinzuf&#252;gen:
-      </td>
-      <td colspan="2">
-        <input type="file" class="attachment_b" id="mmsAttachment" name="mmsAttachment" size="10" accept="image/*" tabindex="3">
-        <input id="mmsAttachmentFileName" name="mmsAttachmentFileName" type="hidden" value=""/>
-      </td>
-    </tr>
-
-    <!-- SMS counters -->
-      <tr>
-        <td>
-          Gratis 0<br/>
-          Bezahlt 40
-        </td>
-
-        <!-- Show [Send] button if it is possible -->
-        <td colspan="2">
-          
-            
-              <div class="submit">
-                <button type="submit" value="send" name="send" tabindex="4">Senden</button>
-                <input type="hidden" name="task" value="send"/>
-              </div>
-            
-          
-        </td>
-      </tr>
-    </form>
-
-    <!-- Show [Buy] button if it is possible -->
-    <tr>
-      <td colspan="3">
-        <form method="post" action="">
-          
-            
-              <div class="submit">
-                <button type="submit" value="buy" name="buy">Zus&#228;tzlich 50 Nachrichten f&#252;r CHF 5.&#8211; kaufen</button>
-                <input type="hidden" name="task" value="buy"/>
-              </div>
-            
-          
-        </form>
-      </td>
-    </tr>
-
-  </table>
-
-  <div class="accordion">
-    <h2 class="header first-child" onClick="toggle('contacts','slide_toggle','https://www.sunrise.ch/bus_plus_n.gif','https://www.sunrise.ch/bus_minus_n.gif');">
-      <span><img src="https://www.sunrise.ch/bus_plus_n.gif" id="slide_toggle"/></span>
-      <span style="padding-left:0.4em;">Handynummern</span>
-    </h2>
-
-    <div class="contacts" id="contacts" style="overflow:hidden;">
-        <div class="header">
-          <form id="SMSCommand" method="post" action="/mip/dyn/sms/sms?.lang=de">
-          
-          <div style="float:left;width:70%;padding-left:0.3em;">
-            <input id="contact" name="contact" class="normal" style="width:97%" tabindex="5" onfocus="if(this.value=='Hans Muster, 0761234567') {this.value='';this.style.color='#000000';}" onblur="if(this.value=='') {this.value='Hans Muster, 0761234567';this.style.color='#afafaf';}" type="text" value="" maxlength="40"/>
-            <script type="text/javascript">
-            //<!--
-              document.getElementById('contact').value = 'Hans Muster, 0761234567';
-              document.getElementById('contact').style.color = '#afafaf';
-            //-->
-            </script>
-          </div>
-          <div class="button">
-            <div class="submit">
-            
-              <button type="submit" onclick="if(document.getElementById('contact').value=='Hans Muster, 0761234567') {document.getElementById('contact').value='';this.style.color='#000000';}"
-                value="addContact" name="add">hinzuf&#252;gen</button>
-              <input type="hidden" name="task" value="addContact"/>
-            
-            </div>
-          </div>
-          </form>
-        </div>
-        
-        <div id="pageNavPosition" class="pagenavigation" style="padding-left:1.2em;display:none;"></div>
-        
-        
-          
-          
-            
-
-            
-              
-            
-          
-          <div class="contact" style="background-color:#F9F3F4;">
-            <div style="float:left;width:70%;" class="contact_item">
-            	<div onclick="document.getElementById('recipient').value=convertRecipient(this.innerHTML)">+41786020621 simone baby</div>
-            </div>
-            <div class="button">
-                <form id="SMSCommand" name="delContact" method="post" action="/mip/dyn/sms/sms?.lang=de">
-                  
-                    <input type="hidden" name="contactId" value="1618082"/>
-                  
-                  
-                  	<div class="submit">
-						<button type="submit" value="delContact" name="del">entfernen</button>
-					</div>
-                    <input type="hidden" name="task" value="delContact"/>
-                  
-                </form>
-            </div>
-          </div>
-        
-    </div>
-  </div>
-
-  
-  <script type="text/javascript">
-  //<!--
-	var cookieName = 'mip_msg_dispContacts';
-	
-	var x = readCookie(cookieName)
-	if (x == "1") {
-		document.getElementById('contacts').style.display = "block";
-		document.getElementById('slide_toggle').src = "https://www.sunrise.ch/bus_minus_n.gif";
-	} else if (x == "0") {
-		document.getElementById('contacts').style.display = "none";
-		document.getElementById('slide_toggle').src = "https://www.sunrise.ch/bus_plus_n.gif";
-	} else if (x == null) {
-		//default setting
-		document.getElementById('contacts').style.display = "none";
-		document.getElementById('slide_toggle').src = "https://www.sunrise.ch/bus_plus_n.gif";
-		//create cookie
-		createCookie(cookieName,'0',1000);
-	}
-	
-	function toggle(objname,controller,img_open,img_close){
-	
-		if(document.getElementById(objname).style.display == "none") {
-		  //open
-		  document.getElementById(controller).src = img_close;
-		  slidedown(objname);
-		  createCookie(cookieName,'1',1000);
-		} else if (document.getElementById(objname).style.display == "block") {
-		  //close
-		  document.getElementById(controller).src = img_open;
-		  slideup(objname);
-		  createCookie(cookieName,'0',1000);
-		} else {
-		  return;
-		}
+	</div>
+	<div id="headerNavigationContainer">
 		
-		_IG_AdjustIFrameHeight();
-	}
-	
-	function onBodyLoadFn() {
-		if (window.opera) {
-			var box = document.getElementById('mmsAttachment');
-			box.className = 'attachment_b_opera';
-		}
+		<ul class="xtra" id="navigationList">
+			<li class="spacerTab">
+			</li>
+			<li class="xtraWelcome">
+				Willkommen Giulia Verzaroli</li>
+			<li>
+				<a class="tabDe6" href="https://www.swisscom-mobile.ch/youth/youth_zone_home-de.aspx?logout&next=http://www.swisscom-mobile.ch/scm/prv_xtra-zone-de.aspx">Logout</a>
+			</li>
+		</ul>
 		
-		switchToProperSmsMmsView();
-	}
-	 
-	function switchToProperSmsMmsView() {
-		var thisform = document.getElementById('smsMmsSenderForm');
-		if ( document.getElementById('mmsRB').checked) {
-			switchToMmsView(thisform);
-		} else {
-			switchToSmsView(thisform);
-		}
-	}
-		
-	function switchToSmsView(thisform) {
-		document.getElementById('mmsAttachmentTR').style.display = 'none';
-		
-		sms_message_change(thisform);
-		
-		_IG_AdjustIFrameHeight();
-	}
-	
-	function switchToMmsView(thisform){
-		document.getElementById('mmsAttachmentTR').style.display = '';
+	</div>
+</div>
 
-		sms_message_change(thisform);
-	
-		_IG_AdjustIFrameHeight();
-	}
-	 
-	function hideErrorBlock() {
-		document.getElementById('errorBlock').style.display = 'none';
-	}
+						<!-- /End Head -->
+					</td>
+				</tr>
+				<tr>
+					<td class="cServiceNav" vAlign="top" width="160" height="600">
+						<!-- Locator -->
+						<img src="../youth/assets/images/mc_nav_clear.gif" height="18" width="1" border="0">
 
-    //get contact setting
-	contactsPerPage = parseInt(queryString('up_contactsPerPage'));
-	
-	if (isNaN(contactsPerPage)) {
-		contactsPerPage = 10;
-	}
-	
-	var pager = new Pager('contact', contactsPerPage);
-	pager.init('pageNavPosition');
-	pager.showPageNav('pager', 'pageNavPosition');
-	pager.showPage(1);
-	
-	function queryString(parameter) {
-		var loc = location.search.substring(1, location.search.length);
-		var param_value = false;
-		
-		var params = loc.split("&");
-		for (i=0; i<params.length;i++) {
-		    param_name = params[i].substring(0,params[i].indexOf('='));
-		    if (param_name == parameter) {
-		        param_value = params[i].substring(params[i].indexOf('=')+1)
+						<!-- /Locator End -->
+						<div style="OVERFLOW: hidden; WIDTH: 160px; TOP: 23px">
+							<!-- Service Naviagtion -->
+							<script language="JavaScript" src="assets/js/navKonstruktor.js"></script>
+<script language="JavaScript">
+
+   homeURL.itemText="Home"
+   homeURL.URL="../youth/youth_zone_home-de.aspx"
+   homeURL.message="Home"
+   homeURL.targetFrame="" 
+tocArray[1] = new tocItem(1, 0, "Specials", "../youth/specials-de.aspx", "", "", 0)
+tocArray[2] = new tocItem(1, 0, "Members treffen", "../youth/members_treffen-de.aspx", "", "", 0)
+tocArray[3] = new tocItem(1, 0, "SMS senden", "../youth/sms_senden-de.aspx", "", "", 0)
+tocArray[4] = new tocItem(1, 0, "MMS senden", "../youth/mms_senden-de.aspx", "", "", 0)
+tocArray[5] = new tocItem(1, 0, "Bilder tauschen", "../youth/bilder_tauschen-de.aspx", "", "", 0)
+tocArray[6] = new tocItem(1, 0, "Eigenes Profil", "../youth/eigenes_profil-de.aspx", "", "", 0)
+tocArray[7] = new tocItem(1, 0, "Eigene Kontakte", "../youth/eigene_kontakte-de.aspx", "", "", 0)
+tocArray[8] = new tocItem(1, 0, "Eigene Bilder", "../youth/eigene_bilder-de.aspx", "", "", 0)
+ 
+// -->
+</script>
+<script language="JavaScript" src="assets/js/navFunction.js"></script>
+
+
+
+
+							<!-- /Service Naviagtion -->
+						</div>
+					</td>
+					<td class="cPageTemplate" vAlign="top" width="810">
+						
+						<!-- PageTemplate -->
+						
+<TABLE cellSpacing="0" cellPadding="0" border = "0" width="800">
+  <TR>
+    <TD valign="top" width="620">
+    <div id="druck">
+      <TABLE cellSpacing="0" cellPadding="0" border = "0" width="620">
+         <TR>
+           <TD colspan="3" valign="top" width="620"><table id="_ctl0_ContentObject26446_tblImgObj" cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tr>
+		<TD class="cimage">
+				<img src="upload/page/5342_26446_26_18282.gif" alt="" border="0"></TD>
+	</tr>
+</table>
+
+
+	<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+		<TR>
+			<TD class="ctext" vAlign="top">
+				</TD>
+		</TR>
+	</TABLE>
+
+
+
+	<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+		<TR>
+			<TD class="ctext" vAlign="top">
+					<SCRIPT LANGUAGE="JavaScript">
+
+		if (window.name == 'Login') {
+		    window.opener.location.href='youth_zone_home-de.aspx';
+		    setTimeout('window.close()', 1000);
 		    }
-		}
-		if (param_value) {
-		    return param_value;
-		} else {
-		    return false; //Here determine return if no parameter is found
-		}
-	 }
-
-     function sms_message_change(thisform) {
-	 	
-        var maxLength;
-        var msg = thisform.message.value;
-
-		var newlineCount = msg.split("\n").length - 1;
-
-		if (navigator.userAgent.indexOf("MSIE") > 0) {
-			newlineCount = msg.split("\r\n|\r|\n").length - 1;
-		}
-
-		var charcount    = msg.length + newlineCount;	
 		
-        if (document.getElementById('mmsAttachmentTR').style.display == '') {
-         	maxLength = 3000;
-			thisform.charsLeft.value = maxLength - charcount;
-			if(charcount > maxLength) {
-	            thisform.message.value = msg.slice(0, maxLength - newlineCount);
-	            return;
-			}
-        } else {
-		 	maxLength = 160;
-			var maxSms = 3;
-			
-			if (charcount > maxLength * maxSms) {
-				thisform.message.value = msg.slice(0, (maxLength * maxSms) - newlineCount);	
-				document.getElementById('smsWarningTR').style.display = '';
-				_IG_AdjustIFrameHeight();
-			} else {
-				document.getElementById('smsWarningTR').style.display = 'none';
-			}
-			
-			numberOfSms = Math.floor((charcount-1) / maxLength) + 1;
-			
-			if (numberOfSms == 0) {
-				thisform.charsLeft.value = maxLength + " / 1";
-			} else {
-				thisform.charsLeft.value = (maxLength * numberOfSms - charcount) + " / " + numberOfSms;
-			}
-		}
-		 
-        if((navigator.userAgent.indexOf("MSIE") == -1) && (navigator.userAgent.indexOf("Mozilla/4") != -1)) {
-            thisform.message.blur();
-            thisform.message.focus();
-        }
-    }
-	//-->
-	
-	</script>
+	</SCRIPT></TD>
+		</TR>
+	</TABLE>
 
-  
-  
-</body>
-</html>
+
+</TD>
+         </TR>
+         <TR>
+           <TD valign="top" width="410">
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtitle" onClick="window.open().window.location.href = 'http://www.swisscom.ch/winter';" style="cursor:pointer;">Improve Your Style - Lara Gut zeigt wie’s geht</td>
+		<td width="20" align="right" class="cboxtitlearrow"><a href="http://www.swisscom.ch/winter" target="_blank" alt=""><img src="../assets/images/obj_link_arrow.gif" class="cimage"></a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtextbgcolor">Skiprinzessin Lara Gut muss es wissen: Die Hocke bringt Tempo und st&#228;hlerne Oberschenkel.<BR><A href="http://www.swisscom.ch/winter" target=_blank>Improve Your Style – now</A></td>
+		<td width="200"><img src="upload/page/5342_68711_107_49417.jpg" class="cimage" /></td>
+	</tr>
+</table>
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td><img id="_ctl0_ContentObject67288_imgSpacerImage" src="../assets/images/onepix.gif" height="10" width="1" alt="" border="0" style="height:10px;width:1px;" /></td>
+		</tr>
+	</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtitle" onClick="window.location.href = '../youth/crans-montana-de.aspx';" style="cursor:pointer;">Gewinne Tickets f&#252;r den Weltcup in Crans-Montana.</td>
+		<td width="20" align="right" class="cboxtitlearrow"><a href="../youth/crans-montana-de.aspx" target="" alt=""><img src="../assets/images/obj_link_arrow.gif" class="cimage"></a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtextbgcolor"><P>Reise an den Damen Ski Weltcup nach Crans-Montana und erlebe die Schweizer Skifahrerinnen live.</P></td>
+		<td width="200"><img src="upload/page/5342_68712_107_49421.jpg" class="cimage" /></td>
+	</tr>
+</table>
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td><img id="_ctl0_ContentObject68723_imgSpacerImage" src="../assets/images/onepix.gif" height="10" width="1" alt="" border="0" style="height:10px;width:1px;" /></td>
+		</tr>
+	</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtitle" onClick="window.open().window.location.href = 'http://www.swisscom.ch/fanbuch';" style="cursor:pointer;">Hopp Schwiiz!</td>
+		<td width="20" align="right" class="cboxtitlearrow"><a href="http://www.swisscom.ch/fanbuch" target="_blank" alt=""><img src="../assets/images/obj_link_arrow.gif" class="cimage"></a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtextbgcolor">Unterst&#252;tze unsere Olympia-Athleten in Vancouver und gewinne 1 Woche Ski-Ferien im Wert von 5'000.-: <A href="http://www.swisscom.ch/fanbuch" target=_blank>www.swisscom.ch/fanbuch</A></td>
+		<td width="200"><img src="upload/page/5342_68724_107_49545.jpg" class="cimage" /></td>
+	</tr>
+</table>
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td><img id="_ctl0_ContentObject67545_imgSpacerImage" src="../assets/images/onepix.gif" height="10" width="1" alt="" border="0" style="height:10px;width:1px;" /></td>
+		</tr>
+	</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtitle" onClick="window.location.href = '../youth/dada_ante_portas-de.aspx';" style="cursor:pointer;">Gewinne die Best-of-Scheibe von Dada Ante Portas</td>
+		<td width="20" align="right" class="cboxtitlearrow"><a href="../youth/dada_ante_portas-de.aspx" target="" alt=""><img src="../assets/images/obj_link_arrow.gif" class="cimage"></a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtextbgcolor">Gewinne eine von drei signierten CDs &quot;The Classics&quot; von Dada Ante Portas.</td>
+		<td width="200"><img src="upload/page/5342_68584_107_49236.jpg" class="cimage" /></td>
+	</tr>
+</table>
+
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td><img id="_ctl0_ContentObject67685_imgSpacerImage" src="../assets/images/onepix.gif" height="10" width="1" alt="" border="0" style="height:10px;width:1px;" /></td>
+		</tr>
+	</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtitle" onClick="window.location.href = '../youth/sims3-de.aspx';" style="cursor:pointer;">Reise mit den SIMS</td>
+		<td width="20" align="right" class="cboxtitlearrow"><a href="../youth/sims3-de.aspx" target="" alt=""><img src="../assets/images/obj_link_arrow.gif" class="cimage"></a></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctable">
+	<tr>
+		<td class="cboxtextbgcolor">Das brandneue SIMS™-Erlebnis aus der meistverkauften PC-Reihe, jetzt auf Deinem Handy!</td>
+		<td width="200"><img src="upload/page/5342_68585_107_49239.jpg" class="cimage" /></td>
+	</tr>
+</table>
+
+
+
+
+</TD>
+           <TD width=10><IMG src="../assets/images/onepix.gif" width="10" height="1" border="0"> </TD>
+           <TD valign="top" width="200">
+
+
+<table class="ctable" cellSpacing="0" width="200" border="0">
+	<tr>
+		<td class="cboxtitle">
+			Dein MMS / SMS Konto
+		</td>
+	</tr>
+	<tr>
+		<td class="cboxtext">
+			500 SMS bzw. MMS pro Monat gratis!<br>
+			<b>Guthaben&nbsp;<span id="COBControl26644_lblThisMonth">02/10</span>:</b>&nbsp;<span id="COBControl26644_lblGuthaben">496</span>&nbsp;Nachrichten<br>
+			<b>Verschickte SMS:</b>&nbsp;<span id="COBControl26644_lblSMS">4</span>&nbsp;SMS<br>
+			<b>Verschickte MMS:</b>&nbsp;<span id="COBControl26644_lblMMS">0</span>&nbsp;MMS
+		</td>
+	</tr>
+</table>
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td><img id="_ctl0_ContentObject26645_imgSpacerImage" src="../assets/images/onepix.gif" height="10" width="1" alt="" border="0" style="height:10px;width:1px;" /></td>
+		</tr>
+	</table>
+
+
+
+
+<table class="ctable" cellSpacing="0" width="200" border="0">
+	<tr>
+		<td class="cboxtitle">
+			Xtra-Zone Members
+		</td>
+	</tr>
+	<tr>
+		<td class="cboxtext">
+			<span id="COBControl26646_lblGirls">230274</span>&nbsp;Girls<br>
+			<span id="COBControl26646_lblBoys">205810</span>&nbsp;Boys<br>
+			<span id="COBControl26646_lblOnline">2153</span>&nbsp;Online<br>
+		</td>
+	</tr>
+</table>
+
+</TD>
+         </TR>
+         <TR>
+           <TD colspan="3" valign="top" width="620"></TD>
+         </TR>
+      </TABLE>
+    </div>
+    </TD>
+    <TD width="10"><IMG src="../assets/images/onepix.gif" width="10" height="1" border="0"></TD>
+    <TD valign="top" width="170"></TD>
+  </TR>
+</TABLE>
+						<!-- /PageTemplate -->
+						<!-- Footer -->
+						
+<script language="JavaScript" src="assets/js/mnu_print.js"></script>
+<table cellSpacing="0" cellPadding="0" width="530" border="0">
+	<tr>
+		<td><img src="../assets/images/onepix.gif" width="1" height="45" border="0"></td>
+	</tr>
+</table>
+<table cellSpacing="0" cellPadding="0" width="620" border="0">
+	<tr>
+		<td><table id="FooterControl_pnlSiteRating" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td>
+
+</td></tr></table></td>
+	</tr>
+</table>
+<table cellSpacing="0" cellPadding="0" width="530" border="0">
+	<tr>
+		<td><img src="../assets/images/onepix.gif" width="1" height="5" border="0"></td>
+	</tr>
+</table>
+<table cellSpacing="0" cellPadding="0" width="" border="0" class="ctable">
+	<tr>
+		<td class="cfooter"><a href="#" onClick="drucken('de')" ><IMG src="../assets/images/footer1.gif" border=0 alt="Print"><IMG src="../assets/images/onepix.gif" border=0 width="5px" alt="">Drucken</a><IMG src="../assets/images/onepix.gif" border=0 width="25px" alt=""></td><td class="cfooter"><a href="http://www.swisscom.ch/res/kundencenter/rechtliches/index.htm?languageId=de" target="_blank"  ><IMG src="../assets/images/footer2.gif" border=0 alt="Rechtliches"><IMG src="../assets/images/onepix.gif" border=0 width="5px" alt="">Rechtliches</a><IMG src="../assets/images/onepix.gif" border=0 width="25px" alt=""></td>	
+	</tr>
+</table>
+<input name="FooterControl:hidNavigationName" id="FooterControl_hidNavigationName" type="hidden" value="Xtra-Zone Home" /> <input name="FooterControl:hidMailToFriendUrl" id="FooterControl_hidMailToFriendUrl" type="hidden" value="youth/youth_zone_home-de.aspx" />
+
+						<!-- End Footer -->
+						
+					</td>
+				</tr>
+			</TBODY>
+		</table>
+		</form>
+	</body>
+</HTML>

@@ -118,6 +118,9 @@ this.getCurrentProviderName = function(){
         
  if(provider == 3) //ETHZ
         return "ETHZ";
+        
+ if(provider == 4) //Swisscom
+        return "Xtra-Zone";
 
  
  return provider; //Default case should never happens
@@ -249,6 +252,9 @@ function initSMSEngine(){
         
     if(provider == 3) //ETHZ
         smsEngine = new SMSEngineETHZ(userName,password,extra);
+        
+    if(provider == 4) //Swisscom
+        smsEngine = new SMSEngineSwisscom(userName,password,extra);
     
     //Start the authentication process and get the available sms count
     smsEngine.getAvailSMS();
