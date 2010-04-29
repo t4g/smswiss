@@ -13,7 +13,7 @@ var defaultPreferenceValues = {
                 accountsNames : ["", "", "", "", ""],
                 userNames: ["", "", "", "", ""],
                 passwords: ["", "", "", "", ""],
-                providers: [0, 0, 0,0,0],
+                providers: [0, 0, 0, 0, 0],
                 xtras: ["", "", "", "", ""],
                 ruuningAccount:0,
                 proxy:null,
@@ -122,6 +122,8 @@ this.getCurrentProviderName = function(){
  if(provider == 4) //Swisscom
         return "Xtra-Zone";
 
+ if(provider == 5) //Mobile Budget
+        return "MBudget";
  
  return provider; //Default case should never happens
 
@@ -256,6 +258,9 @@ function initSMSEngine(){
     if(provider == 4) //Swisscom
         smsEngine = new SMSEngineSwisscom(userName,password,extra);
     
+    if(provider == 5) //Mobile Budget
+        smsEngine = new SMSEngineMBudget(userName,password,extra);
+
     //Start the authentication process and get the available sms count
     smsEngine.getAvailSMS();
         
