@@ -27,12 +27,13 @@ var dashcodePartSpecs = {
     "text1": { "text": "Enable phone book filtering:", "view": "DC.Text" },
     "text2": { "text": "Phone number type to show up:", "view": "DC.Text" },
     "text3": { "text": "Vibration:", "view": "DC.Text" },
-    "text4": { "text": "SMSwiss is an open source widget created and supported by: Elia Palme, Beat Birkhofer, David and Vladimir Knobel", "view": "DC.Text" },
+    "text4": { "text": "SMSwiss is an open source widget created and supported by: Elia Palme, Beat Birkhofer, David, Vladimir Knobel and Sven Leupold", "view": "DC.Text" },
     "text5": { "text": "If you like SMSwiss please make a donation and support us to improve the widget and make it even better!", "view": "DC.Text" },
     "userNameLabel": { "text": "E-mail:", "view": "DC.Text" },
     "webSite": { "text": "http://code.google.com/p/smswiss/", "view": "DC.Text" },
     "xtraAcountSettingLabel": { "text": "x", "view": "DC.Text" }
 };
+
 
 
 
