@@ -50,7 +50,7 @@
 		<string>-setRunningAccount</string>
 	</dict>
 	<key>CYLastWindowPosition</key>
-	<string>{468, 535}</string>
+	<string>{661, 147}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -114,7 +114,7 @@
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>325 99 1122 679 0 0 1280 778 </string>
+	<string>158 99 1122 679 0 0 1280 778 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -147,11 +147,17 @@
 	</array>
 	<key>Widget</key>
 	<dict>
+		<key>Objects view expanded items</key>
+		<array>
+			<array>
+				<integer>0</integer>
+			</array>
+		</array>
 		<key>Objects view last selections</key>
 		<array/>
 		<key>Visible StackLayout Views</key>
 		<array>
-			<string>front</string>
+			<string>back</string>
 		</array>
 	</dict>
 </dict>
