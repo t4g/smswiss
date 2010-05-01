@@ -10,7 +10,8 @@ var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 
-var smsChars = 160;
+var smsFooter = 36; // Mobile Budget Footer: M-Budget Mobile SMS: nur 10 Rp!
+var smsChars = 160 - smsFooter;
 var innerSMSCount=0;
 var isJustAuthenticated = false;
 var dailySms = 5;
@@ -146,7 +147,10 @@ function responseHandler(xmlRequest,mess,number,withAutentication,withSendSMS){
    }
 	
     // Retreive remaining SMS
+	doAuthentication(null,null);	
+	
 	remainningSMS = getSMSCount(xmlRequest.responseText);
+	
 	if (remainningSMS == null) {
 			alert("Unable to retreive remaining sms");
 			return engineFeedBack(SMSEngineFeedBack.smsCountError);
@@ -211,7 +215,7 @@ function getSessionID(header){
 
 
 function getSMSCount(html){
-		
+
 	var smsDetecStr1 = "JobCount:";
 	
 	if (html.indexOf(smsDetecStr1) == -1) {
