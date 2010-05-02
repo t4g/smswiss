@@ -53,6 +53,11 @@ function globalSetXtraAccountSettings(event){
         xtraText.style.visibility = "hidden";
         xtraInfo.style.visibility = "hidden";
         userNameLabel.innerHTML="Number:";
+    }else if (provider.object.getSelectedIndex() == 5) {  //MBudget
+        xtraLabel.style.visibility = "hidden";
+        xtraText.style.visibility = "hidden";
+        xtraInfo.style.visibility = "hidden";
+        userNameLabel.innerHTML="Number:";		
     } else {
         xtraLabel.style.visibility = "hidden";
         xtraText.style.visibility = "hidden";
