@@ -32,6 +32,7 @@ this.GetSMSCharsCount = function () {
 	return smsChars;
 };
 
+
 this.getSMSCount = function () {
 	return remainningSMS;
 };
@@ -126,6 +127,7 @@ function responseHandler(xmlRequest,mess,number,withAutentication,withSendSMS){
     
         // Retreive remaining SMS
         remainningSMS = getSMSCount(xmlRequest.responseText);
+
         if (remainningSMS == null) {
 			alert("Unable to retreive remaining sms");
 			return engineFeedBack(SMSEngineFeedBack.smsCountError);
@@ -146,10 +148,6 @@ function responseHandler(xmlRequest,mess,number,withAutentication,withSendSMS){
     return;
    }
 	
-    // Retreive remaining SMS
-	doAuthentication(null,null);	
-	
-	remainningSMS = getSMSCount(xmlRequest.responseText);
 	
 	if (remainningSMS == null) {
 			alert("Unable to retreive remaining sms");
@@ -164,6 +162,10 @@ function responseHandler(xmlRequest,mess,number,withAutentication,withSendSMS){
 		alert("Unable to send sms!");
 		return engineFeedBack(SMSEngineFeedBack.smsSendingError);
 	}
+	else {
+		doAuthentication(null,null);
+		remainningSMS = getSMSCount(xmlRequest.responseText);
+	};
 	
 	
 	//There is no sms to send
@@ -214,6 +216,7 @@ function getSessionID(header){
 }
 
 
+
 function getSMSCount(html){
 
 	var smsDetecStr1 = "JobCount:";
@@ -230,5 +233,6 @@ function getSMSCount(html){
 	innerSMSCount = parseInt(gratisSMS);
 	return parseInt(gratisSMS);
 }
+
 
 }
