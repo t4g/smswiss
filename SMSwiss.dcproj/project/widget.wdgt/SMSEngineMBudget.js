@@ -10,7 +10,7 @@ var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 
-var smsFooter = 36; // Mobile Budget Footer: M-Budget Mobile SMS: nur 10 Rp!
+var smsFooter = 37; // Mobile Budget Footer: M-Budget Mobile SMS: nur 10 Rp!
 var smsChars = 160 - smsFooter;
 var innerSMSCount=0;
 var isJustAuthenticated = false;
@@ -42,11 +42,11 @@ this.isConnected = function () {
 };
 
 this.isSMSCountCritical = function () {
-	return false;
+	return (innerSMSCount < 2);
 };
 
 this.isSMSCountWarning = function () {
-	return false;
+	return (innerSMSCount < 3);
 	
 };
 
@@ -61,6 +61,7 @@ function sendSMS(smsText,number){
     return;
 
   number = number.replace("+","00");
+  smsText = smsText + "\n";
 
   sendSingleSMS(smsText,number); //No need to split mess
 }
@@ -85,7 +86,7 @@ function doAuthentication(mess,number)
   isJustAuthenticated=true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
   var feedURL = "http://www.company.ecall.ch/ecompurl/ECOMPURL.ASP?wci=Interface&Function=GetInfoSend&LinkID=mbudget&UserName=" + escape(username) + "&UserPassword=" + escape(password) + "&Language=de" + "&fake=" + Math.floor(Math.random()*16384);
-  var onloadHandler = function() { responseHandler(xmlRequest, mess, number, true, false); };
+  var onloadHandler = function() { responseHandler(xmlRequest, null, null, true, false); };
   xmlRequest.onload = onloadHandler;
   xmlRequest.open("GET", feedURL, true);
   xmlRequest.send();
