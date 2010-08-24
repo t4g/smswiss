@@ -1,8 +1,12 @@
 HTTP/1.1 200 OK
-Date: Fri, 30 Apr 2010 08:37:05 GMT
-Server: Apache/2.2.3 (Red Hat)
-Vary: Accept-Encoding,User-Agent
-Transfer-Encoding: chunked
-Content-Type: text/html; charset=ISO-8859-1
+Date: Tue, 24 Aug 2010 08:27:47 GMT
+Server: Microsoft-IIS/6.0
+P3P: CP='NON DSP COR DEVa TAIa OUR NOR UNI NAV STA PRE'; policyref='/w3c/p3policy.xml'
+X-UA-Compatible: IE=EmulateIE7
+Content-Length: 48
+Content-Type: text/html
+Expires: Tue, 24 Aug 2010 08:27:47 GMT
+Set-Cookie: ASPSESSIONIDAACBQQDR=NJNOFMHBDKLJECGCMHMJCDKL; path=/
+Cache-control: private
 
-400 no action specified
+ResultPage	ResultCode:11300	ResultText:AccNoUser

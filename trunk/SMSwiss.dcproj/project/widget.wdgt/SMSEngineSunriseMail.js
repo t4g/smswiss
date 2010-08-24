@@ -301,7 +301,7 @@ function getSMSCount(html){
 	var begin  = html.indexOf(smsDetecStr1) + smsDetecStr1.length;
 		begin  = html.indexOf(smsDetecStr2,begin) + smsDetecStr2.length;
 		
-	var end = html.indexOf("<br/>",begin);
+	var end = html.indexOf("\r",begin);
 	
 	if (end - begin  > 200 || end - begin  < 0) {
 		alert("Unable to retreive remaining free sms from html!");
@@ -311,7 +311,7 @@ function getSMSCount(html){
 	var gratisSMS = html.substring(begin, end).trim();
 	
 	begin  = html.indexOf("Bezahlt ",end) + "Bezahlt ".length;
-	end = html.indexOf("</td>",begin);
+	end = html.indexOf("\r",begin);
 	
 	if (end - begin  > 200 || end - begin  < 0) {
 		alert("Unable to retreive remaining payed sms from html!");
