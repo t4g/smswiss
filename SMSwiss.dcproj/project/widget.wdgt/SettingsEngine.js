@@ -61,7 +61,16 @@ this.loadAccountData= function(accountID){
             
             id.value=accountID;
             accountName.value = accountsNames[accountID];
-            provider.object.setSelectedIndex(providers[accountID]);
+
+            
+            for (var intI = 0; intI < provider.object.select.options.length; intI++) {
+                if (provider.object.select.options[intI].value == providers[accountID]) {
+                    provider.object.setSelectedIndex(intI);
+                    break;
+                }
+            }
+
+            
             userName.value=userNames[accountID];
             password.value=passwords[accountID];
             xtraText.value = extras[accountID];
@@ -306,7 +315,7 @@ function saveAccountData(){
             
             
             accountsNames[accountID]=accountName.value;
-            providers[accountID]=provider.object.getSelectedIndex();
+            providers[accountID]=provider.object.getValue();
             userNames[accountID]=userName.value;
             passwords[accountID]=password.value;
             xtras[accountID] = xtra.value;

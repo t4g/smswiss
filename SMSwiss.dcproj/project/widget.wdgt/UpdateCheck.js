@@ -1,4 +1,4 @@
-var actualVersion = "3.9";
+var actualVersion = "4.0";
 
 //The check method is very simple, try to access the current version file on the web server
 //The update is not always made, only 1/3 time its work this to minimize the traffic.
