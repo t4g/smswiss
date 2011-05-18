@@ -14,13 +14,21 @@
 		<string>SMSEngineMBudget</string>
 		<key>widget.wdgt/SMSEngineMBudget.js:82</key>
 		<string>-SMSEngineMBudget</string>
-		<key>widget.wdgt/SMSEngineSunriseMail.js:277</key>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:150</key>
 		<string>-SMSEngineSunriseMail</string>
-		<key>widget.wdgt/SMSEngineSunriseMail.js:293</key>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:158</key>
 		<string>-SMSEngineSunriseMail</string>
-		<key>widget.wdgt/SMSEngineSunriseMail.js:300</key>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:280</key>
 		<string>-SMSEngineSunriseMail</string>
-		<key>widget.wdgt/SMSEngineSunriseMail.js:301</key>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:297</key>
+		<string>-SMSEngineSunriseMail</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:313</key>
+		<string>-SMSEngineSunriseMail</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:320</key>
+		<string>-SMSEngineSunriseMail</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:321</key>
+		<string>-SMSEngineSunriseMail</string>
+		<key>widget.wdgt/SMSEngineSunriseMail.js:78</key>
 		<string>-SMSEngineSunriseMail</string>
 		<key>widget.wdgt/SMSEngineSwisscom.js:116</key>
 		<string>-SMSEngineSwisscom</string>
@@ -40,7 +48,7 @@
 		<string>-SettingsEngine</string>
 	</dict>
 	<key>CYLastWindowPosition</key>
-	<string>{1231, 588}</string>
+	<string>{1037, 574}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -51,8 +59,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1242, 402}}</string>
-			<string>{{0, 412}, {1242, 468}}</string>
+			<string>{{0, 0}, {1457, 563}}</string>
+			<string>{{0, 573}, {1457, 468}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -89,7 +97,7 @@
 		<key>Save</key>
 		<true/>
 		<key>SavePath</key>
-		<string>/Users/epalme</string>
+		<string>/Users/epalme/Desktop</string>
 		<key>enableSimulation</key>
 		<true/>
 		<key>simulatedHost</key>
@@ -101,12 +109,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 901}}</string>
-			<string>{{245, 0}, {1243, 901}}</string>
+			<string>{{0, 0}, {244, 1062}}</string>
+			<string>{{245, 0}, {1458, 1062}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>168 171 1487 922 0 0 1920 1178 </string>
+	<string>449 281 1702 1083 0 0 2560 1418 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -117,8 +125,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 353}}</string>
-			<string>{{0, 363}, {246, 517}}</string>
+			<string>{{0, 0}, {246, 418}}</string>
+			<string>{{0, 428}, {246, 613}}</string>
 		</array>
 	</dict>
 	<key>Objects view expanded items</key>
@@ -154,26 +162,6 @@
 		<array>
 			<array>
 				<integer>0</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>1</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>1</integer>
-				<integer>5</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>1</integer>
-				<integer>3</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>1</integer>
-				<integer>3</integer>
-				<integer>1</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>

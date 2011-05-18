@@ -9,7 +9,7 @@ var innerSessionID = -1;
 var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
-
+var currentMsisdn = "";
 var smsChars = 160;
 var innerSMSCount=0;
 var isJustAuthenticated = false;
@@ -93,11 +93,13 @@ function sendSingleSMS(queue_mess,number){
 	xmlRequest.onload = onloadHandler;
 	xmlRequest.open("POST",feedURL,true);
     xmlRequest.setRequestHeader("Cookie", "JSESSIONID="+innerSessionID+";");
-	var postData = "task=send";
+	var postData = "task=send&type=sms";
 
 	postData +="&" + "recipient="+URLEncode(number);
 	postData +="&"+URLEncode("message")+"="+URLEncode(mess);		 
-									    		
+	postData +="&"+URLEncode("currentMsisdn")+"="+URLEncode(currentMsisdn);								    		
+                                                
+                                                
 	xmlRequest.send(postData);
 
 }
@@ -153,6 +155,7 @@ function responseHandler(xmlRequest,queue_mess,number,withAutentication,withSend
 	
 	if(getIsLogedIn(xmlRequest.responseText)){
 		innerSessionID=getSessionID(xmlRequest.getAllResponseHeaders());
+        currentMsisdn = getcurrentMsisdn(xmlRequest.responseText);
 	}else{
 		innerSessionID=-1;
 		if(withAutentication){ //In case we are doing the autentication do not check the session
@@ -286,6 +289,23 @@ function getSessionID(header){
 	return header.substring(begin, end);
 
 }
+
+function getcurrentMsisdn(body){
+
+	var sessionDetecStr = "currentMsisdn\" value=\"";
+	
+	if (body.indexOf(sessionDetecStr) == -1) {
+		return innerSessionID; //If a new sessionID is not detected return the old one
+	}
+	
+	var begin  = body.indexOf(sessionDetecStr) + sessionDetecStr.length;
+	var end = body.indexOf("\"",begin);
+	
+	return body.substring(begin, end);
+
+}
+
+
 
 
 function getSMSCount(html){
