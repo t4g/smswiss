@@ -10,7 +10,7 @@ var remainningSMS = null;
 var username = theUsername;
 var password = thePassword;
 
-var smsFooter = 37; // Mobile Budget Footer: M-Budget Mobile SMS: nur 10 Rp!
+var smsFooter = 33; // Mobile Budget Footer:[ M-Budget Mobile SMS: nur 10 Rp!]
 var smsChars = 160 - smsFooter;
 var innerSMSCount=0;
 var isJustAuthenticated = false;
@@ -66,11 +66,11 @@ function sendSMS(smsText,number){
   sendSingleSMS(smsText,number); //No need to split mess
 }
 
-function sendSingleSMS(mess,number){
+function sendSingleSMS(message,number){
 	engineStatusFeedBack(SMSEngineStatus.sendingSMS);
-	var onloadHandler = function() {responseHandler(xmlRequest,mess,number,false,true); };
+	var onloadHandler = function() {responseHandler(xmlRequest,message,number,false,true); };
     
-	var feedURL = "http://www.company.ecall.ch/ecompurl/ECOMPURL.ASP?wci=Interface&Function=SendPage&Address=" + number + "&Message=" + escape(mess)+ "&LinkID=mbudget&UserName=" + escape(username) + "&UserPassword=" + escape(password) + "&Language=de" + "&fake=" + Math.floor(Math.random()*16384);
+	var feedURL = "http://www.company.ecall.ch/ecompurl/ECOMPURL.ASP?wci=Interface&Function=SendPage&Address=" + number + "&Message=" + escape(message)+ "&LinkID=mbudget&UserName=" + escape(username) + "&UserPassword=" + escape(password) + "&Language=de";
 
 	xmlRequest.onload = onloadHandler;
 	xmlRequest.open("GET",feedURL,true);		 
@@ -80,12 +80,12 @@ function sendSingleSMS(mess,number){
 }
 
 //This is acctualy the authentication method but for this engine we have first to autenticate
-function doAuthentication(mess,number) 
+function doAuthentication() 
 {
   alert("doing authenticatiuon");
   isJustAuthenticated=true;
   engineStatusFeedBack(SMSEngineStatus.registeringUser);
-  var feedURL = "http://www.company.ecall.ch/ecompurl/ECOMPURL.ASP?wci=Interface&Function=GetInfoSend&LinkID=mbudget&UserName=" + escape(username) + "&UserPassword=" + escape(password) + "&Language=de" + "&fake=" + Math.floor(Math.random()*16384);
+  var feedURL = "http://www.company.ecall.ch/ecompurl/ECOMPURL.ASP?wci=Interface&Function=GetInfoSend&LinkID=mbudget&UserName=" + escape(username) + "&UserPassword=" + escape(password) + "&Language=de";
   var onloadHandler = function() { responseHandler(xmlRequest, null, null, true, false); };
   xmlRequest.onload = onloadHandler;
   xmlRequest.open("GET", feedURL, true);
