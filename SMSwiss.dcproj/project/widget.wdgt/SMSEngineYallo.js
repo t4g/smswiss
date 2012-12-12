@@ -79,7 +79,7 @@ function sendSingleSMS(queue_mess, number) {
   xmlRequest.open("POST", feedURL, true);
   xmlRequest.setRequestHeader("Cookie", "JSESSIONID=" + innerSessionID);
   var postData = "destination=" + URLEncode(number);
-  postData += "&message=" + URLEncode(mess);
+  postData += "&message=" + URLEncode(escape(mess)).replace(/%25/g, '%');
   postData += "&send=%A0senden";
   xmlRequest.send(postData);
 }
