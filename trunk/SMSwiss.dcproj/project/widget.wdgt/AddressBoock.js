@@ -22,21 +22,21 @@ function addressBoock(){
         lastSearch = receiverNumberField.value;
 
 
-        AddressBookPlugin.searchForStringWithoutBestMatch(receiverNumberField.value);  
+        ContactsPlugin.searchForStringWithoutBestMatch(receiverNumberField.value);  
         
         receiverAutoComplete.innerHTML = "</br></br>";
         
         
-        for (var i=0; i < AddressBookPlugin.count(); i++) {
+        for (var i=0; i < ContactsPlugin.count(); i++) {
                 
-                AddressBookPlugin.displayCardAtIndex(i);
-                for (var j = 0; j < AddressBookPlugin.displayedItemCount(); j++){
+                ContactsPlugin.displayCardAtIndex(i);
+                for (var j = 0; j < ContactsPlugin.displayedItemCount(); j++){
                       
-                      if(AddressBookPlugin.displayedPropertyAtIndex(j) =="Phone" &&
+                      if(ContactsPlugin.displayedPropertyAtIndex(j) =="Phone" &&
                         (settingsEngine.getPhoneBookFilterType() == null ||
-							 AddressBookPlugin.displayedLabelAtIndex(j) == settingsEngine.getPhoneBookFilterType())){
-                            receiverAutoComplete.appendChild(createContactDiv(AddressBookPlugin.displayedName(),
-                                                             AddressBookPlugin.displayedValueAtIndex(j),
+							 ContactsPlugin.displayedLabelAtIndex(j) == settingsEngine.getPhoneBookFilterType())){
+                            receiverAutoComplete.appendChild(createContactDiv(ContactsPlugin.displayedName(),
+                                                             ContactsPlugin.displayedValueAtIndex(j),
                                                              displayedContact));
                             displayedContact++;
                             if(displayedContact>4)break;

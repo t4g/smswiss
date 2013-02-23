@@ -88,7 +88,7 @@ function sendSingleSMS(queue_mess,number){
     
     var mess = queue_mess;
 
-	var feedURL = "http://mip.sunrise.ch/mip/dyn/sms/sms?.lang=de";
+	var feedURL = "http://mip.sunrise.ch/mip/dyn/sms/sms?hl=de";
 	var onloadHandler = function() {responseHandler(xmlRequest,queue_mess,number,false,true); };
 	xmlRequest.onload = onloadHandler;
 	xmlRequest.open("POST",feedURL,true);
@@ -130,7 +130,7 @@ function loadSMS(){
 	engineStatusFeedBack(SMSEngineStatus.loadingAccountStatus);
 	
 		
-	var feedURL = "https://mip.sunrise.ch/mip/dyn/sms/sms?up_contactsPerPage=6&lang=en&country=us&.lang=en&.country=us";
+	var feedURL = "https://mip.sunrise.ch/mip/dyn/sms/sms?up_contactsPerPage=6&lang=en&country=us&hl=de&.country=us";
 	var onloadHandler = function() { responseHandler(xmlRequest,null,null,false,false); };
 	xmlRequest.onload = onloadHandler;
 	xmlRequest.open("GET",feedURL,true);
