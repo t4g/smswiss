@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>12A251</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Contacts</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.widget.addressbook.plugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Contacts</string>
+	<key>CFBundlePackageType</key>
+	<string>WBPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.3.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.3.2</string>
+	<key>DTCompiler</key>
+	<string></string>
+	<key>DTPlatformBuild</key>
+	<string>4F212</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>12A251</string>
+	<key>DTSDKName</key>
+	<string></string>
+	<key>DTXcode</key>
+	<string>0440</string>
+	<key>DTXcodeBuild</key>
+	<string>4F212</string>
+	<key>NSPrincipalClass</key>
+	<string>ABPlugin</string>
+	<key>WebPluginDescription</key>
+	<string>Search Box for Contacts Widget</string>
+	<key>WebPluginMIMETypes</key>
+	<dict>
+		<key>x-abplugin/x-abplugin</key>
+		<dict>
+			<key>WebPluginExtensions</key>
+			<array>
+				<string>abplugin</string>
+			</array>
+			<key>WebPluginTypeDescription</key>
+			<string>ContactsSearchBox</string>
+		</dict>
+	</dict>
+	<key>WebPluginName</key>
+	<string>ContactsSearchBox Plugin</string>
+</dict>
+</plist>
